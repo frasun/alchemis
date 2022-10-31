@@ -1,6 +1,6 @@
-<header class="banner">
+<header class="container mx-auto">
   <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
+    <x-logo style="width: 207px; height: 43px"></x-logo>
   </a>
 
   @if (has_nav_menu('primary_navigation'))
