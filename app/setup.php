@@ -134,3 +134,26 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+
+/**
+ * Register custom post type - testimonial
+ */
+add_action('init', function () {
+    $labels = array(
+        'name'               => _x('Testimonials', 'post type general name'),
+        'singular_name'      => _x('Testimonial', 'post type singular name'),
+        'menu_name'          => 'Testimonials'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our testimonial items',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array('title', 'editor'),
+        'publicly_queryable'  => true,
+        'exclude_from_search' => true,
+        'show_in_rest' => true
+    );
+    register_post_type('testimonial', $args);
+});
