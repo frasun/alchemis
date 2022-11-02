@@ -157,3 +157,20 @@ add_action('init', function () {
     );
     register_post_type('testimonial', $args);
 });
+
+/**
+ * Remove global inline styles
+ */
+add_action('init', function () {
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
+    remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
+});
+
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('wc-block-style'); // REMOVE WOOCOMMERCE BLOCK CSS
+    wp_dequeue_style('global-styles'); // REMOVE THEME.JSON
+    wp_deregister_style('global-styles');
+});

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="274" height="57" viewBox="0 0 274 57" style="{{ $style }}">
+<svg xmlns="http://www.w3.org/2000/svg" width="274" height="57" viewBox="0 0 274 57" style="{{ $style }}"
+  {{ $attributes }}>
   <g transform="translate(0 57)">
     <path
       d="M274-6.99A7.024,7.024,0,0,1,266.673,0a7.023,7.023,0,0,1-6.99-6.99c0-3.867,6.99-10.227,6.99-14.724C266.644-17.131,274-10.857,274-6.99Z"
