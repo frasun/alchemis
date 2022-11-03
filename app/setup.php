@@ -174,3 +174,19 @@ add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style('global-styles'); // REMOVE THEME.JSON
     wp_deregister_style('global-styles');
 });
+
+
+/**
+ * Soil plugin
+ */
+add_theme_support('soil', [
+    'clean-up',
+    'disable-rest-api',
+    'disable-asset-versioning',
+    'disable-trackbacks',
+    // 'google-analytics' => 'UA-XXXXX-Y',
+    'js-to-footer',
+    'nav-walker',
+    'nice-search',
+    'relative-urls'
+]);
