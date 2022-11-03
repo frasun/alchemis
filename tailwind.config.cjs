@@ -26,14 +26,15 @@ module.exports = {
       ]
     },
     spacing: {
-      1: '1rem', // 16px
-      2: '2rem', // 32px
-      3: '3rem', // 48px
-      4: '4rem', // 64px
-      5: '5rem', // 80px
-      6: '6rem', // 96px
-      7: '7rem', // 112px
-      10: '10rem' // 160px
+      16: '1rem', // 16px
+      32: '2rem', // 32px
+      46: '3rem', // 48px
+      60: '3.5rem', // 60px
+      64: '4rem', // 64px
+      80: '5rem', // 80px
+      96: '6rem', // 96px
+      112: '7rem', // 112px
+      160: '10rem' // 160px
     },
     lineHeight: {
       tight: '1.25',
@@ -51,7 +52,7 @@ module.exports = {
     },
     container: ({theme}) => ({
       center: true,
-      padding: theme('spacing.1')
+      padding: theme('spacing.16')
     })
   },
   plugins: []

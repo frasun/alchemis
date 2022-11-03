@@ -1,4 +1,4 @@
-<header class="container mx-auto">
+<header class="container py-60">
   <a class="brand" href="{{ home_url('/') }}">
     <x-logo style="width: 207px; height: 43px"></x-logo>
   </a>
