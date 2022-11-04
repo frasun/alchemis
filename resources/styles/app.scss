@@ -3,3 +3,9 @@
 @import 'tailwindcss/utilities';
 
 @import '_type';
+
+@layer base {
+  p {
+    @apply py-1;
+  }
+}
