@@ -62,17 +62,17 @@
         {
           "name": "base",
           "slug": "base",
-          "size": "1.25rem"
+          "size": "0.9375rem"
         },
         {
           "name": "lg",
           "slug": "lg",
-          "size": "1.5625rem"
+          "size": "1.125rem"
         },
         {
           "name": "xl",
           "slug": "xl",
-          "size": "3.4375rem"
+          "size": "2.5rem"
         }
       ]
     }

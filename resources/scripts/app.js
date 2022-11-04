@@ -15,9 +15,11 @@ const main = async (err) => {
   const menuToggle = document.getElementById('menuToggle');
   const menu = document.getElementById('menu');
 
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
 };
 
 /**

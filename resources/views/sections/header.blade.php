@@ -1,6 +1,6 @@
-<header class="container py-60">
+<header class="container py-3">
   <a class="brand" href="{{ home_url('/') }}">
-    <x-logo style="width: 207px; height: 43px"></x-logo>
+    <x-logo style="width: 155px; height: 32px"></x-logo>
   </a>
 
   @if (has_nav_menu('primary_navigation'))

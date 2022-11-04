@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="274" height="57" viewBox="0 0 274 57" style="{{ $style }}"
+<svg xmlns="http://www.w3.org/2000/svg" width="205" height="43" viewBox="0 0 274 57" style="{{ $style }}"
   {{ $attributes }}>
   <g transform="translate(0 57)">
     <path
