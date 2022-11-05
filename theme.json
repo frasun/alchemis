@@ -28,6 +28,11 @@
           "name": "White",
           "slug": "white",
           "color": "#fff"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "color": "#fefefe"
         }
       ]
     },
@@ -65,9 +70,14 @@
           "size": "0.9375rem"
         },
         {
+          "name": "md",
+          "slug": "md",
+          "size": "1.125rem"
+        },
+        {
           "name": "lg",
           "slug": "lg",
-          "size": "1.125rem"
+          "size": "1.375rem"
         },
         {
           "name": "xl",

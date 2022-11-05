@@ -2,9 +2,13 @@
 
 @layer base {
   body {
-    @apply text-base text-dark;
+    @apply text-base text-dark bg-light;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    @apply py-1;
   }
 }

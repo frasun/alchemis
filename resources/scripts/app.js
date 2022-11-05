@@ -1,4 +1,5 @@
 import {domReady} from '@roots/sage/client';
+import Menu from './menu';
 
 /**
  * app.main
@@ -10,16 +11,8 @@ const main = async (err) => {
   }
 
   // application code
-
-  // menu
-  const menuToggle = document.getElementById('menuToggle');
-  const menu = document.getElementById('menu');
-
-  if (menuToggle && menu) {
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  }
+  const menu = new Menu();
+  menu.init();
 };
 
 /**

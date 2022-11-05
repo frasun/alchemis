@@ -12,6 +12,7 @@ module.exports = {
       green: '#75B84E',
       grey: '#CBCBCB',
       white: '#fff',
+      light: '#FEFEFE',
     },
     screens: {
       sm: '640px',
@@ -23,7 +24,9 @@ module.exports = {
       sans: ['Poppins', 'sans-serif'],
     },
     spacing: {
+      0: '0px',
       1: '1rem', // 16px
+      1.5: '1.5rem', // 20px
       2: '2rem', // 32px
       3: '2.5rem', // 40px
       4: '5rem', // 80px
@@ -35,9 +38,13 @@ module.exports = {
     },
     fontSize: ({theme}) => ({
       base: ['0.9375rem', {lineHeight: theme('lineHeight.normal')}], // 15px
-      lg: ['1.125rem'], // 18px
+      md: ['1.125rem'], // 18px
+      lg: ['1.375rem'], // 22px
       xl: ['2.5rem'], // 40px
     }),
+    opacity: {
+      80: '0.8',
+    },
     extend: {
       backgroundImage: {
         footer: 'url(../images/bg-footer.png)',
@@ -47,7 +54,7 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: theme('spacing.1'),
-        sm: theme('spacing.2'),
+        lg: theme('spacing.4'),
         xl: theme('spacing.5'),
       },
     }),
