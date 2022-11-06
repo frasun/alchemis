@@ -1,5 +1,7 @@
 import {domReady} from '@roots/sage/client';
-import {registerBlockStyle, unregisterBlockStyle} from '@wordpress/blocks';
+// import {registerBlockStyle, unregisterBlockStyle} from '@wordpress/blocks';
+
+import registerHeadingBlock from '../blocks/heading';
 
 /**
  * editor.main
@@ -10,12 +12,14 @@ const main = (err) => {
     console.error(err);
   }
 
-  unregisterBlockStyle('core/button', 'outline');
+  // unregisterBlockStyle('core/button', 'outline');
 
-  registerBlockStyle('core/button', {
-    name: 'outline',
-    label: 'Outline',
-  });
+  // registerBlockStyle('core/button', {
+  //   name: 'outline',
+  //   label: 'Outline',
+  // });
+
+  registerHeadingBlock();
 };
 
 /**

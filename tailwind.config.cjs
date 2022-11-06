@@ -26,15 +26,17 @@ module.exports = {
     spacing: {
       0: '0px',
       1: '1rem', // 16px
-      1.5: '1.5rem', // 20px
-      2: '2rem', // 32px
-      3: '2.5rem', // 40px
-      4: '5rem', // 80px
-      5: '7.5rem', // 120px
+      2: '1.5rem', // 20px
+      3: '2rem', // 32px
+      4: '2.5rem', // 40px
+      5: '3.75rem', // 60px
+      6: '5rem', // 80px
+      7: '7.5rem', // 120px
     },
     lineHeight: {
       tight: '1.25',
       normal: '1.75',
+      headings: '0.9',
     },
     fontSize: ({theme}) => ({
       base: ['0.9375rem', {lineHeight: theme('lineHeight.normal')}], // 15px
