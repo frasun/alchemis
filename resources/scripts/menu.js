@@ -11,6 +11,7 @@ export default class Menu {
   toggleMenu() {
     this.menu.classList.toggle('hidden');
     this.menuToggle.classList.toggle('text-green');
+    this.menuToggle.classList.toggle('text-dark');
     this.isOpen = !this.isOpen;
 
     if (this.isOpen) {

@@ -57,7 +57,7 @@ module.exports = {
       padding: {
         DEFAULT: theme('spacing.1'),
         lg: theme('spacing.4'),
-        xl: theme('spacing.5'),
+        xl: theme('spacing.6'),
       },
     }),
   },

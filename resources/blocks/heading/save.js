@@ -1,4 +1,3 @@
-// import {__} from '@wordpress/i18n';
 import Icon from './icon';
 import {RichText} from '@wordpress/block-editor';
 
