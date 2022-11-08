@@ -1,11 +1,13 @@
 import {domReady} from '@roots/sage/client';
-// import {registerBlockStyle, unregisterBlockStyle} from '@wordpress/blocks';
 
 import registerHeadingBlock from '../blocks/heading';
+import registerSectionBlock from '../blocks/section';
 
-/**
- * editor.main
- */
+function registerBlocks() {
+  registerHeadingBlock();
+  registerSectionBlock();
+}
+
 const main = (err) => {
   if (err) {
     // handle hmr errors
@@ -14,12 +16,7 @@ const main = (err) => {
 
   // unregisterBlockStyle('core/button', 'outline');
 
-  // registerBlockStyle('core/button', {
-  //   name: 'outline',
-  //   label: 'Outline',
-  // });
-
-  registerHeadingBlock();
+  registerBlocks();
 };
 
 /**

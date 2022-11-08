@@ -6,6 +6,7 @@ module.exports = {
     './resources/**/*.{php,vue,js}',
     './patterns/**/*.php',
   ],
+  safelist: ['grid', 'grid-cols-3', 'gap-3'],
   theme: {
     colors: {
       dark: '#223728',
@@ -30,8 +31,9 @@ module.exports = {
       3: '2rem', // 32px
       4: '2.5rem', // 40px
       5: '3.75rem', // 60px
-      6: '5rem', // 80px
-      7: '7.5rem', // 120px
+      6: '4.5rem', // 72px
+      7: '5rem', // 80px
+      8: '7.5rem', // 120px
     },
     lineHeight: {
       tight: '1.25',
@@ -43,6 +45,7 @@ module.exports = {
       md: ['1.125rem'], // 18px
       lg: ['1.375rem'], // 22px
       xl: ['2.5rem'], // 40px
+      '2xl': ['3.75rem'], // 60px
     }),
     opacity: {
       80: '0.8',

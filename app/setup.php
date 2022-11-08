@@ -190,15 +190,3 @@ add_theme_support('soil', [
     'nice-search',
     'relative-urls'
 ]);
-
-/**
- * Blocks
- */
-add_action('init', function () {
-    if (!function_exists('register_block_type')) {
-        // Block editor is not available.
-        return;
-    }
-
-    register_block_type(dirname(__FILE__) . '../resources/blocks/' . 'heading' . '/block.json');
-});

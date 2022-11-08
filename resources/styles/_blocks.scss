@@ -1,0 +1,19 @@
+.wp-block-alchemis-content-section {
+  &.is-style-dark {
+    @apply text-white bg-dark;
+  }
+}
+
+.wp-block-image {
+  @apply text-center;
+
+  img {
+    @apply m-auto;
+  }
+
+  figcaption {
+    color: inherit;
+    font-size: inherit;
+    text-align: inherit;
+  }
+}

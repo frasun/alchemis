@@ -1,1 +1,20 @@
 @import 'app';
+@import '_headings';
+@import '_blocks';
+
+html :where(.editor-styles-wrapper) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-headings;
+  }
+
+  @include h-sizes;
+
+  p {
+    @apply m-0;
+  }
+}
