@@ -43,6 +43,11 @@
           "name": "Grey-1",
           "slug": "grey-1",
           "color": "#afafaf"
+        },
+        {
+          "name": "Grey-2",
+          "slug": "grey-2",
+          "color": "#cbcbcb"
         }
       ]
     },

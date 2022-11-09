@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-09 18:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/filters.php:15
+msgid "Continued"
+msgstr ""
+
+#: app/View/Composers/Post.php:48
+msgid "Latest Posts"
+msgstr ""
+
+#: app/View/Composers/Post.php:58
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: app/View/Composers/Post.php:64
+msgid "Not Found"
+msgstr ""
+
+#: app/setup.php:60
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/setup.php:128
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:133
+msgid "Footer"
+msgstr ""
+
+#: app/setup.php:144
+msgctxt "post type general name"
+msgid "Testimonials"
+msgstr ""
+
+#: app/setup.php:145
+msgctxt "post type singular name"
+msgid "Testimonial"
+msgstr ""
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you are trying to view does not exist."
+msgstr ""
+
+#: resources/views/forms/search.blade.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: resources/views/forms/search.blade.php:15
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: resources/views/layouts/app.blade.php:2
+msgid "Skip to content"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:5
+msgctxt "comments title"
+msgid "One"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:17
+msgid "&larr; Older comments"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:23
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/partials/content-page.blade.php:3
+#: resources/views/partials/content-single.blade.php:15
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/partials/entry-meta.blade.php:6
+msgid "By"
+msgstr ""

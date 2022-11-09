@@ -23,4 +23,8 @@
   }
 
   @include h-sizes;
+
+  a {
+    @apply text-greyDark hover:text-green transition-colors;
+  }
 }

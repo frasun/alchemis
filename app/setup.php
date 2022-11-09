@@ -79,7 +79,7 @@ add_action('after_setup_theme', function () {
      *
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
-    add_theme_support('post-thumbnails');
+    // add_theme_support('post-thumbnails');
 
     /**
      * Enable responsive embed support.
@@ -190,3 +190,10 @@ add_theme_support('soil', [
     'nice-search',
     'relative-urls'
 ]);
+
+/**
+ * add translations support
+ */
+// add_action('after_setup_theme', function () {
+//     load_theme_textdomain('sage', get_template_directory() . '/lang');
+// });

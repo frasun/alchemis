@@ -16,6 +16,7 @@ module.exports = {
       greyLight: '#FEFEFE',
       white: '#fff',
       'grey-1': '#afafaf',
+      'grey-2': '#cbcbcb',
     },
     screens: {
       sm: '640px',
@@ -51,6 +52,13 @@ module.exports = {
     }),
     opacity: {
       80: '0.8',
+    },
+    borderRadius: {
+      DEFAULT: '2.35rem',
+      full: '9999px',
+    },
+    boxShadow: {
+      DEFAULT: '4px 4px 15px rgb(0 0 0 / 0.16)',
     },
     extend: {
       backgroundImage: {
