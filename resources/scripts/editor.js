@@ -2,10 +2,12 @@ import {domReady} from '@roots/sage/client';
 
 import registerHeadingBlock from '../blocks/heading';
 import registerSectionBlock from '../blocks/section';
+import registerTestimonialsBlock from '../blocks/testimonials';
 
 function registerBlocks() {
   registerHeadingBlock();
   registerSectionBlock();
+  registerTestimonialsBlock();
 }
 
 const main = (err) => {

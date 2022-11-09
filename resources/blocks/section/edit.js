@@ -14,6 +14,7 @@ const ALLOWED_BLOCKS = [
   'core/paragraph',
   'core/image',
   'core/group',
+  'alchemis/testimonials',
 ];
 const ALLOWED_MEDIA_TYPES = ['image'];
 

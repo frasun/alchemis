@@ -21,6 +21,10 @@ export default () => {
         name: 'dark',
         label: __('Dark'),
       },
+      {
+        name: 'grey',
+        label: __('Grey'),
+      },
     ],
   });
 };

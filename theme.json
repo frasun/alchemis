@@ -22,7 +22,17 @@
         {
           "name": "Grey",
           "slug": "grey",
-          "color": "#cbcbcb"
+          "color": "#e3e3e3"
+        },
+        {
+          "name": "GreyDark",
+          "slug": "greydark",
+          "color": "#808080"
+        },
+        {
+          "name": "GreyLight",
+          "slug": "greylight",
+          "color": "#fefefe"
         },
         {
           "name": "White",
@@ -30,9 +40,9 @@
           "color": "#fff"
         },
         {
-          "name": "Light",
-          "slug": "light",
-          "color": "#fefefe"
+          "name": "Grey-1",
+          "slug": "grey-1",
+          "color": "#afafaf"
         }
       ]
     },

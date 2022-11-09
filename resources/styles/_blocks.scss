@@ -1,6 +1,47 @@
-.wp-block-alchemis-content-section {
-  &.is-style-dark {
-    @apply text-white bg-dark;
+.wp-block-alchemis {
+  &-content-section {
+    &.is-style-dark {
+      @apply text-white bg-dark;
+    }
+
+    &.is-style-grey {
+      @apply bg-grey;
+    }
+  }
+}
+
+.wp-block-alchemis-testimonials,
+[data-type='alchemis/testimonials'] {
+  blockquote p {
+    &::before {
+      content: '„';
+    }
+
+    &::after {
+      content: '”';
+    }
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: none;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-grey-1;
+
+    &:hover {
+      @apply text-greyDark;
+    }
   }
 }
 
