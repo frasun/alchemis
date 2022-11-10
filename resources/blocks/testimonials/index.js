@@ -8,6 +8,7 @@ export default () => {
     title: __('Testimonials'),
     description: __('Create slider with testimonials', 'sage'),
     category: 'widgets',
+    icon: 'testimonial',
     attributes: {
       testimonials: {
         type: 'array',
