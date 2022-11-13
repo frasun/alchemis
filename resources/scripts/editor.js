@@ -3,11 +3,13 @@ import {domReady} from '@roots/sage/client';
 import registerHeadingBlock from '../blocks/heading';
 import registerSectionBlock from '../blocks/section';
 import registerTestimonialsBlock from '../blocks/testimonials';
+import registerBoxesBlock from '../blocks/boxes';
 
 function registerBlocks() {
   registerHeadingBlock();
   registerSectionBlock();
   registerTestimonialsBlock();
+  registerBoxesBlock();
 }
 
 const main = (err) => {

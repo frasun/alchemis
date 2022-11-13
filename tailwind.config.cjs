@@ -48,11 +48,14 @@ module.exports = {
       base: ['0.9375rem', {lineHeight: theme('lineHeight.normal')}], // 15px
       md: ['1.125rem'], // 18px
       lg: ['1.375rem'], // 22px
+      xlg: ['1.75rem'], // 28px
       xl: ['2.5rem'], // 40px
       '2xl': ['3.75rem'], // 60px
     }),
     opacity: {
+      0: '0',
       80: '0.8',
+      100: '1',
     },
     borderRadius: {
       DEFAULT: '2.35rem',
@@ -60,6 +63,9 @@ module.exports = {
     },
     boxShadow: {
       DEFAULT: '4px 4px 15px rgb(0 0 0 / 0.16)',
+    },
+    transitionDuration: {
+      DEFAULT: '300ms',
     },
     extend: {
       backgroundImage: {

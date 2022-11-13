@@ -95,6 +95,11 @@
           "size": "1.375rem"
         },
         {
+          "name": "xlg",
+          "slug": "xlg",
+          "size": "1.75rem"
+        },
+        {
           "name": "xl",
           "slug": "xl",
           "size": "2.5rem"

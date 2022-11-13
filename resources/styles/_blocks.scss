@@ -80,3 +80,47 @@
     @apply leading-tight pb-3 px-3;
   }
 }
+
+.box {
+  @apply border-2 rounded-tl rounded-br border-grey-2 pt-3 pb-4 px-2;
+
+  .box-inner {
+    @apply flex flex-col items-center bg-no-repeat bg-top;
+  }
+
+  .box-title {
+    @apply translate-y-[110px] transition-transform mt-1 flex items-center;
+
+    height: calc(2 * theme('fontSize.xl') * theme('lineHeight.headings'));
+  }
+
+  .box-subtitle {
+    @apply opacity-0 flex items-center;
+
+    height: calc(3 * theme('fontSize.lg') * theme('lineHeight.tight'));
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  &:hover {
+    @apply bg-dark;
+
+    .box-inner {
+      background-image: none !important;
+    }
+
+    .box-title {
+      @apply translate-y-0 text-green;
+    }
+
+    .box-subtitle {
+      @apply opacity-100 text-white;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
