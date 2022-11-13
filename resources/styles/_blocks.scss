@@ -64,7 +64,7 @@
     @apply grid md:grid-cols-3 md:gap-3;
 
     li {
-      @apply border-2 rounded-tl rounded-br border-grey-2 mb-3 md:mb-0 hover:shadow transition-shadow;
+      @apply border-2 rounded-tl rounded-br border-grey-2 mb-3 md:mb-0 hover:shadow transition-shadow bg-white;
     }
   }
 
@@ -73,10 +73,10 @@
   }
 
   &__post-title {
-    @apply text-md leading-tight px-3 block pt-2 text-dark hover:text-green;
+    @apply text-md leading-tight px-3 block pt-2 pb-1 text-dark hover:text-green;
   }
 
   &__post-excerpt {
-    @apply leading-tight pt-1 pb-3 px-3;
+    @apply leading-tight pb-3 px-3;
   }
 }

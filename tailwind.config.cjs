@@ -36,7 +36,8 @@ module.exports = {
       5: '3.75rem', // 60px
       6: '4.5rem', // 72px
       7: '5rem', // 80px
-      8: '7.5rem', // 120px
+      8: '6rem', // 96px
+      9: '7.5rem', // 120px
     },
     lineHeight: {
       tight: '1.25',
@@ -74,5 +75,4 @@ module.exports = {
       },
     }),
   },
-  plugins: [],
 };
