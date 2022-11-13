@@ -67,6 +67,11 @@ module.exports = {
     transitionDuration: {
       DEFAULT: '300ms',
     },
+    backgroundPosition: {
+      top: 'top',
+      right: 'right',
+      'header-mobile': '80%',
+    },
     extend: {
       backgroundImage: {
         footer: 'url(../images/bg-footer.png)',

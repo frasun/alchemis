@@ -95,7 +95,7 @@
   }
 
   .box-subtitle {
-    @apply opacity-0 flex items-center;
+    @apply opacity-0 flex items-center transition-opacity;
 
     height: calc(3 * theme('fontSize.lg') * theme('lineHeight.tight'));
   }
@@ -123,4 +123,8 @@
       display: none;
     }
   }
+}
+
+.infobox {
+  @apply border-2 rounded-tl rounded-br border-grey-2 pt-3 pb-4 px-2;
 }
