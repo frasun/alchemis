@@ -4,12 +4,14 @@ import registerHeadingBlock from '../blocks/heading';
 import registerSectionBlock from '../blocks/section';
 import registerTestimonialsBlock from '../blocks/testimonials';
 import registerBoxesBlock from '../blocks/boxes';
+import registerInfoboxesBlock from '../blocks/infoboxes';
 
 function registerBlocks() {
   registerHeadingBlock();
   registerSectionBlock();
   registerTestimonialsBlock();
   registerBoxesBlock();
+  registerInfoboxesBlock();
 }
 
 const main = (err) => {
