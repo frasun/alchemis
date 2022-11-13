@@ -2,6 +2,7 @@ export default class Menu {
   constructor() {
     this.menuToggle = document.getElementById('menuToggle');
     this.menu = document.getElementById('menu');
+    this.header = document.getElementById('header');
     this.logo = document.getElementById('logo');
     this.isOpen = false;
 
@@ -10,8 +11,7 @@ export default class Menu {
 
   toggleMenu() {
     this.menu.classList.toggle('hidden');
-    this.menuToggle.classList.toggle('text-green');
-    this.menuToggle.classList.toggle('text-dark');
+    this.menuToggle.classList.toggle('open');
     this.isOpen = !this.isOpen;
 
     if (this.isOpen) {
@@ -32,11 +32,9 @@ export default class Menu {
   handleScroll() {
     window.requestAnimationFrame(() => {
       if (window.scrollY > 0) {
-        this.menuToggle.classList.add('bg-white');
-        this.logo.classList.add('bg-white');
+        this.header.classList.add('scrolled');
       } else {
-        this.menuToggle.classList.remove('bg-white');
-        this.logo.classList.remove('bg-white');
+        this.header.classList.remove('scrolled');
       }
     });
   }

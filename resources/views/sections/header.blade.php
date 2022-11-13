@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50">
+<header id="header" class="sticky top-0 z-50">
   <div class="container py-1 lg:py-2 flex justify-between items-center">
     <a id="logo" class="-ml-1" href="{{ home_url('/') }}">
       <x-logo style="width: 155px; height: 32px" class="m-1"></x-logo>
@@ -9,3 +9,5 @@
     @endif
   </div>
 </header>
+
+{{ $theme }}

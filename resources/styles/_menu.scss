@@ -1,5 +1,35 @@
-.menu-item {
-  a {
-    @apply text-lg hover:text-green block;
+#header {
+  .menu-item {
+    a {
+      @apply text-lg hover:text-green block;
+    }
+  }
+
+  #menuToggle,
+  #logo {
+    @apply transition-colors;
+  }
+
+  &.scrolled {
+    #menuToggle,
+    #logo {
+      @apply bg-white;
+    }
+  }
+
+  #menuToggle.open {
+    @apply text-green;
+  }
+}
+
+body.page-template-template-white {
+  #header:not(.scrolled) {
+    #logo g {
+      fill: theme('colors.white');
+    }
+
+    #menuToggle:not(.open):not(:hover) {
+      @apply text-white;
+    }
   }
 }
