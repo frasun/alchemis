@@ -8,6 +8,10 @@
     &.is-style-grey {
       @apply bg-grey;
     }
+
+    &[style*='background-image'] {
+      @apply bg-top;
+    }
   }
 }
 
@@ -185,5 +189,19 @@ body.home .infobox-section {
     p {
       @apply font-bold pb-0;
     }
+  }
+}
+
+// icon-grid
+.wp-block-columns.icon-grid {
+  @apply grid md:grid-cols-3 gap-3 py-3;
+  @apply lg:w-3/4 lg:mx-auto;
+
+  figcaption {
+    @apply pt-3;
+  }
+
+  h3 {
+    @apply text-center text-green text-xlg pt-2;
   }
 }

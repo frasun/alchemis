@@ -6,6 +6,7 @@ import registerTestimonialsBlock from '../blocks/testimonials';
 import registerBoxesBlock from '../blocks/boxes';
 import registerInfoboxesBlock from '../blocks/infoboxes';
 import registerStatsBlock from '../blocks/stats';
+import registerIconGridBlock from '../blocks/icon-grid';
 
 function registerBlocks() {
   registerHeadingBlock();
@@ -14,6 +15,7 @@ function registerBlocks() {
   registerBoxesBlock();
   registerInfoboxesBlock();
   registerStatsBlock();
+  registerIconGridBlock();
 }
 
 const main = (err) => {
