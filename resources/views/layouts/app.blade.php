@@ -11,6 +11,8 @@
 @hasSection('sidebar')
   <aside class="sidebar">
     @yield('sidebar')
+
+    @include('partials.newsletter')
   </aside>
 @endif
 

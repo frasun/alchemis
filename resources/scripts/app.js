@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import Menu from './menu';
 import Swiper, {Navigation, Autoplay} from 'swiper';
+import Form from './form';
 
 /**
  * app.main
@@ -29,6 +30,12 @@ const main = async (err) => {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // forms
+  const forms = document.querySelectorAll('form[novalidate]');
+  for (let form of Array.from(forms)) {
+    new Form(form);
+  }
 };
 
 /**

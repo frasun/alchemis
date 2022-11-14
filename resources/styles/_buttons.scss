@@ -1,0 +1,17 @@
+.btn {
+  @apply py-0.75 px-4;
+  @apply rounded-tl-full rounded-br-full;
+  @apply border-2 border-green outline-0;
+  @apply bg-white;
+  @apply transition-colors;
+  @apply leading-normal;
+
+  &:hover {
+    @apply bg-green text-white;
+  }
+
+  &:active {
+    @apply text-dark;
+    @apply transition-none;
+  }
+}

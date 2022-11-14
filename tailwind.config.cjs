@@ -17,6 +17,8 @@ module.exports = {
       white: '#fff',
       'grey-1': '#afafaf',
       'grey-2': '#cbcbcb',
+      red: '#E3423C',
+      transparent: 'rgba(255, 255, 255, 0)',
     },
     screens: {
       sm: '640px',
@@ -29,6 +31,7 @@ module.exports = {
     },
     spacing: {
       0: '0px',
+      0.75: '0.75rem', // 12px
       1: '1rem', // 16px
       2: '1.5rem', // 20px
       3: '2rem', // 32px
@@ -56,6 +59,7 @@ module.exports = {
     }),
     opacity: {
       0: '0',
+      60: '0.6',
       80: '0.8',
       100: '1',
     },

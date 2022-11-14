@@ -1,0 +1,16 @@
+input[type='text'],
+input[type='search'],
+input[type='email'] {
+  @apply text-center;
+  @apply bg-grey;
+  @apply rounded-tl-full rounded-br-full border-2 border-grey outline-0;
+  @apply w-full py-0.75 px-2;
+  @apply leading-normal;
+  @apply transition-colors;
+
+  &:focus,
+  &:focus-visible {
+    @apply border-green;
+    @apply bg-grey/60;
+  }
+}

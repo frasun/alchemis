@@ -48,6 +48,16 @@
           "name": "Grey-2",
           "slug": "grey-2",
           "color": "#cbcbcb"
+        },
+        {
+          "name": "Red",
+          "slug": "red",
+          "color": "#e3423c"
+        },
+        {
+          "name": "Transparent",
+          "slug": "transparent",
+          "color": "rgba(255, 255, 255, 0)"
         }
       ]
     },
