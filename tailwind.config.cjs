@@ -38,6 +38,8 @@ module.exports = {
       7: '5rem', // 80px
       8: '6rem', // 96px
       9: '7.5rem', // 120px
+      10: '10rem', // 160px
+      13: '13rem', // 208px
     },
     lineHeight: {
       tight: '1.25',
@@ -73,6 +75,7 @@ module.exports = {
       },
       backgroundPosition: {
         'header-mobile': '80%',
+        homepage: '100% 30%',
       },
     },
     container: ({theme}) => ({

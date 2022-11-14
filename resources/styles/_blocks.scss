@@ -1,3 +1,4 @@
+// content section
 .wp-block-alchemis {
   &-content-section {
     &.is-style-dark {
@@ -10,6 +11,7 @@
   }
 }
 
+// testimonials
 .wp-block-alchemis-testimonials,
 [data-type='alchemis/testimonials'] {
   blockquote p {
@@ -81,6 +83,7 @@
   }
 }
 
+// box
 .box {
   @apply border-2 rounded-tl rounded-br border-grey-2 pt-3 pb-4 px-2 bg-white;
 
@@ -121,6 +124,7 @@
   }
 }
 
+// infobox
 .infobox {
   @apply relative py-5 px-2;
 
@@ -159,4 +163,9 @@
       }
     }
   }
+}
+
+body.home .infobox-section {
+  @apply -mt-10;
+  @apply hidden md:block;
 }
