@@ -5,6 +5,7 @@ import registerSectionBlock from '../blocks/section';
 import registerTestimonialsBlock from '../blocks/testimonials';
 import registerBoxesBlock from '../blocks/boxes';
 import registerInfoboxesBlock from '../blocks/infoboxes';
+import registerStatsBlock from '../blocks/stats';
 
 function registerBlocks() {
   registerHeadingBlock();
@@ -12,6 +13,7 @@ function registerBlocks() {
   registerTestimonialsBlock();
   registerBoxesBlock();
   registerInfoboxesBlock();
+  registerStatsBlock();
 }
 
 const main = (err) => {

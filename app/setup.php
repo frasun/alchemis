@@ -174,7 +174,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style('global-styles'); // REMOVE THEME.JSON
     wp_deregister_style('global-styles');
 });
-
+remove_filter('render_block', 'wp_render_layout_support_flag', 10, 2);
+remove_filter('render_block', 'gutenberg_render_layout_support_flag', 10, 2);
+remove_filter('render_block', 'wp_render_elements_support', 10, 2);
+remove_filter('render_block', 'gutenberg_render_elements_support', 10, 2);
 
 /**
  * Soil plugin

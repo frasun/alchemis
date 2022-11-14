@@ -13,9 +13,9 @@ const ALLOWED_BLOCKS = [
   'core/heading',
   'core/paragraph',
   'core/image',
-  'core/group',
   'alchemis/testimonials',
   'core/latest-posts',
+  'core/columns',
 ];
 const ALLOWED_MEDIA_TYPES = ['image'];
 

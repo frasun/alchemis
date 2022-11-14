@@ -169,3 +169,21 @@ body.home .infobox-section {
   @apply -mt-10;
   @apply hidden md:block;
 }
+
+// stats
+.wp-block-columns.stats {
+  @apply grid md:grid-cols-3 gap-3 py-3;
+  @apply lg:w-3/4 lg:mx-auto;
+
+  .wp-block-column {
+    @apply text-center;
+
+    h3 {
+      @apply text-xl md:text-2xl text-green;
+    }
+
+    p {
+      @apply font-bold pb-0;
+    }
+  }
+}
