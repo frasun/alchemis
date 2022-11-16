@@ -26,5 +26,9 @@
 
   a {
     @apply text-greyDark hover:text-green transition-colors;
+
+    &.link {
+      @apply text-dark hover:text-green;
+    }
   }
 }

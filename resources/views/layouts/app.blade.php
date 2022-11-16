@@ -4,12 +4,12 @@
 
 @include('sections.header')
 
-<main id="main" class="main">
+<main>
   @yield('content')
 </main>
 
 @hasSection('sidebar')
-  <aside class="sidebar">
+  <aside>
     @yield('sidebar')
 
     @include('partials.newsletter')

@@ -6,7 +6,7 @@ module.exports = {
     './resources/**/*.{php,vue,js}',
     './patterns/**/*.php',
   ],
-  safelist: ['grid', 'grid-cols-3', 'gap-3'],
+  safelist: ['grid', 'gap-3', 'grid-cols-2', 'grid-cols-3', 'grid-cols-4'],
   theme: {
     colors: {
       dark: '#223728',
@@ -17,6 +17,7 @@ module.exports = {
       white: '#fff',
       'grey-1': '#afafaf',
       'grey-2': '#cbcbcb',
+      'grey-3': '#707070',
       red: '#E3423C',
       transparent: 'rgba(255, 255, 255, 0)',
     },

@@ -1,0 +1,46 @@
+// product loop
+.product-grid {
+  .woocommerce-Price-amount {
+    @apply block;
+    @apply font-bold text-md;
+    @apply pt-0.75;
+  }
+
+  figure {
+    img {
+      @apply mx-auto;
+    }
+  }
+}
+
+// pagination
+.woocommerce-pagination {
+  @apply mt-3;
+
+  ul {
+    @apply flex justify-center;
+
+    li {
+      a,
+      span {
+        @apply p-0.75;
+      }
+    }
+  }
+}
+
+// alerts
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  @apply text-dark;
+  @apply border-dark;
+}
+
+.woocommerce-info {
+  @apply border-green;
+
+  &::before {
+    @apply text-green;
+  }
+}
