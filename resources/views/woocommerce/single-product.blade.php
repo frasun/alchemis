@@ -17,21 +17,29 @@ the readme will list any important changes.
 @extends('layouts.app')
 
 @section('content')
-  @php
-    do_action('get_header', 'shop');
-    do_action('woocommerce_before_main_content');
-  @endphp
+  <section class="container">
+    <div class="border-t border-grey-3 py-3">
+      @php
+        do_action('get_header', 'shop');
+        do_action('woocommerce_before_main_content');
+      @endphp
 
-  @while(have_posts())
-    @php
-      the_post();
-      wc_get_template_part('content', 'single-product');
-    @endphp
-  @endwhile
+      @while (have_posts())
+        @php
+          the_post();
+          wc_get_template_part('content', 'single-product');
+        @endphp
+      @endwhile
 
-  @php
-    do_action('woocommerce_after_main_content');
-    do_action('get_sidebar', 'shop');
-    do_action('get_footer', 'shop');
-  @endphp
+      @php
+        do_action('woocommerce_after_main_content');
+        do_action('get_sidebar', 'shop');
+        do_action('get_footer', 'shop');
+      @endphp
+    </div>
+  </section>
+@endsection
+
+@section('sidebar')
+  @include('sections.sidebar')
 @endsection

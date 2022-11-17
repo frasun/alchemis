@@ -82,6 +82,19 @@ module.exports = {
         'header-mobile': '80%',
         homepage: '100% 30%',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              padding: 0,
+            },
+            maxWidth: 'none',
+            h3: {
+              textTransform: 'uppercase',
+            },
+          },
+        },
+      },
     },
     container: ({theme}) => ({
       center: true,
@@ -92,4 +105,5 @@ module.exports = {
       },
     }),
   },
+  plugins: [require('@tailwindcss/typography')],
 };

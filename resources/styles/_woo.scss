@@ -1,8 +1,12 @@
+// general
+.woocommerce-Price-amount {
+  @apply block;
+  @apply font-bold text-md;
+}
+
 // product loop
 .product-grid {
   .woocommerce-Price-amount {
-    @apply block;
-    @apply font-bold text-md;
     @apply pt-0.75;
   }
 
@@ -42,5 +46,55 @@
 
   &::before {
     @apply text-green;
+  }
+}
+
+// gallery
+$thumbnail-size: 120px;
+$thumbnail-size-sm: 75px;
+
+.woocommerce-product-gallery {
+  @apply flex flex-col md:flex-row;
+
+  .flex-viewport {
+    @apply md:order-2 md:ml-3;
+  }
+
+  &__image {
+    @apply max-w-full;
+
+    img {
+      @apply mx-auto;
+    }
+  }
+
+  .flex-control-thumbs {
+    @apply md:order-1;
+    @apply flex flex-row flex-wrap md:flex-col;
+    @apply mt-2 md:mt-0;
+
+    li {
+      flex: 0 0 $thumbnail-size-sm;
+      min-width: $thumbnail-size-sm;
+      max-width: $thumbnail-size-sm;
+
+      @screen md {
+        flex: 0 0 $thumbnail-size;
+        min-width: $thumbnail-size;
+        max-width: $thumbnail-size;
+      }
+
+      &:not(:last-child) {
+        @apply md:mb-0.75 cursor-pointer;
+      }
+
+      img {
+        @apply border border-transparent;
+
+        &.flex-active {
+          @apply border-grey-3;
+        }
+      }
+    }
   }
 }

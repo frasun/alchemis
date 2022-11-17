@@ -200,10 +200,3 @@ add_theme_support('soil', [
 add_action('after_setup_theme', function () {
     load_theme_textdomain('sage', get_template_directory() . '/lang');
 });
-
-/**
- * woocommerce
- */
-// add_theme_support('wc-product-gallery-zoom');
-// add_theme_support('wc-product-gallery-lightbox');
-// add_theme_support('wc-product-gallery-slider');
