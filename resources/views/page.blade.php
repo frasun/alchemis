@@ -11,3 +11,7 @@
 @section('sidebar')
   @include('sections.sidebar')
 @endsection
+
+@section('aside')
+  @include('partials.newsletter')
+@endsection

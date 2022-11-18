@@ -11,9 +11,11 @@
 @hasSection('sidebar')
   <aside>
     @yield('sidebar')
-
-    @include('partials.newsletter')
   </aside>
+@endif
+
+@hasSection('aside')
+  @yield('aside')
 @endif
 
 @include('sections.footer')

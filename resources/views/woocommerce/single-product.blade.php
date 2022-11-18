@@ -40,6 +40,6 @@ the readme will list any important changes.
   </section>
 @endsection
 
-@section('sidebar')
-  @include('sections.sidebar')
+@section('aside')
+  @include('partials.newsletter')
 @endsection

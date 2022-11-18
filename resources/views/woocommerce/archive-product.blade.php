@@ -68,3 +68,7 @@ the readme will list any important changes.
     do_action('get_footer', 'shop');
   @endphp
 @endsection
+
+@section('aside')
+  @include('partials.newsletter')
+@endsection
