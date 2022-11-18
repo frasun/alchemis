@@ -138,3 +138,17 @@ add_action('wp_print_scripts', function () {
     wp_dequeue_script('zoom');
     wp_dequeue_script('photoswipe-ui-default');
 }, 100);
+
+/**
+ * Replace the home link URL in breadcrumbs
+ */
+add_filter('woocommerce_breadcrumb_home_url', function () {
+    return wc_get_page_permalink('shop');
+});
+
+add_filter('woocommerce_breadcrumb_defaults', function () {
+    $defaults['delimiter'] = ' &gt; ';
+    $defaults['home'] = __('Products', 'woocommerce');
+
+    return $defaults;
+});
