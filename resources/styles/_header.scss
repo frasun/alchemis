@@ -1,24 +1,22 @@
 #header {
+  @apply transition-colors;
+
   .menu-item {
     a {
       @apply text-lg text-dark hover:text-green block;
     }
   }
 
-  #menuToggle,
-  #logo {
-    @apply transition-colors;
-  }
-
   &.scrolled {
-    #menuToggle,
-    #logo {
-      @apply bg-white;
-    }
+    @apply bg-white;
   }
 
   #menuToggle.open {
     @apply text-green;
+  }
+
+  #cartIcon:not(:hover) {
+    @apply text-dark;
   }
 }
 
@@ -28,7 +26,8 @@ body.page-template-template-white {
       fill: theme('colors.white');
     }
 
-    #menuToggle:not(.open):not(:hover) {
+    #menuToggle:not(.open):not(:hover),
+    #cartIcon:not(:hover) {
       @apply text-white;
     }
   }

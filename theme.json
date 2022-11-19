@@ -100,6 +100,11 @@
       ],
       "fontSizes": [
         {
+          "name": "sm",
+          "slug": "sm",
+          "size": "0.75rem"
+        },
+        {
           "name": "base",
           "slug": "base",
           "size": "0.9375rem"

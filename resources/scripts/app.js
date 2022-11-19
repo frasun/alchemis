@@ -2,6 +2,9 @@ import {domReady} from '@roots/sage/client';
 import Menu from './menu';
 import Swiper, {Navigation, Autoplay} from 'swiper';
 import Form from './form';
+import CartUpdate from './cart';
+
+const UPDATE_CART_BTN = 'update_cart';
 
 /**
  * app.main
@@ -35,6 +38,12 @@ const main = async (err) => {
   const forms = document.querySelectorAll('form[novalidate]');
   for (let form of Array.from(forms)) {
     new Form(form);
+  }
+
+  // cart
+  const cartUpdateBtn = document.querySelector(`[name=${UPDATE_CART_BTN}]`);
+  if (cartUpdateBtn) {
+    new CartUpdate(cartUpdateBtn);
   }
 };
 

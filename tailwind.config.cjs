@@ -52,6 +52,7 @@ module.exports = {
       headings: '0.9',
     },
     fontSize: ({theme}) => ({
+      sm: ['0.75rem'], // 12px
       base: ['0.9375rem', {lineHeight: theme('lineHeight.normal')}], // 15px
       md: ['1.125rem'], // 18px
       lg: ['1.375rem'], // 22px
