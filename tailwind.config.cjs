@@ -18,7 +18,8 @@ module.exports = {
       'grey-1': '#afafaf',
       'grey-2': '#cbcbcb',
       'grey-3': '#707070',
-      red: '#E3423C',
+      'grey-4': '#D8D8D8',
+      red: '#C41414',
       transparent: 'rgba(255, 255, 255, 0)',
     },
     screens: {

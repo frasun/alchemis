@@ -1,7 +1,7 @@
 <form class="lg:w-2/3 mx-auto mt-4" spellcheck="false" novalidate>
   <fieldset class="grid sm:grid-cols-2 sm:gap-3">
-    <input name="imię" type="text" class="mb-1 sm:mb-0" placeholder="{!! esc_attr_x('imię', 'sage') !!}" required>
-    <input name="e-mail" type="email" placeholder="{!! esc_attr_x('e-mail', 'sage') !!}" required>
+    <input name="imię" type="text" class="input-alt mb-1 sm:mb-0" placeholder="{!! esc_attr_x('imię', 'sage') !!}" required>
+    <input name="e-mail" type="email" class="input-alt" placeholder="{!! esc_attr_x('e-mail', 'sage') !!}" required>
   </fieldset>
 
   <footer class="mt-2 text-center">

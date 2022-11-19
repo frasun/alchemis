@@ -55,9 +55,14 @@
           "color": "#707070"
         },
         {
+          "name": "Grey-4",
+          "slug": "grey-4",
+          "color": "#d8d8d8"
+        },
+        {
           "name": "Red",
           "slug": "red",
-          "color": "#e3423c"
+          "color": "#c41414"
         },
         {
           "name": "Transparent",

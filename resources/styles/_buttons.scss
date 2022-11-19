@@ -5,13 +5,20 @@
   @apply bg-white;
   @apply transition-colors;
   @apply leading-normal;
+  @apply text-dark;
+  @apply inline-block;
 
-  &:hover {
+  &:not([disabled]):hover {
     @apply bg-green text-white;
   }
 
-  &:active {
+  &:not([disabled]):active {
     @apply text-dark;
     @apply transition-none;
+  }
+
+  &[disabled] {
+    @apply bg-grey border-grey text-greyDark;
+    @apply cursor-not-allowed;
   }
 }

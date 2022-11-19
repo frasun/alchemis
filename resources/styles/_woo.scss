@@ -1,7 +1,11 @@
 // general
 .woocommerce-Price-amount {
-  @apply block;
-  @apply font-bold text-md;
+  .product-grid &,
+  .single-product & {
+    @apply font-bold;
+    @apply block;
+    @apply text-md;
+  }
 }
 
 // product loop
@@ -95,6 +99,109 @@ $thumbnail-size-sm: 75px;
           @apply border-grey-3;
         }
       }
+    }
+  }
+}
+
+// cart
+.woocommerce {
+  @apply container;
+  @apply pb-6;
+
+  table.shop_table {
+    @apply border-0;
+    @apply m-0;
+
+    th {
+      @apply font-normal;
+    }
+
+    tbody,
+    tfoot {
+      td {
+        @apply font-normal;
+      }
+    }
+
+    tbody {
+      td {
+        @apply border-grey-3;
+
+        &.product-quantity {
+          @apply md:w-[100px];
+        }
+      }
+
+      tr:last-child {
+        td {
+          border: 0;
+          @apply pb-3;
+        }
+      }
+    }
+
+    tfoot {
+      td {
+        @apply align-top;
+        @apply border-0;
+        @apply p-1;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      @screen md {
+        tr {
+          &:first-child td {
+            @apply border-grey-3;
+            @apply border-t;
+
+            &:first-child {
+              @apply border-grey-3;
+              @apply border-l;
+            }
+
+            &:last-child {
+              @apply border-grey-3;
+              @apply border-r;
+            }
+          }
+
+          &:last-child td {
+            @apply border-grey-3;
+            @apply border-b;
+            @apply align-middle;
+
+            &:first-child {
+              @apply border-grey-3;
+              @apply border-l;
+            }
+
+            &:last-child {
+              @apply border-grey-3;
+              @apply border-r;
+            }
+          }
+        }
+      }
+    }
+
+    &.shop_table_responsive {
+      tr:nth-child(2n) td {
+        @apply bg-transparent;
+      }
+    }
+  }
+
+  a.remove {
+    @apply font-normal;
+    @apply text-xlg;
+
+    color: theme('colors.red') !important;
+
+    &:hover {
+      @apply bg-red;
     }
   }
 }

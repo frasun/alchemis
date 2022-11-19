@@ -107,8 +107,8 @@ add_theme_support('wc-product-gallery-slider');
  */
 add_filter('woocommerce_get_image_size_gallery_thumbnail', function ($size) {
     return array(
-        'width' => 120,
-        'height' => 120,
+        'width' => 90,
+        'height' => 90,
         'crop' => 1,
     );
 });

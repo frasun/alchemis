@@ -12,7 +12,7 @@
   }
   
   $header_classes = 'mt-[-6rem] lg:mt-[-7rem] pt-[6rem] lg:pt-[7rem]';
-  $header_inner_padding = 'py-4';
+  $header_inner_padding = 'pt-6 pb-4';
   
   if ($header_style) {
       if (is_front_page()) {
@@ -28,7 +28,13 @@
 @endphp
 
 <header class="{!! $header_classes !!}"{!! $header_style ? ' style="' . $header_style : '' !!}">
-  <div class="container h-full flex {!! $header_inner_padding !!}">
-    <h1 class="md:w-1/2 self-end">{!! $page_title !!}</h1>
-  </div>
+  @if ($header_style)
+    <div class="container h-full flex {!! $header_inner_padding !!}">
+      <h1 class="md:w-1/2 self-end">{!! $page_title !!}</h1>
+    </div>
+  @else
+    <div class="container">
+      <h1 class="{!! $header_inner_padding !!} border-t border-grey-3 text-xlg">{!! $page_title !!}</h1>
+    </div>
+  @endif
 </header>
