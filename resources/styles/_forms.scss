@@ -33,7 +33,7 @@ input[type='radio'],
 .woocommerce ul#shipping_method li input {
   @apply w-1 h-1 rounded border-2 border-greyDark appearance-none;
   @apply inline-flex items-center justify-center transition-colors;
-  @apply m-0 mt-[2px];
+  @apply m-0 mt-[3px];
   @apply align-text-top;
   @apply cursor-pointer;
 
@@ -52,6 +52,36 @@ input[type='radio'],
 
   & + label {
     @apply pl-0.75;
+  }
+}
+
+input[type='checkbox'] {
+  @apply w-1 h-1 rounded-[2px] border-2 border-greyDark appearance-none;
+  @apply inline-flex items-center justify-center transition-colors;
+  @apply m-0 mt-[3px];
+  @apply align-text-top;
+  @apply cursor-pointer;
+
+  &::after {
+    content: '';
+    @apply w-[0.3rem] h-[0.6rem] scale-0 transition-transform;
+    @apply border-r-2 border-b-2;
+    @apply border-white;
+    @apply rotate-45;
+    @apply relative -top-[2px];
+  }
+
+  &:checked {
+    @apply border-green;
+
+    &::after {
+      @apply scale-100;
+      @apply border-green;
+    }
+  }
+
+  & + label {
+    @apply pl-0.75 -ml-[4px];
   }
 }
 
