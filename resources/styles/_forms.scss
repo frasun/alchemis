@@ -28,3 +28,33 @@ html:where(.editor-styles-wrapper) {
     }
   }
 }
+
+input[type='radio'],
+.woocommerce ul#shipping_method li input {
+  @apply w-1 h-1 rounded border-2 border-greyDark appearance-none;
+  @apply inline-flex items-center justify-center transition-colors;
+  @apply m-0 mt-[2px];
+  @apply align-text-top;
+  @apply cursor-pointer;
+
+  &::after {
+    content: '';
+    @apply w-[0.5rem] h-[0.5rem] rounded bg-green scale-0 transition-transform;
+  }
+
+  &:checked {
+    @apply border-green;
+
+    &::after {
+      @apply scale-100;
+    }
+  }
+
+  & + label {
+    @apply pl-0.75;
+  }
+}
+
+label {
+  @apply cursor-pointer;
+}
