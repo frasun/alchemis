@@ -50,6 +50,8 @@ module.exports = {
       tight: '1.25',
       normal: '1.75',
       headings: '0.9',
+      radioLabel: '2',
+      label: '2.75',
     },
     fontSize: ({theme}) => ({
       sm: ['0.75rem'], // 12px

@@ -3,7 +3,9 @@ html:where(.editor-styles-wrapper) {
   input[type='text'],
   input[type='search'],
   input[type='email'],
-  input[type='number'] {
+  input[type='number'],
+  input[type='tel'],
+  textarea {
     @apply border border-grey-4 outline-0;
     @apply w-full py-0.75 px-1;
     @apply leading-tight;
@@ -87,4 +89,13 @@ input[type='checkbox'] {
 
 label {
   @apply cursor-pointer;
+  @apply leading-label;
+
+  input + & {
+    @apply leading-radioLabel;
+  }
+}
+
+textarea {
+  @apply h-7;
 }
