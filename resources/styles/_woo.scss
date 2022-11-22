@@ -280,3 +280,7 @@ $thumbnail-size-sm: 75px;
   @apply md:w-1/2;
   @apply rounded-none;
 }
+
+.woocommerce-NoticeGroup-updateOrderReview {
+  @apply hidden;
+}

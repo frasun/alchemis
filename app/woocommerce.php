@@ -152,13 +152,3 @@ add_filter('woocommerce_breadcrumb_defaults', function () {
 
     return $defaults;
 });
-
-// Removes cart notices from the checkout page
-add_action('init', function () {
-    if (function_exists('wc_cart_notices')) {
-        remove_action('woocommerce_before_checkout_form', array(wc_cart_notices(), 'woocommerce_cart_updated_notice_type'));
-    }
-});
-
-// disable cart notices
-add_filter('woocommerce_add_message', '__return_empty_string');
