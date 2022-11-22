@@ -116,6 +116,7 @@ $thumbnail-size-sm: 75px;
   table.shop_table {
     @apply border-0;
     @apply m-0;
+    @apply w-full;
 
     th {
       @apply font-normal;
@@ -283,4 +284,29 @@ $thumbnail-size-sm: 75px;
 
 .woocommerce-NoticeGroup-updateOrderReview {
   @apply hidden;
+}
+
+// my account
+.woocommerce-MyAccount-navigation {
+  ul {
+    @apply flex flex-wrap;
+
+    li {
+      a {
+        @apply px-3 py-0.75;
+        @apply block;
+      }
+
+      &.is-active {
+        a {
+          @apply border-b-2 border-green;
+          @apply text-dark;
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  @apply pt-3;
 }

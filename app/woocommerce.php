@@ -146,9 +146,22 @@ add_filter('woocommerce_breadcrumb_home_url', function () {
     return wc_get_page_permalink('shop');
 });
 
+/**
+ * Change breadcrumb defaults
+ */
 add_filter('woocommerce_breadcrumb_defaults', function () {
     $defaults['delimiter'] = ' &gt; ';
     $defaults['home'] = __('Products', 'woocommerce');
 
     return $defaults;
 });
+
+/**
+ * Remove woocommerce CSS
+ */
+// add_filter('woocommerce_enqueue_styles', function ($enqueue_styles) {
+//     unset($enqueue_styles['woocommerce-general']);    // Remove the gloss
+//     unset($enqueue_styles['woocommerce-layout']);        // Remove the layout
+//     unset($enqueue_styles['woocommerce-smallscreen']);    // Remove the smallscreen optimisation
+//     return $enqueue_styles;
+// });
