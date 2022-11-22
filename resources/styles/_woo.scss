@@ -270,3 +270,13 @@ $thumbnail-size-sm: 75px;
     float: none;
   }
 }
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  @apply border border-grey-4;
+  @apply pt-1 pb-3 px-3;
+  @apply my-3 mb-4 md:mx-auto;
+  @apply md:w-1/2;
+  @apply rounded-none;
+}
