@@ -25,7 +25,7 @@
   $calculator_text = '';
 @endphp
 
-<div class="woocommerce-shipping-totals shipping mt-4">
+<div class="woocommerce-shipping-totals shipping{{ !is_cart() ? ' mt-4' : '' }}">
   <h3 class="pb-1">{!! wp_kses_post($package_name) !!}</h3>
   @if ($available_methods)
     <ul id="shipping_method" class="woocommerce-shipping-methods">

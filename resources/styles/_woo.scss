@@ -176,7 +176,7 @@ $thumbnail-size-sm: 75px;
           &:last-child td {
             @apply border-grey-3;
             @apply border-b;
-            @apply align-middle;
+            @apply align-bottom;
 
             &:first-child {
               @apply border-grey-3;

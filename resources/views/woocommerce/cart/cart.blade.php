@@ -44,10 +44,10 @@
         <th class="product-remove text-center">
           {!! esc_html_e('Remove item', 'woocommerce') !!}
         </th>
-        <th class="product-price text-center">
+        <th class="product-price text-center md:w-[150px]">
           {!! esc_html_e('Price', 'woocommerce') !!}
         </th>
-        <th class="product-subtotal text-center">
+        <th class="product-subtotal text-center md:w-[150px]">
           {!! esc_html_e('Subtotal', 'woocommerce') !!}
         </th>
       </tr>
@@ -158,7 +158,7 @@
               ) !!}
             </td>
 
-            <td class="product-price text-center" data-title="{!! esc_attr_e('Price', 'woocommerce') !!}">
+            <td class="product-price text-center md:w-[150px]" data-title="{!! esc_attr_e('Price', 'woocommerce') !!}">
               {!! apply_filters(
                   'woocommerce_cart_item_price',
                   WC()->cart->get_product_price($_product),
@@ -167,7 +167,7 @@
               ) !!} {{-- PHPCS: XSS ok. --}}
             </td>
 
-            <td class="product-subtotal text-center" data-title="{!! esc_attr_e('Subtotal', 'woocommerce') !!}">
+            <td class="product-subtotal text-center md:w-[150px]" data-title="{!! esc_attr_e('Subtotal', 'woocommerce') !!}">
               {!! apply_filters(
                   'woocommerce_cart_item_subtotal',
                   WC()->cart->get_product_subtotal($_product, $cart_item['quantity']),
@@ -217,18 +217,18 @@
       @endphp
 
     </tbody>
-    @php
-      do_action('woocommerce_before_cart_collaterals');
-      
-      /**
-       * Cart collaterals hook.
-       *
-       * @hooked woocommerce_cross_sell_display
-       * @hooked woocommerce_cart_totals - 10
-       */
-      do_action('woocommerce_cart_collaterals');
-    @endphp
   </table>
+  @php
+    do_action('woocommerce_before_cart_collaterals');
+    
+    /**
+     * Cart collaterals hook.
+     *
+     * @hooked woocommerce_cross_sell_display
+     * @hooked woocommerce_cart_totals - 10
+     */
+    do_action('woocommerce_cart_collaterals');
+  @endphp
   @php
     do_action('woocommerce_after_cart_table');
   @endphp

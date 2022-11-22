@@ -8,7 +8,7 @@
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  border: inherit;
+  border: 2px solid theme('colors.green'); // woocommerce hack
 
   @apply py-0.75 px-4;
   @apply rounded-tl-full rounded-br-full;
