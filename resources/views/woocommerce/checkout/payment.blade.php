@@ -25,7 +25,7 @@
 <div id="payment" class="woocommerce-checkout-payment mt-4">
   @if (WC()->cart->needs_payment())
     <h3 class="pb-1">
-      {!! esc_html_e('Payment method', 'woocommerce') !!}
+      {!! esc_html_e('Payment', 'woocommerce') !!}
     </h3>
     <ul>
       @if (!empty($available_gateways))
