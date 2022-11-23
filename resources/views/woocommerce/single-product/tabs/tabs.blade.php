@@ -37,8 +37,12 @@
       @endif
     @endforeach
 
-    @php
-      do_action('woocommerce_product_after_tabs');
-    @endphp
+    @if (has_filter('woocommerce_product_after_tabs'))
+      <footer class="flex items-center mt-5 gap-3">
+        @php
+          do_action('woocommerce_product_after_tabs');
+        @endphp
+      </footer>
+    @endif
   </div>
 @endif

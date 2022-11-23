@@ -31,7 +31,7 @@
     do_action('woocommerce_before_add_to_cart_form');
   @endphp
 
-  <form class="flex items-center" action="{!! esc_url(apply_filters('woocommerce_add_to_cart_form_action', $product->get_permalink())) !!}" method="post" enctype='multipart/form-data'>
+  <form class="flex items-center flex-wrap" action="{!! esc_url(apply_filters('woocommerce_add_to_cart_form_action', $product->get_permalink())) !!}" method="post" enctype='multipart/form-data'>
     @php
       do_action('woocommerce_before_add_to_cart_button');
     @endphp
@@ -49,7 +49,7 @@
     @endphp
 
     <button type="submit" name="add-to-cart" value="{!! esc_attr($product->get_id()) !!}"
-      class="btn ml-2">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
+      class="btn ml-2 shrink-0">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
 
     @php
       do_action('woocommerce_after_add_to_cart_button');

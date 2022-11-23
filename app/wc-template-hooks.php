@@ -200,6 +200,8 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
  */
 // remove_filter('woocommerce_product_tabs', 'woocommerce_default_product_tabs');
 // remove_filter('woocommerce_product_tabs', 'woocommerce_sort_product_tabs', 99);
+add_action('woocommerce_product_after_tabs', 'woocommerce_template_single_price', 30);
+add_action('woocommerce_product_after_tabs', 'woocommerce_template_single_add_to_cart', 30);
 
 /**
  * Additional Information tab.

@@ -18,7 +18,7 @@ the readme will list any important changes.
 
 @section('content')
   <section class="container">
-    <div class="border-t border-grey-3 py-3">
+    <div class="border-t border-grey-3 pt-3 pb-5">
       @php
         do_action('get_header', 'shop');
         do_action('woocommerce_before_main_content');
