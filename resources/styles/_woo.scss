@@ -310,3 +310,14 @@ $thumbnail-size-sm: 75px;
 .woocommerce-MyAccount-content {
   @apply pt-3;
 }
+
+// paczkomat
+.btn.button.select-paczkomat-button {
+  @apply my-1;
+  @apply border-0 p-0 text-greyDark bg-transparent rounded-none;
+  @apply leading-normal;
+
+  &:not([disabled]):hover {
+    @apply text-green bg-transparent;
+  }
+}
