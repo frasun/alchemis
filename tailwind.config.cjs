@@ -87,9 +87,11 @@ module.exports = {
         'header-mobile': '80%',
         homepage: '100% 30%',
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
+            color: theme('colors.dark'),
+            '--tw-prose-bullets': theme('colors.green'),
             p: {
               padding: 0,
             },
@@ -99,7 +101,7 @@ module.exports = {
             },
           },
         },
-      },
+      }),
     },
     container: ({theme}) => ({
       center: true,
