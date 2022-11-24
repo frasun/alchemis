@@ -56,7 +56,7 @@ module.exports = {
     },
     fontSize: ({theme}) => ({
       sm: ['0.75rem'], // 12px
-      base: ['0.9375rem', {lineHeight: theme('lineHeight.normal')}], // 15px
+      base: ['1rem', {lineHeight: theme('lineHeight.normal')}], // 16px
       md: ['1.125rem'], // 18px
       lg: ['1.375rem'], // 22px
       xlg: ['1.75rem'], // 28px
@@ -92,6 +92,7 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.dark'),
+            fontSize: theme('fontSize.md'),
             '--tw-prose-bullets': theme('colors.green'),
             p: {
               padding: 0,
