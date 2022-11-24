@@ -112,7 +112,7 @@
         {
           "name": "base",
           "slug": "base",
-          "size": "1rem"
+          "size": "0.9375rem"
         },
         {
           "name": "md",
