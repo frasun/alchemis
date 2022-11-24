@@ -60,6 +60,11 @@
           "color": "#d8d8d8"
         },
         {
+          "name": "Grey-5",
+          "slug": "grey-5",
+          "color": "#eaeaea"
+        },
+        {
           "name": "Red",
           "slug": "red",
           "color": "#c41414"

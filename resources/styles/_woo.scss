@@ -43,7 +43,7 @@
 .woocommerce-message {
   @apply text-dark;
   @apply border-dark;
-  @apply bg-grey;
+  @apply bg-grey-5;
 }
 
 .woocommerce-info {
@@ -141,7 +141,7 @@ $thumbnail-size-sm: 75px;
       tr:last-child {
         td {
           border: 0;
-          @apply pb-3;
+          @apply py-3 px-0;
         }
       }
     }
@@ -159,6 +159,13 @@ $thumbnail-size-sm: 75px;
 
       @screen md {
         tr {
+          td {
+            &:last-child {
+              @apply border-grey-3;
+              @apply border-r;
+            }
+          }
+
           &:first-child td {
             @apply border-grey-3;
             @apply border-t;
@@ -166,11 +173,6 @@ $thumbnail-size-sm: 75px;
             &:first-child {
               @apply border-grey-3;
               @apply border-l;
-            }
-
-            &:last-child {
-              @apply border-grey-3;
-              @apply border-r;
             }
           }
 
@@ -182,11 +184,6 @@ $thumbnail-size-sm: 75px;
             &:first-child {
               @apply border-grey-3;
               @apply border-l;
-            }
-
-            &:last-child {
-              @apply border-grey-3;
-              @apply border-r;
             }
           }
         }
@@ -222,16 +219,6 @@ $thumbnail-size-sm: 75px;
 .woocommerce form .form-row {
   @apply p-0 m-0;
 
-  @screen md {
-    .screen-reader-text {
-      height: auto;
-      overflow: visible;
-      position: static !important;
-      width: auto;
-      margin: 0;
-    }
-  }
-
   .woocommerce-input-wrapper strong,
   label {
     @apply leading-label;
@@ -243,6 +230,16 @@ $thumbnail-size-sm: 75px;
 
   textarea {
     @apply h-7;
+  }
+}
+
+@screen md {
+  .address-field .screen-reader-text {
+    height: auto;
+    overflow: visible;
+    position: static !important;
+    width: auto;
+    margin: 0;
   }
 }
 
@@ -280,6 +277,10 @@ $thumbnail-size-sm: 75px;
         .scalable {
           @apply mx-auto;
         }
+      }
+
+      p {
+        @apply pt-0;
       }
     }
   }

@@ -53,7 +53,7 @@ input[type='radio'],
     }
   }
 
-  & + label {
+  &:not([style='display: none;']) + label {
     @apply pl-0.75;
   }
 }
@@ -83,7 +83,7 @@ input[type='checkbox'] {
     }
   }
 
-  & + label {
+  &:not([style='display: none;']) + label {
     @apply pl-0.75 -ml-[4px];
   }
 }

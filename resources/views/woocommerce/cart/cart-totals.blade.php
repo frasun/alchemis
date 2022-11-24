@@ -22,7 +22,7 @@
   <table cellspacing="0" class="shop_table shop_table_responsive">
     <tfoot>
       <tr>
-        <td colspan="4">
+        <td colspan="3" rowspan="2">
           <div class="flex">
             <div class="mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="38.558" height="22.816" viewBox="0 0 38.558 22.816">
@@ -53,13 +53,33 @@
             </div>
           </div>
         </td>
-        <td class="text-center md:w-[150px]">
-          {!! esc_html_e('Total', 'woocommerce') !!}
+        <td colspan="2" class="text-right">
+          {{-- <div>{!! esc_html_e('Subtotal', 'woocommerce') !!}</div> --}}
+          <div>{!! esc_html_e('Total', 'woocommerce') !!}</div>
         </td>
-        <td class="text-center md:w-[150px]" data-title="{!! esc_attr_e('Total', 'woocommerce') !!}">
-          {!! wc_cart_totals_order_total_html() !!}
+        <td class="text-center md:w-[150px]">
+          {{-- <div>{!! wc_cart_totals_subtotal_html() !!}</div> --}}
+          <div>{!! wc_cart_totals_order_total_html() !!}</div>
         </td>
       </tr>
+      <tr>
+        <td colspan="3" class="border-l-0 text-right">
+          @foreach (WC()->cart->get_coupons() as $code => $coupon)
+            <div class="cart-discount coupon-{!! esc_attr(sanitize_title($code)) !!}">
+              {!! wc_cart_totals_coupon_label($coupon) !!}
+              {!! wc_cart_totals_coupon_html($coupon) !!}
+            </div>
+          @endforeach
+        </td>
+      </tr>
+
+      {{-- <?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+      <tr class="fee">
+        <th><?php echo esc_html($fee->name); ?></th>
+        <td data-title="<?php echo esc_attr($fee->name); ?>"><?php wc_cart_totals_fee_html($fee); ?></td>
+      </tr>
+      <?php endforeach; ?> --}}
+
       <tr>
         <td colspan="3">
           <a href="{!! get_permalink(wc_get_page_id('shop')) !!}" class="link">

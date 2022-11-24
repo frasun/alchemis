@@ -33,4 +33,9 @@
     @apply bg-grey border-grey text-greyDark;
     @apply cursor-not-allowed;
   }
+
+  &.btn-sm,
+  &.button-sm {
+    @apply py-[0.4rem] px-3;
+  }
 }
