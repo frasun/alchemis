@@ -2,7 +2,7 @@
 @import '_headings';
 
 @layer base {
-  body {
+  body:not(.wp-admin) {
     @apply text-base text-dark bg-greyLight;
 
     -webkit-font-smoothing: antialiased;
