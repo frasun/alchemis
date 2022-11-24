@@ -9,6 +9,7 @@
   
   if ($header_style) {
       $header_style .= ' background-size: cover;';
+      $header_style .= ' background-position-y: 18%;';
   }
   
   $header_classes = 'mt-[-6rem] lg:mt-[-7rem] pt-[6rem] lg:pt-[7rem]';

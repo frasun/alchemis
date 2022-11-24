@@ -31,4 +31,8 @@ body.page-template-template-white {
       @apply text-white;
     }
   }
+
+  main > header {
+    @apply text-white;
+  }
 }
