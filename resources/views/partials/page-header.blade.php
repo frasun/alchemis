@@ -16,10 +16,10 @@
   
   if ($header_style) {
       if (is_front_page()) {
-          $header_classes .= ' h-[100vh] max-h-[86rem] bg-header-mobile md:bg-homepage';
+          $header_classes .= ' h-[85vh] max-h-[64rem] bg-header-mobile md:bg-homepage';
           $header_inner_padding = 'pt-8 pb-8 md:pb-13';
       } else {
-          $header_classes .= ' h-[90vh] max-h-[55rem] bg-header-mobile md:bg-right';
+          $header_classes .= ' h-[70vh] max-h-[42rem] bg-header-mobile md:bg-right';
           $header_inner_padding = 'py-8';
       }
   }
@@ -30,7 +30,7 @@
 <header class="{!! $header_classes !!}"{!! $header_style ? ' style="' . $header_style : '' !!}">
   @if ($header_style)
     <div class="container h-full flex {!! $header_inner_padding !!}">
-      <h1 class="md:w-1/2 self-end">{!! $page_title !!}</h1>
+      <h1 class="md:w-1/2 self-end{!! is_front_page() ? ' lg:self-center' : '' !!}">{!! $page_title !!}</h1>
     </div>
   @else
     <div class="container">
