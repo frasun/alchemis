@@ -256,6 +256,32 @@ $thumbnail-size-sm: 75px;
 .woocommerce-checkout {
   #payment {
     @apply bg-transparent;
+
+    ul.payment_methods {
+      @apply p-0 border-0;
+
+      li input {
+        margin: 3px 0 0;
+      }
+    }
+
+    div.payment_box {
+      @apply p-0 m-0 font-normal leading-normal bg-transparent text-dark;
+
+      &::before {
+        content: none;
+      }
+
+      &.payment_method_wppay-blik-zero {
+        max-width: 150px;
+      }
+
+      &.payment_method_wppay-card {
+        .scalable {
+          @apply mx-auto;
+        }
+      }
+    }
   }
 }
 

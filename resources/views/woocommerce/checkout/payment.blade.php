@@ -27,7 +27,7 @@
     <h3 class="pb-1">
       {!! esc_html_e('Payment', 'woocommerce') !!}
     </h3>
-    <ul>
+    <ul class="wc_payment_methods payment_methods methods">
       @if (!empty($available_gateways))
         @foreach ($available_gateways as $gateway)
           {!! wc_get_template('checkout/payment-method.php', ['gateway' => $gateway]) !!}

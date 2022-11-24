@@ -28,4 +28,9 @@
   <label for="payment_method_{!! esc_attr($gateway->id) !!}">
     {!! $gateway->get_title() !!}
   </label>
+  @if ($gateway->has_fields() || $gateway->get_description())
+    <div class="payment_box payment_method_{!! esc_attr($gateway->id) !!}">
+      {!! $gateway->payment_fields() !!}
+    </div>
+  @endif
 </li>
