@@ -160,6 +160,7 @@ add_action('init', function () {
 
 /**
  * Remove global inline styles
+ * Comment out for debug
  */
 add_action('init', function () {
     remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');

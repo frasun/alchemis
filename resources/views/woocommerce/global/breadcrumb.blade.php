@@ -21,27 +21,19 @@
   }
   
   if (!empty($breadcrumb)) {
-      echo $wrap_before;
-  
       // remove categories
       $modified_breadcrumb = [reset($breadcrumb), end($breadcrumb)];
   
       foreach ($modified_breadcrumb as $key => $crumb) {
-          echo $before;
-  
           if (!empty($crumb[1]) && sizeof($modified_breadcrumb) !== $key + 1) {
               echo '<a href="' . esc_url($crumb[1]) . '">' . esc_html($crumb[0]) . '</a>';
           } else {
               echo esc_html($crumb[0]);
           }
   
-          echo $after;
-  
           if (sizeof($modified_breadcrumb) !== $key + 1) {
               echo '<span class="px-0.75 text-greyDark">></span>';
           }
       }
-  
-      echo $wrap_after;
   }
 @endphp
