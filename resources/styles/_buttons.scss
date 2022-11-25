@@ -35,7 +35,8 @@
   }
 
   &.btn-sm,
-  &.button-sm {
+  &.button-sm,
+  &.wc-forward {
     @apply py-[0.4rem] px-3;
   }
 }

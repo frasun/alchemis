@@ -46,6 +46,7 @@
   @apply bg-grey-5;
 }
 
+.woocommerce-message,
 .woocommerce-info {
   @apply border-green;
 
@@ -56,6 +57,10 @@
 
 .woocommerce-error {
   @apply border-red;
+
+  &::before {
+    @apply text-red;
+  }
 }
 
 // gallery
