@@ -137,16 +137,14 @@ $thumbnail-size-sm: 75px;
     tbody {
       td {
         @apply border-grey-3;
+        @apply py-0.75 px-[0.5rem];
 
         &.product-quantity {
           @apply md:w-[100px];
-        }
-      }
 
-      tr:last-child {
-        td {
-          border: 0;
-          @apply py-3 px-0;
+          .quantity {
+            @apply w-[100px] inline-block;
+          }
         }
       }
     }
@@ -210,6 +208,38 @@ $thumbnail-size-sm: 75px;
 
     &:hover {
       @apply bg-red;
+    }
+  }
+
+  .woocommerce-shipping-methods {
+    li {
+      @apply flex items-center;
+
+      .easypack-shipping-method-logo {
+        @apply top-0;
+      }
+    }
+  }
+}
+
+.shop_table.woocommerce-cart-form__contents {
+  tr:last-child {
+    td {
+      border: 0;
+      @apply py-3 px-0;
+    }
+  }
+
+  .actions {
+    @apply flex flex-col md:flex-row gap-1 md:table-cell;
+
+    button {
+      @apply self-center md:self-auto;
+      @apply order-1 md:order-2;
+    }
+
+    .coupon {
+      @apply order-2 md:order-1;
     }
   }
 }
@@ -344,12 +374,86 @@ $thumbnail-size-sm: 75px;
 }
 
 // paczkomat
-.btn.button.select-paczkomat-button {
+#eqasypack_show_geowidget {
   @apply my-1;
   @apply border-0 p-0 text-greyDark bg-transparent rounded-none;
   @apply leading-normal;
 
   &:not([disabled]):hover {
     @apply text-green bg-transparent;
+  }
+}
+
+.cart_totals {
+  @apply border border-grey-3 mt-1 p-1;
+
+  table {
+    tbody {
+      @apply flex flex-col md:flex-row;
+
+      .woocommerce-shipping-totals.shipping {
+        @apply flex flex-col grow;
+
+        th,
+        td {
+          @apply align-top;
+
+          text-align: left !important;
+        }
+
+        .woocommerce-shipping-destination {
+          @apply pb-0;
+        }
+      }
+
+      .order-total {
+        th,
+        td {
+          @apply align-top text-right md:w-[120px] lg:w-[150px] border-0;
+        }
+
+        td {
+          @apply text-lg leading-none;
+        }
+      }
+    }
+  }
+
+  .wc-proceed-to-checkout {
+    @apply py-0.75 px-[0.5rem];
+    @apply flex gap-1 flex-row-reverse md:flex-row justify-between items-end flex-wrap;
+    @apply mt-3 md:mt-0;
+
+    .link {
+      @apply order-2 md:order-1;
+    }
+
+    .btn {
+      @apply order-1 md:order-2;
+    }
+  }
+}
+
+.woocommerce .shop_table.woocommerce-checkout-review-order-table {
+  @apply mt-4;
+
+  .woocommerce-shipping-totals.shipping {
+    svg {
+      @apply hidden;
+    }
+  }
+
+  th {
+    @apply hidden;
+  }
+
+  tfoot {
+    tr,
+    tr:first-child {
+      td,
+      td:last-child {
+        @apply p-0 border-0;
+      }
+    }
   }
 }

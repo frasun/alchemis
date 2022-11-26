@@ -34,6 +34,7 @@ module.exports = {
     },
     spacing: {
       0: '0px',
+      0.5: '0.5rem', // 8px
       0.75: '0.75rem', // 12px
       1: '1rem', // 16px
       2: '1.5rem', // 20px
@@ -48,9 +49,10 @@ module.exports = {
       13: '13rem', // 208px
     },
     lineHeight: {
+      headings: '0.9',
+      none: '1',
       tight: '1.25',
       normal: '1.75',
-      headings: '0.9',
       radioLabel: '2',
       label: '2.75',
     },
