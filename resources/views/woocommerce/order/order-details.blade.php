@@ -96,11 +96,11 @@
     do_action('woocommerce_order_details_after_order_table', $order);
   @endphp
 
-  @if ($show_customer_details)
-    {!! wc_get_template('order/order-details-customer.php', ['order' => $order]) !!}
-  @endif
-
   @php
     do_action('woocommerce_after_order_details', $order);
   @endphp
+
+  {{-- @if ($show_customer_details) --}}
+  {{ wc_get_template('order/order-details-customer.php', ['order' => $order]) }}
+  {{-- @endif --}}
 </section>

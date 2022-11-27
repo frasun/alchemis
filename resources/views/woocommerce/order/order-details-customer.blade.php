@@ -21,7 +21,7 @@
 @endphp
 
 @if ($show_shipping)
-  <section class="pt-2">
+  <section>
     <h4 class="mt-3">
       {!! esc_html_e('Billing address', 'woocommerce') !!}
     </h4>
