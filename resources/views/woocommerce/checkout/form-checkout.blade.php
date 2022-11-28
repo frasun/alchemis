@@ -62,6 +62,10 @@
   @php
     do_action('woocommerce_checkout_after_order_review');
   @endphp
+
+  <footer>
+    <img src="@asset('images/banner_1215x200B.png')" />
+  </footer>
 </form>
 
 <?php do_action('woocommerce_after_checkout_form', $checkout); ?>

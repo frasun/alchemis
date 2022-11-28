@@ -3,7 +3,7 @@
 
 @layer base {
   body:not(.wp-admin) {
-    @apply text-base text-dark bg-greyLight;
+    @apply text-base text-dark bg-white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

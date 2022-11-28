@@ -1,0 +1,18 @@
+.blog {
+  a.post {
+    @apply border-2 rounded-tl rounded-br border-grey-2;
+    @apply hover:shadow transition-shadow bg-white;
+
+    figure {
+      @apply rounded-tl rounded-br overflow-hidden m-[-2px];
+    }
+  }
+}
+
+.posts-navigation {
+  @apply container;
+
+  .nav-links {
+    @apply flex flex-wrap gap-1 justify-center;
+  }
+}
