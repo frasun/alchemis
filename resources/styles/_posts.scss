@@ -1,5 +1,6 @@
-.blog {
-  a.post {
+.blog,
+.archive {
+  .hentry {
     @apply border-2 rounded-tl rounded-br border-grey-2;
     @apply hover:shadow transition-shadow bg-white;
 

@@ -6,8 +6,12 @@
     if (has_post_thumbnail($page_id)) {
         $thumbnail_url = get_the_post_thumbnail_url($page_id, 'full');
     }
+    
+    if (is_archive()) {
+        $page_title = get_post_type_object(get_post_type())->labels->name;
+    }
   @endphp
-  @include('partials.page-header', ['thumbnail_url' => $thumbnail_url])
+  @include('partials.page-header', ['thumbnail_url' => $thumbnail_url, 'page_title' => $page_title])
 
   <section class="container py-5">
     {!! apply_filters('the_content', get_post($page_id)->post_content) !!}

@@ -8,17 +8,154 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-09 18:05+0100\n"
+"POT-Creation-Date: 2022-11-28 13:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:53
+#: resources/views/woocommerce/myaccount/orders.blade.php:53
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:65
+#: resources/views/woocommerce/myaccount/orders.blade.php:65
+#, php-format
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:95
+#: resources/views/woocommerce/myaccount/orders.blade.php:95
+msgid "Previous"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:100
+#: resources/views/woocommerce/myaccount/orders.blade.php:100
+msgid "Next"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:107
+#: resources/views/woocommerce/myaccount/orders.blade.php:107
+msgid "Browse products"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/orders.blade.php:108
+#: resources/views/woocommerce/myaccount/orders.blade.php:108
+msgid "No order has been made yet."
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-lost-password.blade.php:49
+#: resources/views/woocommerce/myaccount/form-lost-password.blade.php:49
+msgid "Reset password"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/dashboard.blade.php:36
+#: resources/views/woocommerce/myaccount/dashboard.blade.php:36
+#, php-format
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:27
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:27
+msgid "First name"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:32
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:32
+msgid "Last name"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:39
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:39
+msgid "Display name"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:41
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:41
+msgid ""
+"This will be how your name will be displayed in the account section and in "
+"reviews"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:46
+#: resources/views/woocommerce/myaccount/form-login.blade.php:104
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:46
+#: resources/views/woocommerce/myaccount/form-login.blade.php:104
+msgid "Email address"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:52
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:52
+msgid "Password change"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:55
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:55
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:60
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:60
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:65
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:65
+msgid "Confirm new password"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:77
+#: resources/views/woocommerce/myaccount/form-edit-account.blade.php:77
+msgid "Save changes"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:88
+#: resources/views/woocommerce/myaccount/form-login.blade.php:128
+#: resources/views/woocommerce/myaccount/form-login.blade.php:88
+#: resources/views/woocommerce/myaccount/form-login.blade.php:128
+msgid "Register"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:96
+#: resources/views/woocommerce/myaccount/form-login.blade.php:96
+msgid "Username"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:112
+#: resources/views/woocommerce/myaccount/form-login.blade.php:46
+#: resources/views/woocommerce/myaccount/form-login.blade.php:112
+#: resources/views/woocommerce/global/form-login.blade.php:43
+msgid "Password"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:117
+#: resources/views/woocommerce/myaccount/form-login.blade.php:117
+msgid "A link to set a new password will be sent to your email address."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/terms.blade.php:30
+msgid "required"
+msgstr ""
+
+#: resources/views/woocommerce/single-product/product-image.blade.php:37
+#: resources/views/woocommerce/single-product/product-image.blade.php:37
+msgid "Awaiting product image"
+msgstr ""
 
 #: app/filters.php:15
 msgid "Continued"
+msgstr ""
+
+#: app/woocommerce.php:154
+msgid "Products"
 msgstr ""
 
 #: app/View/Composers/Post.php:48
@@ -47,21 +184,333 @@ msgid "Footer"
 msgstr ""
 
 #: app/setup.php:144
-msgctxt "post type general name"
+msgctxt "Post type general name"
 msgid "Testimonials"
 msgstr ""
 
 #: app/setup.php:145
-msgctxt "post type singular name"
+msgctxt "Post type singular name"
 msgid "Testimonial"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+#: app/setup.php:146
+msgctxt "Admin Menu text"
+msgid "Testimonials"
+msgstr ""
+
+#: app/setup.php:147
+msgctxt "Add New on Toolbar"
+msgid "Testimonial"
+msgstr ""
+
+#: app/setup.php:162
+msgctxt ""
+"The post type archive label used in nav menus. Default “Post Archives”. "
+"Added in 4.4"
+msgid "Book archives"
+msgstr ""
+
+#: app/setup.php:166
+msgctxt ""
+"Screen reader text for the pagination heading on the post type listing "
+"screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4"
+msgid "Books list navigation"
+msgstr ""
+
+#: app/setup.php:167
+msgctxt ""
+"Screen reader text for the items list heading on the post type listing "
+"screen. Default “Posts list”/”Pages list”. Added in 4.4"
+msgid "Books list"
+msgstr ""
+
+#: resources/views/index.blade.php:23
+#: resources/views/forms/newsletter.blade.php:16
+#: resources/views/search.blade.php:8
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: resources/views/404.blade.php:8
+#: resources/views/woocommerce/order/order-details.blade.php:42
+msgid "Order number:"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details.blade.php:45
+msgid "Date:"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details.blade.php:53
+msgid "Order details"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details.blade.php:90
+msgid "Note:"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details-customer.blade.php:26
+msgid "Billing address"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details-customer.blade.php:30
+#: resources/views/woocommerce/order/order-details-customer.blade.php:47
+msgid "N/A"
+msgstr ""
+
+#: resources/views/woocommerce/order/order-details-customer.blade.php:44
+msgid "Shipping address"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-lost-password.blade.php:28
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-lost-password.blade.php:36
+msgid "Username or email"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/dashboard.blade.php:47
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">billing address</a>, and <a "
+"href=\"%3$s\">edit your password and account details</a>."
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/dashboard.blade.php:50
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">shipping and billing addresses</a>, "
+"and <a href=\"%3$s\">edit your password and account details</a>."
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:28
+msgid "Login"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:38
+#: resources/views/woocommerce/global/form-login.blade.php:36
+msgid "Username or email address"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:62
+#: resources/views/woocommerce/global/form-login.blade.php:59
+msgid "Remember me"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:73
+#: resources/views/woocommerce/global/form-login.blade.php:70
+msgid "Log in"
+msgstr ""
+
+#: resources/views/woocommerce/myaccount/form-login.blade.php:78
+#: resources/views/woocommerce/global/form-login.blade.php:75
+msgid "Lost your password?"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-coupon.blade.php:30
+msgid "Have a coupon?"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-coupon.blade.php:32
+msgid "Click here to enter your code"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-coupon.blade.php:42
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-coupon.blade.php:48
+#: resources/views/woocommerce/cart/cart.blade.php:191
+msgid "Coupon:"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-coupon.blade.php:58
+#: resources/views/woocommerce/cart/cart.blade.php:197
+msgid "Apply coupon"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/review-order.blade.php:24
+#: resources/views/woocommerce/cart/cart.blade.php:38
+msgid "Product"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/review-order.blade.php:25
+#: resources/views/woocommerce/checkout/review-order.blade.php:70
+#: resources/views/woocommerce/cart/cart.blade.php:51
+#: resources/views/woocommerce/cart/cart-totals.blade.php:31
+msgid "Subtotal"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/review-order.blade.php:121
+#: resources/views/woocommerce/cart/cart-totals.blade.php:111
+msgid "Total"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/thankyou.blade.php:29
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/thankyou.blade.php:36
+msgid "Pay"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/thankyou.blade.php:40
+msgid "My account"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/thankyou.blade.php:48
+#: resources/views/woocommerce/checkout/thankyou.blade.php:62
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-shipping.blade.php:32
+msgid "Ship to a different address?"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-shipping.blade.php:68
+msgid "Additional information"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-checkout.blade.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/payment.blade.php:28
+msgid "Payment"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/payment.blade.php:41
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/payment.blade.php:44
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/payment.blade.php:55
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+
+#: resources/views/woocommerce/checkout/payment.blade.php:61
+msgid "Update totals"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-billing.blade.php:25
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-billing.blade.php:27
+msgid "Billing details"
+msgstr ""
+
+#: resources/views/woocommerce/checkout/form-billing.blade.php:57
+msgid "Create an account?"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:33
+msgid "Thumbnail image"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:42
+msgid "Quantity"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:45
+msgid "Remove item"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:48
+msgid "Price"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:117
+msgid "Available on backorder"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:153
+msgid "Remove this item"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart.blade.php:210
+msgid "Update cart"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:64
+#, python-format
+msgid "Shipping to %s."
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:66
+msgid "Change address"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:73
+msgid "Shipping options will be updated"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:89
+msgid "Shipping costs are calculated during checkout."
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:96
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:105
+msgid ""
+"There are no shipping options available. Please ensure that your address has "
+"been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:115
+#, python-format
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-shipping.blade.php:121
+msgid "Enter a different address"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-empty.blade.php:29
+msgid "Return to shop"
+msgstr ""
+
+#: resources/views/woocommerce/cart/proceed-to-checkout-button.blade.php:26
+msgid "Proceed to checkout"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-totals.blade.php:26
+msgid "Cart totals"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-totals.blade.php:59
+msgid "Shipping"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-totals.blade.php:83
+#, python-format
+msgid "(estimated for %s)"
+msgstr ""
+
+#: resources/views/woocommerce/cart/cart-totals.blade.php:125
+msgid "Continue shopping"
+msgstr ""
+
+#: resources/views/404.blade.php:9
 msgid "Sorry, but the page you are trying to view does not exist."
+msgstr ""
+
+#: resources/views/forms/newsletter.blade.php:8
+msgctxt "sage"
+msgid "zapisz się"
 msgstr ""
 
 #: resources/views/forms/search.blade.php:4
@@ -95,8 +544,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: resources/views/partials/content-page.blade.php:3
-#: resources/views/partials/content-single.blade.php:15
+#: resources/views/partials/content-page.blade.php:5
+#: resources/views/partials/content-single.blade.php:38
 msgid "Pages:"
 msgstr ""
 

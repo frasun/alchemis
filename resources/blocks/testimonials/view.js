@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
-import {decodeEntities} from '@wordpress/html-entities';
+import {useSelect} from '@wordpress/data';
 
 const Slider = ({testimonials, ...props}) => {
+  const testimonials = useSelect(
+    (select) => select(store).getEntityRecords('postType', 'testimonial'),
+    [],
+  );
+
   return (
     <div {...props}>
       <div className="swiper-wrapper">
-        {testimonials?.map(({id, title, content}) => (
+        {testimonials?.map(({id, content, meta}) => (
           <figure
             key={id}
             className="swiper-slide text-greyDark flex flex-col px-5">
@@ -14,9 +19,13 @@ const Slider = ({testimonials, ...props}) => {
               dangerouslySetInnerHTML={{
                 __html: content?.rendered,
               }}></blockquote>
-            <figcaption className="order-1 bg-white self-center py-1 px-5 rounded-tl-full rounded-br-full mb-1">
-              {decodeEntities(title.rendered)}
-            </figcaption>
+            {meta?.author ? (
+              <figcaption className="order-1 bg-white self-center py-1 px-5 rounded-tl-full rounded-br-full mb-1">
+                {meta.author}
+              </figcaption>
+            ) : (
+              ''
+            )}
           </figure>
         ))}
       </div>

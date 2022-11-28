@@ -141,21 +141,50 @@ add_action('widgets_init', function () {
  */
 add_action('init', function () {
     $labels = array(
-        'name'               => _x('Testimonials', 'post type general name'),
-        'singular_name'      => _x('Testimonial', 'post type singular name'),
-        'menu_name'          => 'Testimonials'
+        'name'                  => _x('Testimonials', 'Post type general name', 'sage'),
+        'singular_name'         => _x('Testimonial', 'Post type singular name', 'sage'),
+        'menu_name'             => _x('Testimonials', 'Admin Menu text', 'sage'),
+        'name_admin_bar'        => _x('Testimonial', 'Add New on Toolbar', 'sage'),
+        // 'add_new'               => __('Add New', 'sage'),
+        // 'add_new_item'          => __('Add New Book', 'sage'),
+        // 'new_item'              => __('New Book', 'sage'),
+        // 'edit_item'             => __('Edit Book', 'sage'),
+        // 'view_item'             => __('View Book', 'sage'),
+        // 'all_items'             => __('All Books', 'sage'),
+        // 'search_items'          => __('Search Books', 'sage'),
+        // 'parent_item_colon'     => __('Parent Books:', 'sage'),
+        // 'not_found'             => __('No books found.', 'sage'),
+        // 'not_found_in_trash'    => __('No books found in Trash.', 'sage'),
+        // 'featured_image'        => _x('Book Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'sage'),
+        // 'set_featured_image'    => _x('Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'sage'),
+        // 'remove_featured_image' => _x('Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'sage'),
+        // 'use_featured_image'    => _x('Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'sage'),
+        'archives'              => _x('Book archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'sage'),
+        // 'insert_into_item'      => _x('Insert into book', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'sage'),
+        // 'uploaded_to_this_item' => _x('Uploaded to this book', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'sage'),
+        // 'filter_items_list'     => _x('Filter books list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'sage'),
+        'items_list_navigation' => _x('Books list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'sage'),
+        'items_list'            => _x('Books list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'sage'),
     );
     $args = array(
         'labels'        => $labels,
         'description'   => 'Holds our testimonial items',
         'public'        => true,
         'menu_position' => 5,
-        'supports'      => array('title', 'editor'),
+        'supports'      => array('title', 'editor', 'thumbnail', 'custom-fields'),
         'publicly_queryable'  => true,
         'exclude_from_search' => true,
-        'show_in_rest' => true
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'testimonial'),
+        'has_archive' => 'testimonials'
     );
     register_post_type('testimonial', $args);
+
+    register_post_meta('testimonial', 'author', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string'
+    ));
 });
 
 /**

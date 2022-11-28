@@ -1,4 +1,9 @@
-<article @php(post_class('container pb-5'))>
+@php
+  $author = get_post_meta(get_the_ID(), 'author', true);
+@endphp
+
+<article
+  @php(post_class('container pb-5'))>
   <header class="pt-3 pb-4 border-t border-grey-3">
     @include('partials.post-breadcrumbs')
     @include('partials.post-featured-image')
@@ -11,10 +16,16 @@
           </path>
         </svg>
       </div>
-      <h1 class="pt-0.75 text-xl">{!! $title !!}</h1>
-    </div>
+      <div>
+        <h1 class="pt-0.75 text-xl">
+          {!! $title !!}
+        </h1>
 
-    {{-- @include('partials.entry-meta') --}}
+        @if ($author)
+          <h3 class="pt-0.75">{!! $author !!}</h3>
+        @endif
+  </div>
+  </div>
   </header>
 
   <div class="prose">

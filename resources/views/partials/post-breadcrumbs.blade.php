@@ -6,7 +6,13 @@
 @endphp
 
 <nav>
-  <a href="{!! get_post_type_archive_link('post') !!}">{!! get_the_title(get_option('page_for_posts')) !!}</a>
+  <a href="{!! get_post_type_archive_link(get_post_type()) !!}">
+    @if (get_post_type() == 'post')
+      {!! get_the_title(get_option('page_for_posts')) !!}
+    @else
+      {!! get_post_type_object(get_post_type())->labels->name !!}
+    @endif
+  </a>
   <span class="inline-block px-0.75 text-greyDark">></span>
 
   @if (has_category())
