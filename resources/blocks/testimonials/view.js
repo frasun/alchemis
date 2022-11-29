@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
-import {useSelect} from '@wordpress/data';
 
 const Slider = ({testimonials, ...props}) => {
-  const testimonials = useSelect(
-    (select) => select(store).getEntityRecords('postType', 'testimonial'),
-    [],
-  );
-
   return (
     <div {...props}>
       <div className="swiper-wrapper">

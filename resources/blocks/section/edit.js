@@ -16,6 +16,7 @@ const ALLOWED_BLOCKS = [
   'alchemis/testimonials',
   'core/latest-posts',
   'core/columns',
+  'woocommerce/featured-product',
 ];
 const ALLOWED_MEDIA_TYPES = ['image'];
 

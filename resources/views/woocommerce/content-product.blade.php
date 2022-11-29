@@ -57,10 +57,6 @@
         do_action('woocommerce_shop_loop_item_title');
       @endphp
 
-      @if ($short_desc = $product->get_short_description())
-        <p class="pt-0.75 pb-0">{!! $short_desc !!}</p>
-      @endif
-
       @php
         /**
          * Hook: woocommerce_after_shop_loop_item_title.
