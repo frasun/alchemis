@@ -45,3 +45,35 @@
     }
   }
 }
+
+.wc-block-grid {
+  &.wc-block-product-new {
+    .wc-block-grid__products {
+      @apply m-0 grid md:grid-cols-3 gap-3;
+
+      .wc-block-grid__product {
+        @apply flex-none max-w-full border-0 text-left;
+
+        .wc-block-grid__product-title {
+          @apply uppercase font-bold pt-0.75 leading-tight m-0;
+        }
+
+        .wc-block-grid__product-price.price {
+          @apply font-bold text-md pt-0.75 m-0;
+        }
+
+        .wp-block-button.wc-block-grid__product-add-to-cart {
+          @apply pt-0.75;
+        }
+
+        .wc-block-grid__product-link {
+          @apply text-dark hover:text-green;
+        }
+      }
+
+      .wc-block-grid__product-image img[alt=''] {
+        @apply border-0;
+      }
+    }
+  }
+}

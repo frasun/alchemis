@@ -9,7 +9,8 @@
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .posts-navigation a,
-.wc-block-featured-product__link a {
+.wp-block-button a,
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
   border: 2px solid theme('colors.green'); // woocommerce hack
 
   @apply py-0.75 px-4;

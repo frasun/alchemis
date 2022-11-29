@@ -17,6 +17,7 @@ const ALLOWED_BLOCKS = [
   'core/latest-posts',
   'core/columns',
   'woocommerce/featured-product',
+  'woocommerce/product-new',
 ];
 const ALLOWED_MEDIA_TYPES = ['image'];
 
