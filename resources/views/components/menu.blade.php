@@ -9,5 +9,13 @@
     class="hidden absolute left-full -translate-x-full xl:-translate-x-1/2 xl:left-1/2 py-1.5 min-w-[250px] lg:max-xl:min-w-[200px] xl:min-w-[220px] text-center bg-white/80 max-h-[calc(100vh-10rem)] overflow-auto"
     aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
     {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'echo' => false]) !!}
+
+    @if (is_user_logged_in())
+      <div class="menu-item">
+        <a href="{!! esc_url(wp_logout_url('/')) !!}">
+          {!! __('Logout', 'sage') !!}
+        </a>
+      </div>
+    @endif
   </nav>
 </aside>

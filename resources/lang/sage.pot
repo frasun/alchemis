@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 13:37+0100\n"
+"POT-Creation-Date: 2022-11-29 10:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -521,6 +521,10 @@ msgstr ""
 #: resources/views/forms/search.blade.php:15
 msgctxt "submit button"
 msgid "Search"
+msgstr ""
+
+#: resources/views/components/menu.blade.php:16
+msgid "Logout"
 msgstr ""
 
 #: resources/views/layouts/app.blade.php:2
