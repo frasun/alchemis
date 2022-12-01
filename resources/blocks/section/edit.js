@@ -16,6 +16,7 @@ const ALLOWED_BLOCKS = [
   'alchemis/testimonials',
   'core/latest-posts',
   'core/columns',
+  'core/list',
   'woocommerce/featured-product',
   'woocommerce/product-new',
 ];
