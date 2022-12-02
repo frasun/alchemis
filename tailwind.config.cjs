@@ -94,7 +94,6 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.dark'),
-            fontSize: theme('fontSize.md'),
             '--tw-prose-bullets': theme('colors.green'),
             p: {
               padding: 0,
@@ -102,6 +101,11 @@ module.exports = {
             maxWidth: 'none',
             h3: {
               textTransform: 'uppercase',
+            },
+            a: {
+              fontWeight: 'normal',
+              textDecoration: 'none',
+              color: theme('colors.greyDark'),
             },
           },
         },

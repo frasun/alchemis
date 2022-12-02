@@ -20,6 +20,19 @@
   }
 }
 
+#header[data-theme='white'] {
+  &:not(.scrolled) {
+    #logo g {
+      fill: theme('colors.white');
+    }
+
+    #menuToggle:not(.open):not(:hover),
+    #cartIcon:not(:hover) {
+      @apply text-white;
+    }
+  }
+}
+
 body.page-template-template-white {
   #header:not(.scrolled) {
     #logo g {

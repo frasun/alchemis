@@ -30,7 +30,7 @@
 @endphp
 
 @if (!empty($product_tabs))
-  <div class="prose">
+  <div class="prose prose-lg">
     @foreach ($product_tabs as $key => $product_tab)
       @if (isset($product_tab['callback']))
         {!! call_user_func($product_tab['callback'], $key, $product_tab) !!}

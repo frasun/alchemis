@@ -1,5 +1,5 @@
 @php
-  if (isset($thumbnail_url)) {
+  if (isset($thumbnail_url) && !is_null($thumbnail_url)) {
       $header_style = 'background-image: url(' . $thumbnail_url . ');';
   } else {
       if (has_post_thumbnail()) {
@@ -25,13 +25,36 @@
       }
   }
   
+  $header_theme = function_exists('get_field') ? get_field('alchemis_header_theme') : '';
+  
+  if ($header_theme === 'white') {
+      $header_classes .= ' text-white';
+  }
+  
   $page_title = isset($page_title) ? $page_title : $title;
 @endphp
 
-<header class="{!! $header_classes !!}"{!! isset($header_style) ? ' style="' . $header_style : '' !!}">
+<header class="{!! $header_classes !!}"{!! isset($header_style) ? ' style="' . $header_style . '"' : '' !!}>
   @if (isset($header_style))
     <div class="container h-full flex {!! $header_inner_padding !!}">
       <h1 class="md:w-1/2 self-end{!! is_front_page() ? ' lg:self-center' : '' !!}">{!! $page_title !!}</h1>
+    </div>
+  @elseif (isset($prose))
+    <div class="container pb-4">
+      <div class="text-green flex pt-4">
+        <div class="shrink-0 mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="59" viewBox="0 0 38 59">
+            <path fill="currentColor"
+              d="M38 40.008C38 50.516 28.344 59 19 59S0 50.516 0 40.008 19 12.22 19 0c-.078 12.454 19 29.5 19 40.008z">
+            </path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="pt-0.75 text-xl">
+            {!! $page_title !!}
+          </h1>
+        </div>
+      </div>
     </div>
   @else
     <div class="container">
