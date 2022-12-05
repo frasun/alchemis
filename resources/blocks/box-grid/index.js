@@ -4,9 +4,9 @@ import edit from './edit';
 import save from './save';
 
 export default () => {
-  registerBlockType('alchemis/infoboxes', {
-    title: __('2 boxes'),
-    description: __('Create 2 boxes with icons', 'sage'),
+  registerBlockType('alchemis/box-grid', {
+    title: __('Box grid'),
+    description: __('Create box grid', 'sage'),
     category: 'widgets',
     edit,
     save,

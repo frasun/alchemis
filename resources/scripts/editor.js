@@ -3,19 +3,19 @@ import {domReady} from '@roots/sage/client';
 import registerHeadingBlock from '../blocks/heading';
 import registerSectionBlock from '../blocks/section';
 import registerTestimonialsBlock from '../blocks/testimonials';
-import registerBoxesBlock from '../blocks/boxes';
-import registerInfoboxesBlock from '../blocks/infoboxes';
 import registerStatsBlock from '../blocks/stats';
 import registerIconGridBlock from '../blocks/icon-grid';
+import registerBoxBlock from '../blocks/box';
+import registerBoxGridBlock from '../blocks/box-grid';
 
 function registerBlocks() {
   registerHeadingBlock();
   registerSectionBlock();
   registerTestimonialsBlock();
-  registerBoxesBlock();
-  registerInfoboxesBlock();
   registerStatsBlock();
   registerIconGridBlock();
+  registerBoxGridBlock();
+  registerBoxBlock();
 }
 
 const main = (err) => {

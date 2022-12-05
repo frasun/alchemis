@@ -89,93 +89,6 @@
   }
 }
 
-// box
-.box {
-  @apply border-2 rounded-tl rounded-br border-grey-2 pt-3 pb-4 px-2 bg-white;
-
-  .box-inner {
-    @apply flex flex-col items-center bg-no-repeat bg-top;
-  }
-
-  .box-title {
-    @apply translate-y-[110px] transition-transform mt-1 flex items-center;
-
-    height: calc(2 * theme('fontSize.xl') * theme('lineHeight.headings'));
-  }
-
-  .box-subtitle {
-    @apply opacity-0 flex items-center transition-opacity;
-
-    height: calc(3 * theme('fontSize.lg') * theme('lineHeight.tight'));
-  }
-
-  svg {
-    position: absolute;
-  }
-
-  &:hover {
-    @apply bg-dark;
-
-    .box-title {
-      @apply translate-y-0 text-green;
-    }
-
-    .box-subtitle {
-      @apply opacity-100 text-white;
-    }
-
-    svg {
-      display: none;
-    }
-  }
-}
-
-// infobox
-.infobox {
-  @apply relative py-5 px-2;
-
-  .infobox {
-    &-inner {
-      @apply border-2 rounded-tl rounded-br border-grey-2 bg-white;
-      @apply absolute top-0 bottom-0 left-0 right-0;
-      @apply transition-transform scale-y-75 origin-top;
-    }
-
-    &-title {
-      @apply text-xl text-center pt-1;
-      @apply relative;
-      @apply transition-transform translate-y-1;
-    }
-
-    &-subtitle {
-      @apply text-lg text-center leading-tight text-white pt-3;
-      @apply relative;
-      @apply transition-opacity opacity-0;
-    }
-  }
-
-  &:hover {
-    .infobox {
-      &-inner {
-        @apply scale-y-100 bg-dark;
-      }
-
-      &-title {
-        @apply translate-y-0 text-green;
-      }
-
-      &-subtitle {
-        @apply opacity-100;
-      }
-    }
-  }
-}
-
-body.home .infobox-section {
-  @apply -mt-10;
-  @apply hidden md:block;
-}
-
 // stats
 .wp-block-columns.stats {
   @apply grid md:grid-cols-3 gap-3 py-3;
@@ -206,4 +119,130 @@ body.home .infobox-section {
   h3 {
     @apply text-center text-green text-xlg pt-2;
   }
+}
+
+// box
+.box {
+  &[data-type='icon'] {
+    @apply border-2 rounded-tl rounded-br border-grey-2 pt-3 pb-4 px-2 bg-white;
+
+    .box-inner {
+      @apply flex flex-col items-center bg-no-repeat bg-top;
+    }
+
+    .box-title {
+      @apply text-xlg text-center text-dark;
+      @apply m-0;
+      @apply translate-y-[110px] transition-transform mt-1 flex items-center;
+
+      height: calc(2 * theme('fontSize.xl') * theme('lineHeight.headings'));
+    }
+
+    .box-subtitle {
+      @apply text-lg text-center leading-tight;
+      @apply m-0;
+      @apply opacity-0 flex items-center transition-opacity;
+
+      height: calc(3 * theme('fontSize.lg') * theme('lineHeight.tight'));
+    }
+
+    img {
+      position: absolute;
+    }
+
+    &:hover {
+      @apply bg-dark;
+
+      .box-title {
+        @apply translate-y-0 text-green;
+      }
+
+      .box-subtitle {
+        @apply opacity-100 text-white;
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &[data-type='info'] {
+    @apply relative py-5 px-2;
+
+    .box {
+      &-inner {
+        @apply border-2 rounded-tl rounded-br border-grey-2 bg-white;
+        @apply absolute top-0 bottom-0 left-0 right-0;
+        @apply transition-transform scale-y-75 origin-top;
+      }
+
+      &-title {
+        @apply text-xl text-center pt-1 text-dark;
+        @apply relative;
+        @apply transition-transform translate-y-1;
+      }
+
+      &-subtitle {
+        @apply text-lg text-center leading-tight text-white pt-3;
+        @apply relative;
+        @apply transition-opacity opacity-0;
+      }
+    }
+
+    &:hover {
+      .box {
+        &-inner {
+          @apply scale-y-100 bg-dark;
+        }
+
+        &-title {
+          @apply translate-y-0 text-green;
+        }
+
+        &-subtitle {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+}
+
+.alchemis-box-url {
+  .block-editor-link-control {
+    @apply min-w-0;
+  }
+
+  .block-editor-link-control__search-actions {
+    @apply right-[4px];
+  }
+
+  .block-editor-link-control__search-results {
+    @apply px-0;
+  }
+
+  .block-editor-link-control__field {
+    @apply mx-0;
+  }
+
+  .block-editor-link-control__search-item {
+    &,
+    &.is-current {
+      @apply px-[4px];
+    }
+  }
+
+  .block-editor-link-control__tools {
+    @apply px-[4px];
+  }
+
+  .block-editor-link-control__search-item-title {
+    @apply break-all;
+  }
+}
+
+// box-grid
+.infobox-section {
+  @apply -mt-10;
+  @apply hidden md:block;
 }
