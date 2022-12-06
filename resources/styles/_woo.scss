@@ -457,3 +457,7 @@ $thumbnail-size-sm: 75px;
     }
   }
 }
+
+.woocommerce-invalid #terms {
+  @apply outline-red;
+}

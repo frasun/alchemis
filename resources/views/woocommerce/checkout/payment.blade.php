@@ -23,6 +23,10 @@
 @endphp
 
 <div id="payment" class="woocommerce-checkout-payment mt-4">
+  @php
+    wc_get_template('checkout/terms.php');
+  @endphp
+
   @if (WC()->cart->needs_payment())
     <h3 class="pb-1">
       {!! esc_html_e('Payment', 'woocommerce') !!}
@@ -46,6 +50,9 @@
         </li>
       @endif
     </ul>
+    <div class="pt-2">
+      <img src="@asset('images/banner_1215x200B.png')" />
+    </div>
   @endif
 
   <footer class="mt-4 flex flex-col items-end">
@@ -83,8 +90,6 @@
 
     @php
       do_action('woocommerce_review_order_after_submit');
-      
-      wc_get_template('checkout/terms.php');
       
       wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce');
     @endphp
