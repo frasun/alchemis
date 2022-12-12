@@ -12,7 +12,7 @@
     }
 
     &[style*='background-image'] {
-      @apply bg-top;
+      @apply bg-top bg-no-repeat bg-cover;
     }
   }
 }
