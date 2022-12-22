@@ -172,12 +172,11 @@ add_action('init', function () {
         'description'   => 'Holds our testimonial items',
         'public'        => true,
         'menu_position' => 5,
-        'supports'      => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'supports'      => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
         'publicly_queryable'  => true,
         'exclude_from_search' => true,
         'show_in_rest' => true,
-        'rewrite' => array('slug' => 'testimonial'),
-        'has_archive' => 'testimonials'
+        'rewrite' => array('slug' => 'historie-klientow')
     );
     register_post_type('testimonial', $args);
 
@@ -185,6 +184,21 @@ add_action('init', function () {
         'show_in_rest' => true,
         'single' => true,
         'type' => 'string'
+    ));
+});
+
+/**
+ * Block alchemis/testimonials
+ */
+add_action('init', function () {
+    register_block_type('alchemis/testimonials', array(
+        'api_version' => 2,
+        'render_callback' => function () {
+            ob_start();
+            include(get_template_directory() . '/resources/blocks/testimonials/testimonials.php');
+
+            return ob_get_clean();
+        }
     ));
 });
 
@@ -230,4 +244,89 @@ add_theme_support('soil', [
  */
 add_action('after_setup_theme', function () {
     load_theme_textdomain('sage', get_template_directory() . '/lang');
+});
+
+// ACF Display Custom Fields
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
+/**
+ * analytics
+ */
+add_action('wp_head', function () {
+?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK0N6KNLSB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-NK0N6KNLSB');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10943144298"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-10943144298');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-57N9F5N');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1656380098135208');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1656380098135208&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta name="facebook-domain-verification" content="ijmxcp3n5v2mmmklcimc2dfbcb6os7" />
+<?php
+});
+
+add_action('wp_footer', function () {
+?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57N9F5N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<?php
 });

@@ -6,7 +6,9 @@
 @endphp
 
 <nav>
-  <a href="{!! get_post_type_archive_link(get_post_type()) !!}">
+  <a href="{!! get_post_type() == 'testimonial'
+      ? get_page_link(get_page_by_path('historie-klientow'))
+      : get_post_type_archive_link(get_post_type()) !!}">
     @if (get_post_type() == 'post')
       {!! get_the_title(get_option('page_for_posts')) !!}
     @else

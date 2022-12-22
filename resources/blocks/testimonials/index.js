@@ -1,7 +1,6 @@
 import {registerBlockType} from '@wordpress/blocks';
 import {__} from '@wordpress/i18n';
 import edit from './edit';
-import save from './save';
 
 export default () => {
   registerBlockType('alchemis/testimonials', {
@@ -16,6 +15,5 @@ export default () => {
     },
     parent: ['alchemis/content-section'],
     edit,
-    save,
   });
 };

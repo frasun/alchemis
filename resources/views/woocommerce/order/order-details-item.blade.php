@@ -27,7 +27,7 @@
 @php
   $is_visible = $product && $product->is_visible();
 @endphp
-{!! apply_filters('woocommerce_order_item_quantity_html', $item->get_quantity(), $item) !!}x
+{!! apply_filters('woocommerce_order_item_quantity_html', $item->get_quantity(), $item) !!}&nbsp;&times;&nbsp;
 {!! wp_kses_post(apply_filters('woocommerce_order_item_name', $item->get_name(), $item, $is_visible)) !!}:
 
 @php
