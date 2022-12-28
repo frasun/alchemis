@@ -351,7 +351,7 @@ $thumbnail-size-sm: 75px;
 // my account
 .woocommerce-MyAccount-navigation {
   ul {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap list-none;
 
     li {
       a {
