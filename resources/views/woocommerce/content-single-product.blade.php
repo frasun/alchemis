@@ -34,7 +34,7 @@
 <div id="product-{!! the_ID() !!}">
 
   <div class="grid lg:grid-cols-5 gap-3">
-    <div class="lg:col-span-3">
+    <div class="lg:col-span-3 overflow-hidden max-h-[80vh]">
       @php
         /**
          * Hook: woocommerce_before_single_product_summary.

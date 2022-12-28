@@ -45,6 +45,31 @@ const main = async (err) => {
   if (cartUpdateBtn) {
     new CartUpdate(cartUpdateBtn);
   }
+
+  // checkout quantity
+  const changeQuantity = document.querySelectorAll('.changeQuantity');
+
+  for (let input of Array.from(changeQuantity)) {
+    input.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const add = input.getAttribute('data-add');
+      const qtyInputId = input.getAttribute('data-input-id');
+      const qtyInput = document.getElementById(qtyInputId);
+
+      if (qtyInput) {
+        let newValue = Number(qtyInput.value);
+
+        if (add === 'true') {
+          newValue += 1;
+        } else if (newValue > 1) {
+          newValue -= 1;
+        }
+
+        qtyInput.value = newValue;
+      }
+    });
+  }
 };
 
 /**

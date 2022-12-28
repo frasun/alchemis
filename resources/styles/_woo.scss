@@ -461,3 +461,17 @@ $thumbnail-size-sm: 75px;
 .woocommerce-invalid #terms {
   @apply outline-red;
 }
+
+[id^='product-'] {
+  img {
+    @apply max-h-full w-auto m-auto;
+  }
+}
+
+.add-to-cart-simple {
+  .quantity {
+    .qty {
+      @apply max-w-[90px] text-center;
+    }
+  }
+}
