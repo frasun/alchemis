@@ -475,3 +475,9 @@ $thumbnail-size-sm: 75px;
     }
   }
 }
+
+#productOverview {
+  .woocommerce-Price-amount {
+    @apply pb-1;
+  }
+}

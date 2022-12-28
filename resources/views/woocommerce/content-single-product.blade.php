@@ -33,7 +33,7 @@
 @endphp
 <div id="product-{!! the_ID() !!}">
 
-  <div class="grid lg:grid-cols-5 gap-3">
+  <div class="grid lg:grid-cols-5 gap-3 mb-6">
     <div class="lg:col-span-3 overflow-hidden max-h-[80vh]">
       @php
         /**
@@ -51,7 +51,7 @@
 
     </div>
 
-    <div class="lg:col-span-2">
+    <div id="productOverview" class="lg:col-span-2 flex flex-col lg:pt-5 pb-7">
       @php
         /**
          * Hook: woocommerce_single_product_summary.
