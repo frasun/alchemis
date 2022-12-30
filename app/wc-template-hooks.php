@@ -148,6 +148,7 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+add_action('woocommerce_single_product_summary', 'wc_display_product_attributes', 6);
 
 /**
  * Reviews
@@ -201,7 +202,7 @@ add_action('woocommerce_product_after_tabs', 'woocommerce_template_single_add_to
  *
  * @see wc_display_product_attributes()
  */
-// remove_action('woocommerce_product_additional_information', 'wc_display_product_attributes', 10);
+remove_action('woocommerce_product_additional_information', 'wc_display_product_attributes', 10);
 
 /**
  * Checkout.

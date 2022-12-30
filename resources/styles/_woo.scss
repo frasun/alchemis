@@ -478,6 +478,18 @@ $thumbnail-size-sm: 70px;
 
 #productOverview {
   .woocommerce-Price-amount {
-    @apply pb-1;
+    @apply pb-1 flex-grow flex items-end;
+  }
+
+  .shop_attributes {
+    @apply text-md;
+
+    .woocommerce-product-attributes-item__label {
+      @apply hidden;
+    }
+
+    p {
+      @apply p-0;
+    }
   }
 }
