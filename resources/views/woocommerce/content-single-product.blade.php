@@ -34,7 +34,7 @@
 <div id="product-{!! the_ID() !!}">
 
   <div class="grid lg:grid-cols-5 gap-3 mb-6">
-    <div class="lg:col-span-3 overflow-hidden max-h-[80vh]">
+    <div class="lg:col-span-3 overflow-hidden">
       @php
         /**
          * Hook: woocommerce_before_single_product_summary.
@@ -44,16 +44,9 @@
          */
         do_action('woocommerce_before_single_product_summary');
       @endphp
-
-      @if (has_post_thumbnail())
-        {!! the_post_thumbnail() !!}
-      @else
-        <img src="@asset('images/woocommerce-placeholder.png')" />
-      @endif
-
     </div>
 
-    <div id="productOverview" class="lg:col-span-2 flex flex-col lg:pt-5 pb-7">
+    <div id="productOverview" class="lg:col-span-2 flex flex-col lg:pt-3 pb-7">
       @php
         /**
          * Hook: woocommerce_single_product_summary.

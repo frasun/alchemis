@@ -118,8 +118,8 @@ remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_lo
  * @see woocommerce_show_product_images()
  * @see woocommerce_show_product_thumbnails()
  */
-remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
-remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
+// remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
+// remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
 
 /**
  * After Single Products Summary Div.

@@ -337,6 +337,7 @@ if (!defined('WP_DEV')) :
     <?php
     });
 endif;
+
 /**
  * favicon
  */

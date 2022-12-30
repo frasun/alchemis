@@ -24,6 +24,8 @@
       // remove categories
       $modified_breadcrumb = [reset($breadcrumb), end($breadcrumb)];
   
+      echo '<nav class="pb-3">';
+  
       foreach ($modified_breadcrumb as $key => $crumb) {
           if (!empty($crumb[1]) && sizeof($modified_breadcrumb) !== $key + 1) {
               echo '<a href="' . esc_url($crumb[1]) . '">' . esc_html($crumb[0]) . '</a>';
@@ -35,5 +37,7 @@
               echo '<span class="px-0.75 text-greyDark">></span>';
           }
       }
+  
+      echo '</nav>';
   }
 @endphp
