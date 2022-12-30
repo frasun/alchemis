@@ -47,6 +47,8 @@
 
       @if (has_post_thumbnail())
         {!! the_post_thumbnail() !!}
+      @else
+        <img src="@asset('images/woocommerce-placeholder.png')" />
       @endif
 
     </div>
