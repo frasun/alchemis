@@ -44,6 +44,8 @@
   }
 }
 
-.posts-navigation a {
+.posts-navigation a,
+.woocommerce .woocommerce-message .woocommerce-Button,
+.woocommerce .woocommerce-message .button {
   @apply py-[0.4rem] px-3;
 }

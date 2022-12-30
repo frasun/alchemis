@@ -493,3 +493,9 @@ $thumbnail-size-sm: 70px;
     }
   }
 }
+
+.woocommerce-orders-table__cell-order-actions a {
+  &:not(:first-child) {
+    @apply ml-1;
+  }
+}
