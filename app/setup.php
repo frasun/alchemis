@@ -179,9 +179,9 @@ add_action('init', function () {
         'menu_position' => 5,
         'supports'      => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
         'publicly_queryable'  => true,
-        'exclude_from_search' => true,
+        'exclude_from_search' => false,
         'show_in_rest' => true,
-        'rewrite' => array('slug' => 'historie-klientow')
+        'rewrite' => array('slug' => 'historie', 'pages' => true)
     );
     register_post_type('testimonial', $args);
 

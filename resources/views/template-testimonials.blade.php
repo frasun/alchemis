@@ -8,7 +8,7 @@
     query_posts([
         'post_type' => 'testimonial',
         'post_status' => 'publish',
-        'posts_per_page' => -1,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
     ]);
     
     $page_id = get_queried_object_id();
