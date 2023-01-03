@@ -1,0 +1,25 @@
+.wpcf7 {
+  @apply text-base;
+
+  max-width: 700px;
+
+  form.invalid .wpcf7-response-output {
+    @apply bg-red bg-opacity-30;
+  }
+
+  form .wpcf7-response-output {
+    @apply border-0 bg-green bg-opacity-30 mx-0;
+  }
+
+  .wpcf7-spinner {
+    top: 8px;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  @apply text-red text-base;
+}
+
+.wpcf7-submit {
+  cursor: pointer;
+}

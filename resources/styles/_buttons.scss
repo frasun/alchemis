@@ -10,7 +10,8 @@
 .woocommerce input.button.alt,
 .posts-navigation a,
 .wp-block-button a,
-.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.wpcf7-submit {
   border: 2px solid theme('colors.green'); // woocommerce hack
 
   @apply py-0.75 px-4;
@@ -46,6 +47,7 @@
 
 .posts-navigation a,
 .woocommerce .woocommerce-message .woocommerce-Button,
-.woocommerce .woocommerce-message .button {
+.woocommerce .woocommerce-message .button,
+.wpcf7-submit {
   @apply py-[0.4rem] px-3;
 }

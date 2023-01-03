@@ -42,7 +42,7 @@ const main = async (err) => {
   }
 
   // forms
-  const forms = document.querySelectorAll('form[novalidate]');
+  const forms = document.querySelectorAll('form[novalidate]:not(.wpcf7-form)');
   for (let form of Array.from(forms)) {
     new Form(form);
   }
