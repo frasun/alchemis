@@ -15,6 +15,11 @@ export default () => {
         source: 'html',
         selector: 'h2',
       },
+      subcontent: {
+        type: 'string',
+        source: 'html',
+        selector: 'h3',
+      },
     },
     example: {
       attributes: {

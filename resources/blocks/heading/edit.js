@@ -6,14 +6,24 @@ export default function edit({attributes, setAttributes}) {
   return (
     <header className="flex items-center py-2 text-green">
       <Icon />
-      <RichText
-        tagName="h2"
-        value={attributes.content}
-        onChange={(content) => setAttributes({content})}
-        placeholder={__('Heading...')}
-        className="ml-3 m-0 text-xl"
-        allowedFormats={[]}
-      />
+      <div className="ml-3">
+        <RichText
+          tagName="h2"
+          value={attributes.content}
+          onChange={(content) => setAttributes({content})}
+          placeholder={__('Heading...')}
+          className="m-0 text-xl"
+          allowedFormats={[]}
+        />
+        <RichText
+          tagName="h3"
+          value={attributes.subcontent}
+          onChange={(subcontent) => setAttributes({subcontent})}
+          placeholder={__('Subheading...')}
+          className="pt-0.75"
+          allowedFormats={[]}
+        />
+      </div>
     </header>
   );
 }
