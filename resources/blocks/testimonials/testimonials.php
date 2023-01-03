@@ -3,10 +3,12 @@ query_posts([
   'post_type' => 'testimonial',
   'post_status' => 'publish',
 ]);
+
+$post_count = wp_count_posts($post_type = 'testimonial')->publish;
 ?>
 
 <?php if (have_posts()) : ?>
-  <div class="wp-block-alchemis-testimonials swiper">
+  <div class="wp-block-alchemis-testimonials swiper" data-post-count="<?php echo $post_count; ?>">
     <div class="swiper-wrapper flex items-center">
       <?php while (have_posts()) : the_post(); ?>
         <?php $author = get_post_meta(get_the_ID(), 'author', true); ?>
@@ -22,16 +24,18 @@ query_posts([
         </figure>
       <?php endwhile; ?>
     </div>
-    <div class="swiper-button-prev">
-      <svg xmlns="http:www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22">
-        <path d="M11,0,22,16H0Z" transform="translate(0 22) rotate(-90)" fill="currentColor" />
-      </svg>
-    </div>
-    <div class="swiper-button-next">
-      <svg xmlns="http:www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22">
-        <path d="M11,0,22,16H0Z" transform="translate(16) rotate(90)" fill="currentColor" />
-      </svg>
-    </div>
+    <?php if ($post_count > 1) : ?>
+      <div class="swiper-button-prev">
+        <svg xmlns="http:www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22">
+          <path d="M11,0,22,16H0Z" transform="translate(0 22) rotate(-90)" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg xmlns="http:www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22">
+          <path d="M11,0,22,16H0Z" transform="translate(16) rotate(90)" fill="currentColor" />
+        </svg>
+      </div>
+    <?php endif; ?>
   </div>
 <?php endif; ?>
 

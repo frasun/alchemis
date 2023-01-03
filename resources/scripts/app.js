@@ -21,18 +21,25 @@ const main = async (err) => {
   menu.init();
 
   // testimonials slider
-  // eslint-disable-next-line no-unused-vars
-  const testimonials = new Swiper('.wp-block-alchemis-testimonials', {
-    modules: [Navigation, Autoplay],
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  const TESTIMONIALS_SLIDER = '.wp-block-alchemis-testimonials';
+  const testimonialsSwiper = document.querySelector(TESTIMONIALS_SLIDER);
+  const testimonialsCount =
+    testimonialsSwiper && testimonialsSwiper.getAttribute('data-post-count');
+
+  if (parseInt(testimonialsCount) > 1) {
+    // eslint-disable-next-line no-unused-vars
+    const testimonials = new Swiper(TESTIMONIALS_SLIDER, {
+      modules: [Navigation, Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 
   // forms
   const forms = document.querySelectorAll('form[novalidate]');
