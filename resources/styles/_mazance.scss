@@ -1,0 +1,80 @@
+#app {
+  @apply relative;
+}
+
+.maz {
+  @apply absolute;
+  @apply top-0 bottom-0;
+  @apply overflow-hidden;
+  @apply w-[258px];
+
+  > div {
+    position: absolute;
+  }
+
+  &.maz-left {
+    left: 0;
+
+    > div {
+      left: 0;
+    }
+  }
+
+  &.maz-right {
+    right: 0;
+
+    > div {
+      right: 0;
+    }
+  }
+
+  .bg-maz1 {
+    width: 258px;
+    height: 906px;
+    top: 0;
+  }
+
+  .bg-maz2 {
+    width: 255px;
+    height: 949px;
+    top: 503px;
+  }
+
+  .bg-maz3 {
+    width: 161px;
+    height: 847px;
+    top: 2000px;
+  }
+
+  .bg-maz4 {
+    width: 117px;
+    height: 825px;
+    top: 3000px;
+  }
+
+  .bg-maz5 {
+    width: 204px;
+    height: 929px;
+    top: 4000px;
+  }
+
+  .bg-maz6 {
+    width: 120px;
+    height: 876px;
+    top: 5000px;
+  }
+
+  @media (max-width: 1540px) {
+    display: none;
+  }
+
+  @media (min-width: 1541px) and (max-width: 1796px) {
+    &.maz-left {
+      left: -130px;
+    }
+
+    &.maz-right {
+      right: -130px;
+    }
+  }
+}

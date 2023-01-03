@@ -85,6 +85,12 @@ module.exports = {
     extend: {
       backgroundImage: {
         footer: 'url(../images/bg-footer.png)',
+        maz1: 'url(../images/bg-maz-1.png)',
+        maz2: 'url(../images/bg-maz-2.png)',
+        maz3: 'url(../images/bg-maz-3.png)',
+        maz4: 'url(../images/bg-maz-4.png)',
+        maz5: 'url(../images/bg-maz-5.png)',
+        maz6: 'url(../images/bg-maz-6.png)',
       },
       backgroundPosition: {
         'header-mobile': '80%',
