@@ -499,3 +499,27 @@ $thumbnail-size-sm: 70px;
     @apply ml-1;
   }
 }
+
+// select
+.select2-container--default .select2-selection--single {
+  @apply border-grey-4 rounded-none;
+  @apply py-0.75 px-1;
+
+  .select2-selection__rendered {
+    @apply leading-tight;
+    @apply px-0;
+  }
+
+  .select2-selection__arrow {
+    @apply h-full;
+    @apply right-[6px];
+  }
+}
+
+.select2-container .select2-selection--single {
+  @apply h-auto;
+}
+
+.select2-dropdown {
+  @apply border-grey-4;
+}
