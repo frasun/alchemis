@@ -8,7 +8,7 @@ $post_count = wp_count_posts($post_type = 'testimonial')->publish;
 ?>
 
 <?php if (have_posts()) : ?>
-  <div class="wp-block-alchemis-testimonials swiper" data-post-count="<?php echo $post_count; ?>">
+  <div class="wp-block-alchemis-testimonials swiper mt-1" data-post-count="<?php echo $post_count; ?>">
     <div class="swiper-wrapper flex items-center">
       <?php while (have_posts()) : the_post(); ?>
         <?php $author = get_post_meta(get_the_ID(), 'author', true); ?>

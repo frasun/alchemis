@@ -4,6 +4,8 @@
 @import '_acf';
 
 html :where(.editor-styles-wrapper) {
+  font-family: Poppins, sans-serif;
+
   h1,
   h2,
   h3,
@@ -11,6 +13,8 @@ html :where(.editor-styles-wrapper) {
   h5,
   h6 {
     @apply leading-headings;
+
+    font-weight: 500;
   }
 
   @include h-sizes;

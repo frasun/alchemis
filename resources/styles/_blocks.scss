@@ -20,16 +20,6 @@
 // testimonials
 .wp-block-alchemis-testimonials,
 [data-type='alchemis/testimonials'] {
-  blockquote p {
-    &::before {
-      content: '„';
-    }
-
-    &::after {
-      content: '”';
-    }
-  }
-
   .swiper-button-prev::after,
   .swiper-button-next::after {
     content: none;

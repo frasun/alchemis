@@ -42,6 +42,10 @@
   .wc-block-featured-product__description {
     ul {
       @apply list-disc pl-2;
+
+      li::marker {
+        @apply text-green;
+      }
     }
   }
 }

@@ -4,14 +4,14 @@ const Slider = ({testimonials, ...props}) => {
   return (
     <div {...props}>
       <div className="swiper-wrapper">
-        {testimonials?.map(({id, content, meta}) => (
+        {testimonials?.map(({id, excerpt, meta}) => (
           <figure
             key={id}
             className="swiper-slide text-greyDark flex flex-col px-5">
             <blockquote
               className="order-2"
               dangerouslySetInnerHTML={{
-                __html: content?.rendered,
+                __html: excerpt?.rendered,
               }}></blockquote>
             {meta?.author ? (
               <figcaption className="order-1 bg-white self-center py-1 px-5 rounded-tl-full rounded-br-full mb-1">
