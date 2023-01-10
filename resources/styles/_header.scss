@@ -49,3 +49,11 @@ body.page-template-template-white {
     @apply text-white;
   }
 }
+
+body.home #pageHeader {
+  background-position: right 45%;
+
+  @screen md {
+    background-position: 40% 45%;
+  }
+}

@@ -95,7 +95,6 @@ module.exports = {
       },
       backgroundPosition: {
         'header-mobile': '80%',
-        homepage: '100% 30%',
       },
       typography: (theme) => ({
         DEFAULT: {

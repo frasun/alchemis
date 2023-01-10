@@ -233,6 +233,6 @@
 
 // box-grid
 .infobox-section {
-  @apply -mt-10;
-  @apply hidden md:block;
+  @apply -mt-[7rem];
+  @apply hidden lg:block;
 }
