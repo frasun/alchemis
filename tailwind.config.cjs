@@ -63,6 +63,7 @@ module.exports = {
       lg: ['1.375rem'], // 22px
       xlg: ['1.75rem'], // 28px
       xl: ['2.5rem'], // 40px
+      '1/5xl': ['3rem'], // 48px
       '2xl': ['3.75rem'], // 60px
     }),
     opacity: {

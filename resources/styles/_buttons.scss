@@ -12,24 +12,25 @@
 .wp-block-button a,
 .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
 .wpcf7-submit {
-  border: 2px solid theme('colors.green'); // woocommerce hack
+  border: 2px solid theme('colors.dark'); // woocommerce hack
 
   @apply py-0.75 px-4;
   @apply rounded-tl-full rounded-br-full;
   @apply border-2 border-green outline-0;
-  @apply bg-white;
+  @apply bg-green;
   @apply transition-colors;
   @apply leading-normal;
-  @apply text-dark;
+  @apply text-white;
   @apply inline-block;
   @apply font-normal;
+  @apply text-center;
 
   &:not([disabled]):hover {
-    @apply bg-green text-white;
+    @apply bg-dark border-dark text-white;
   }
 
   &:not([disabled]):active {
-    @apply text-dark;
+    @apply text-green;
     @apply transition-none;
   }
 
@@ -42,6 +43,12 @@
   &.button-sm,
   &.wc-forward {
     @apply py-[0.4rem] px-3;
+  }
+
+  &.btn-xl {
+    // @screen lg {
+    @apply text-lg;
+    // }
   }
 }
 

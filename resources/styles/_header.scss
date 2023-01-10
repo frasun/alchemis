@@ -51,9 +51,9 @@ body.page-template-template-white {
 }
 
 body.home #pageHeader {
-  background-position: right 45%;
+  background-position: 85% 45%;
 
-  @screen md {
+  @screen sm {
     background-position: 40% 45%;
   }
 }

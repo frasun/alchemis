@@ -135,6 +135,11 @@
           "size": "2.5rem"
         },
         {
+          "name": "1/5xl",
+          "slug": "1/5xl",
+          "size": "3rem"
+        },
+        {
           "name": "2xl",
           "slug": "2xl",
           "size": "3.75rem"

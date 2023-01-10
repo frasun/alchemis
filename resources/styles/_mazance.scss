@@ -6,7 +6,8 @@
   @apply absolute;
   @apply top-0 bottom-0;
   @apply overflow-hidden;
-  @apply w-[258px];
+
+  width: calc((50% - 580px));
 
   > div {
     position: absolute;
@@ -16,7 +17,13 @@
     left: 0;
 
     > div {
-      left: 0;
+      @media (max-width: 1669px) {
+        right: 0;
+      }
+
+      @media (min-width: 1670px) {
+        left: 0;
+      }
     }
   }
 
@@ -24,7 +31,13 @@
     right: 0;
 
     > div {
-      right: 0;
+      @media (max-width: 1599px) {
+        left: 0;
+      }
+
+      @media (min-width: 1600px) {
+        right: 0;
+      }
     }
   }
 
@@ -66,25 +79,5 @@
 
   @media (max-width: 1279px) {
     display: none;
-  }
-
-  @media (min-width: 1280px) and (max-width: 1439px) {
-    &.maz-left > div {
-      transform: translateX(-185px);
-    }
-
-    &.maz-right > div {
-      transform: translateX(185px);
-    }
-  }
-
-  @media (min-width: 1440px) and (max-width: 1599px) {
-    &.maz-left > div {
-      transform: translateX(-100px);
-    }
-
-    &.maz-right > div {
-      transform: translateX(100px);
-    }
   }
 }

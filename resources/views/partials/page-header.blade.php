@@ -16,8 +16,8 @@
   
   if (isset($header_style)) {
       if (is_front_page()) {
-          $header_classes .= ' h-[55vh] lg:h-[80vh] max-h-[64rem]';
-          $header_inner_padding = 'pb-4';
+          $header_classes .= ' h-[80vh] max-h-[64rem]';
+          $header_inner_padding = 'pb-3 sm:pb-6';
       } else {
           $header_classes .= ' h-[70vh] max-h-[42rem] bg-header-mobile md:bg-right';
           $header_inner_padding = 'py-8';
@@ -30,13 +30,20 @@
       $header_classes .= ' text-white';
   }
   
+  $header_url = function_exists('get_field') ? get_field('alchemis_slider_url') : '';
+  
   $page_title = isset($page_title) ? $page_title : $title;
 @endphp
 
 <header id="pageHeader" class="{!! $header_classes !!}"{!! isset($header_style) ? ' style="' . $header_style . '"' : '' !!}>
   @if (isset($header_style))
     <div class="container h-full flex {!! $header_inner_padding !!}">
-      <h1 class="md:w-1/2 self-end{!! is_front_page() ? ' lg:self-center' : '' !!}">{!! $page_title !!}</h1>
+      <div class="p-1 sm:p-0 bg-white sm:bg-transparent overflow-hidden sm:w-1/2 self-end{!! is_front_page() ? ' lg:self-center' : '' !!}">
+        <h1 class="break-words">{!! $page_title !!}</h1>
+        @if ($header_url)
+          <a href="{!! esc_url($header_url) !!}" class="btn btn-xl mt-2 lg:mt-3">{{ __('Kup już teraz', 'sage') }}</a>
+        @endif
+      </div>
     </div>
   @elseif (isset($prose))
     <div class="container pb-4">
@@ -49,7 +56,7 @@
           </svg>
         </div>
         <div>
-          <h1 class="pt-0.75 text-xl">
+          <h1 class="pt-0.75 text-xl break-words">
             {!! $page_title !!}
           </h1>
         </div>
