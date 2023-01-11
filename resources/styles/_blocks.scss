@@ -236,3 +236,7 @@
   @apply -mt-[7rem];
   @apply hidden lg:block;
 }
+
+.wp-block-alchemis-box-grid {
+  @apply px-2 md:px-0;
+}

@@ -12,7 +12,7 @@ $post_count = wp_count_posts($post_type = 'testimonial')->publish;
     <div class="swiper-wrapper flex items-center">
       <?php while (have_posts()) : the_post(); ?>
         <?php $author = get_post_meta(get_the_ID(), 'author', true); ?>
-        <figure class="swiper-slide text-greyDark flex flex-col px-5">
+        <figure class="swiper-slide text-greyDark flex flex-col md:px-5">
           <blockquote class="order-2 text-center">
             <?php echo get_the_excerpt() ?>
           </blockquote>

@@ -121,7 +121,7 @@ module.exports = {
     container: ({theme}) => ({
       center: true,
       padding: {
-        DEFAULT: theme('spacing.1'),
+        DEFAULT: theme('spacing.2'),
         lg: theme('spacing.4'),
         xl: theme('spacing.6'),
       },
