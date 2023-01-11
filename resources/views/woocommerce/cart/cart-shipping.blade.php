@@ -69,11 +69,7 @@
                 {!! wp_kses_post(
                     apply_filters(
                         'woocommerce_shipping_estimate_html',
-                        __(
-                            'Shipping options will be updated
-                                                                                                                                                                                                                                                                                                                                                                                    during checkout.',
-                            'woocommerce',
-                        ),
+                        __('Shipping options will be updated during checkout.', 'woocommerce'),
                     ),
                 ) !!}
               @endif
