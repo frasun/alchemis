@@ -1,0 +1,7 @@
+#footer {
+  .menu a {
+    @apply text-grey hover:text-green;
+    @apply pt-0.5;
+    @apply inline-block;
+  }
+}

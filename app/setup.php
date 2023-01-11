@@ -121,8 +121,8 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
     ];
 
     register_sidebar([
@@ -131,8 +131,23 @@ add_action('widgets_init', function () {
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
+        'name' => __('Footer 1', 'sage'),
+        'id' => 'sidebar-footer-1',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer 2', 'sage'),
+        'id' => 'sidebar-footer-2',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer 3', 'sage'),
+        'id' => 'sidebar-footer-3',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer 4', 'sage'),
+        'id' => 'sidebar-footer-4',
     ] + $config);
 
     register_sidebar([
