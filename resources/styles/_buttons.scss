@@ -24,6 +24,7 @@
   @apply inline-block;
   @apply font-normal;
   @apply text-center;
+  @apply text-md;
 
   &:not([disabled]):hover {
     @apply bg-dark border-dark text-white;
