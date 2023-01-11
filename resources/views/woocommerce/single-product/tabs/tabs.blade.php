@@ -38,7 +38,7 @@
     @endforeach
 
     @if (has_filter('woocommerce_product_after_tabs'))
-      <footer class="flex flex-wrap items-center mt-5 gap-3">
+      <footer class="flex flex-wrap items-baseline mt-5 gap-3">
         @php
           do_action('woocommerce_product_after_tabs');
         @endphp

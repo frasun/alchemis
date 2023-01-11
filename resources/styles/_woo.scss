@@ -69,6 +69,7 @@ $thumbnail-size-sm: 70px;
 
 .woocommerce-product-gallery {
   @apply flex flex-col md:flex-row;
+  @apply justify-center lg:justify-start;
 
   .flex-viewport {
     @apply md:order-2 md:ml-3;
@@ -517,7 +518,7 @@ $thumbnail-size-sm: 70px;
 
 #productOverview {
   .woocommerce-Price-amount {
-    @apply pb-1 flex-grow flex items-end;
+    @apply mt-1 pb-1 flex items-end;
   }
 
   .shop_attributes {

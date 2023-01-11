@@ -37,7 +37,7 @@
       do_action('woocommerce_before_add_to_cart_button');
     @endphp
 
-    <div class="flex">
+    <div class="flex mr-2 pb-2">
       @php
         $input_id = uniqid('quantity_');
       @endphp
@@ -62,8 +62,10 @@
         data-add="true" data-input-id="<?php echo $input_id; ?>">+</button>
     </div>
 
-    <button type="submit" name="add-to-cart" value="{!! esc_attr($product->get_id()) !!}"
-      class="btn btn-sm ml-2 shrink-0">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
+    <div class="pb-2">
+      <button type="submit" name="add-to-cart" value="{!! esc_attr($product->get_id()) !!}"
+        class="btn btn-sm shrink-0">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
+    </div>
 
     @php
       do_action('woocommerce_after_add_to_cart_button');
