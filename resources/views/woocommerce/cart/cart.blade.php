@@ -186,12 +186,12 @@
       <tr>
         <td colspan="6" class="actions">
           @if (wc_coupons_enabled())
-            <div class="coupon flex">
+            <div class="coupon flex flex-wrap sm:flex-nowrap pt-4 md:pt-0">
               <label for="coupon_code">
                 {!! esc_html_e('Coupon:', 'woocommerce') !!}
               </label>
-              <input type="text" name="coupon_code" class="input-text mr-1" id="coupon_code" value=""
-                placeholder="{!! esc_attr_e('Coupon code', 'woocommerce') !!}" />
+              <input type="text" name="coupon_code" class="input-text sm:mr-2 mb-1 sm:mb-0" id="coupon_code"
+                value="" placeholder="{!! esc_attr_e('Coupon code', 'woocommerce') !!}" />
               <button type="submit" class="button button-sm shrink-0" name="apply_coupon"
                 value="{!! esc_attr_e('Apply coupon', 'woocommerce') !!}">
                 {!! esc_attr_e('Apply coupon', 'woocommerce') !!}

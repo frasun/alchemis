@@ -197,6 +197,38 @@ $thumbnail-size-sm: 70px;
       tr:nth-child(2n) td {
         @apply bg-transparent;
       }
+
+      tr {
+        @screen md {
+          @apply table-row;
+
+          &:first-child {
+            td:first-child {
+              @apply border-t border-solid border-grey-3;
+            }
+          }
+
+          td {
+            @apply table-cell;
+
+            text-align: center !important;
+
+            &.product-name {
+              text-align: left !important;
+            }
+
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+
+      thead {
+        @screen md {
+          @apply table-header-group;
+        }
+      }
     }
   }
 
@@ -217,6 +249,7 @@ $thumbnail-size-sm: 70px;
 
       .easypack-shipping-method-logo {
         @apply top-0;
+        @apply hidden sm:block;
       }
     }
   }
@@ -227,6 +260,10 @@ $thumbnail-size-sm: 70px;
     td {
       border: 0;
       @apply py-3 px-0;
+
+      @screen md {
+        @apply flex;
+      }
     }
   }
 
@@ -393,6 +430,10 @@ $thumbnail-size-sm: 70px;
           @apply align-top;
 
           text-align: left !important;
+
+          &::before {
+            content: none;
+          }
         }
 
         .woocommerce-shipping-destination {
@@ -404,6 +445,10 @@ $thumbnail-size-sm: 70px;
         th,
         td {
           @apply align-top text-right md:w-[120px] lg:w-[150px] border-0;
+
+          @screen md {
+            @apply table-cell;
+          }
         }
 
         td {
@@ -516,4 +561,30 @@ $thumbnail-size-sm: 70px;
 
 .select2-dropdown {
   @apply border-grey-4;
+}
+
+.woocommerce table.cart {
+  td.actions .coupon .button {
+    width: auto;
+  }
+
+  @screen md {
+    .product-name,
+    .product-thumbnail {
+      display: table-cell;
+    }
+  }
+}
+
+.woocommerce table.cart td.actions {
+  @screen md {
+    .coupon {
+      float: left;
+      padding-bottom: 0;
+    }
+
+    > button {
+      float: right;
+    }
+  }
 }
