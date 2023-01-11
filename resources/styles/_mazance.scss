@@ -11,18 +11,28 @@
 
   > div {
     position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
   }
 
   &.maz-left {
     left: 0;
 
     > div {
-      @media (max-width: 1669px) {
+      @media (max-width: 1599px) {
         right: 0;
+        background-position: right;
       }
 
-      @media (min-width: 1670px) {
+      @media (min-width: 1600px) {
         left: 0;
+      }
+
+      &.bg-maz4,
+      &.bg-maz6 {
+        @media (min-width: 1400px) and (max-width: 1599px) {
+          background-position: left;
+        }
       }
     }
   }
@@ -37,42 +47,37 @@
 
       @media (min-width: 1600px) {
         right: 0;
+        background-position: right;
       }
     }
   }
 
   .bg-maz1 {
-    width: 258px;
     height: 906px;
     top: 0;
   }
 
   .bg-maz2 {
-    width: 255px;
     height: 949px;
     top: 503px;
   }
 
   .bg-maz3 {
-    width: 161px;
     height: 847px;
     top: 2000px;
   }
 
   .bg-maz4 {
-    width: 117px;
     height: 825px;
     top: 3000px;
   }
 
   .bg-maz5 {
-    width: 204px;
     height: 929px;
     top: 4000px;
   }
 
   .bg-maz6 {
-    width: 120px;
     height: 876px;
     top: 5000px;
   }
