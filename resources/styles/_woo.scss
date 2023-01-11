@@ -376,12 +376,6 @@ $thumbnail-size-sm: 70px;
 // paczkomat
 #eqasypack_show_geowidget {
   @apply my-1;
-  @apply border-0 p-0 text-greyDark bg-transparent rounded-none;
-  @apply leading-normal;
-
-  &:not([disabled]):hover {
-    @apply text-green bg-transparent;
-  }
 }
 
 .cart_totals {
