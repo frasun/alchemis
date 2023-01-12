@@ -44,6 +44,14 @@
   @apply text-dark;
   @apply border-dark;
   @apply bg-grey-5;
+
+  @apply flex flex-col-reverse items-start flex-wrap;
+
+  .button,
+  a.button,
+  a.button.wc-forward {
+    @apply mt-0.5;
+  }
 }
 
 .woocommerce-message,
