@@ -121,7 +121,7 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h4>',
+        'before_title' => '<h4 class="pb-0.5">',
         'after_title' => '</h4>',
     ];
 
