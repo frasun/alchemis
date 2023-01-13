@@ -38,7 +38,7 @@
 <header id="pageHeader" class="{!! $header_classes !!}"{!! isset($header_style) ? ' style="' . $header_style . '"' : '' !!}>
   @if (isset($header_style))
     <div class="container h-full flex {!! $header_inner_padding !!}">
-      <div class="overflow-x-hidden sm:w-1/2 self-end{!! is_front_page() ? ' lg:self-center bg-white sm:bg-transparent p-1 sm:p-0' : '' !!}">
+      <div class="sm:w-1/2 self-end{!! is_front_page() ? ' lg:self-center bg-white sm:bg-transparent p-1 sm:p-0' : '' !!}">
         <h1 class="break-words">{!! $page_title !!}</h1>
         @if ($header_url)
           <a href="{!! esc_url($header_url) !!}" class="btn btn-xl mt-2 lg:mt-3">{{ __('Kup już teraz', 'sage') }}</a>
