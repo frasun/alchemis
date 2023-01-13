@@ -26,7 +26,7 @@
         }
       @endphp
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 pt-1">
         @if (is_active_sidebar('sidebar-footer-1'))
           @php(dynamic_sidebar('sidebar-footer-1'))
         @endif
