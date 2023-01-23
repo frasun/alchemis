@@ -24,7 +24,7 @@
 @endphp
 
 @if (wc_get_page_id('shop') > 0)
-  <a class="btn{{ esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '') }}"
+  <a class="btn{{ esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '') }} btn-sm mt-2"
     href="{!! esc_url(apply_filters('woocommerce_return_to_shop_redirect', wc_get_page_permalink('shop'))) !!}">
     {!! esc_html(apply_filters('woocommerce_return_to_shop_text', __('Return to shop', 'woocommerce'))) !!}
   </a>
