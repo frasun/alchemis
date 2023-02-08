@@ -1,0 +1,11 @@
+.wp-block-social-links {
+  @apply flex gap-1;
+}
+
+.wp-block-social-link-anchor {
+  @apply text-grey hover:text-green;
+
+  svg {
+    fill: currentcolor;
+  }
+}
