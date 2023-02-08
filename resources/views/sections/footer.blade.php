@@ -4,9 +4,9 @@
     <x-logo type="light" class="mb-2"></x-logo>
 
     @if (is_active_sidebar('sidebar-footer-1') ||
-        is_active_sidebar('sidebar-footer-2') ||
-        is_active_sidebar('sidebar-footer-3') ||
-        is_active_sidebar('sidebar-footer-4'))
+            is_active_sidebar('sidebar-footer-2') ||
+            is_active_sidebar('sidebar-footer-3') ||
+            is_active_sidebar('sidebar-footer-4'))
       @php
         $cols = 0;
         if (is_active_sidebar('sidebar-footer-1')) {
@@ -28,19 +28,27 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 pt-1">
         @if (is_active_sidebar('sidebar-footer-1'))
-          @php(dynamic_sidebar('sidebar-footer-1'))
+          <div>
+            @php(dynamic_sidebar('sidebar-footer-1'))
+          </div>
         @endif
 
         @if (is_active_sidebar('sidebar-footer-2'))
-          @php(dynamic_sidebar('sidebar-footer-2'))
+          <div>
+            @php(dynamic_sidebar('sidebar-footer-2'))
+          </div>
         @endif
 
         @if (is_active_sidebar('sidebar-footer-3'))
-          @php(dynamic_sidebar('sidebar-footer-3'))
+          <div>
+            @php(dynamic_sidebar('sidebar-footer-3'))
+          </div>
         @endif
 
         @if (is_active_sidebar('sidebar-footer-4'))
-          @php(dynamic_sidebar('sidebar-footer-4'))
+          <div>
+            @php(dynamic_sidebar('sidebar-footer-4'))
+          </div>
         @endif
       </div>
     @endif
