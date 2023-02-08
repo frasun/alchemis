@@ -44,3 +44,9 @@ html :where(.editor-styles-wrapper) {
     @apply mt-0;
   }
 }
+
+.block-editor-writing-flow {
+  .container {
+    max-width: 100%;
+  }
+}
