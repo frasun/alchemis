@@ -6,6 +6,7 @@
   @apply absolute;
   @apply top-0 bottom-0;
   @apply overflow-hidden;
+  @apply z-50;
 
   width: calc((50% - 580px));
 

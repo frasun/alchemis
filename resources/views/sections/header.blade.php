@@ -1,19 +1,20 @@
-@php
-  $header_theme = function_exists('get_field') ? get_field('alchemis_header_theme') : '';
-@endphp
+<header id="header" class="sticky top-0 z-50 bg-white">
+  <div class="container py-0.75 lg:py-1 xl:py-2 grid grid-cols-7 items-center">
+    @if (has_nav_menu('primary_navigation'))
+      <div class="col-span-2 lg:col-span-3">
+        @include('components.menu')
+      </div>
+    @endif
 
-<header id="header" class="sticky top-0 z-50" data-theme="{!! $header_theme !!}">
-  <div class="container py-1 lg:py-2 flex justify-between items-center">
-    <a id="logo" class="grow" href="{{ home_url('/') }}">
-      <x-logo style="width: 155px; height: 32px"></x-logo>
+    <a id="logo" href="{{ home_url('/') }}" class="col-span-3 lg:col-span-1 flex justify-center">
+      <x-logo style="width: 165px; height: auto"></x-logo>
     </a>
 
     @if (class_exists('woocommerce'))
-      @include('components.cart-icon')
-    @endif
-
-    @if (has_nav_menu('primary_navigation'))
-      @include('components.menu')
+      <aside class="col-span-2 lg:col-span-3 flex justify-end items-center gap-0.5 sm:gap-1">
+        @include('components.cart-icon')
+        @include('components.profile-icon')
+      </aside>
     @endif
   </div>
 </header>

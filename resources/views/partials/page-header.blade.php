@@ -7,14 +7,17 @@
       }
   }
   
+  $header_classes = '';
+  
   if (isset($header_style)) {
       $header_style .= ' background-size: cover;';
   }
   
-  $header_classes = 'mt-[-6rem] lg:mt-[-7rem] pt-[6rem] lg:pt-[7rem]';
   $header_inner_padding = 'pt-6 pb-4';
   
   if (isset($header_style)) {
+      $header_classes .= 'pt-[6rem] lg:pt-[7rem]';
+  
       if (is_front_page()) {
           $header_classes .= ' h-[80vh] max-h-[64rem]';
           $header_inner_padding = 'pb-3 sm:pb-6';

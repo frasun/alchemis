@@ -29,18 +29,7 @@ export default class Menu {
     this.toggleMenu();
   }
 
-  handleScroll() {
-    window.requestAnimationFrame(() => {
-      if (window.scrollY > 0) {
-        this.header.classList.add('scrolled');
-      } else {
-        this.header.classList.remove('scrolled');
-      }
-    });
-  }
-
   init() {
     this.menuToggle.addEventListener('click', this.toggleMenu.bind(this));
-    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 }

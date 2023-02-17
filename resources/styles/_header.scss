@@ -1,20 +1,40 @@
 #header {
-  @apply transition-colors;
-
   .menu-item {
-    @apply pl-1;
-
     a {
-      @apply text-lg text-dark hover:text-green block;
+      @apply text-dark hover:text-green block;
     }
   }
 
-  .sub-menu .menu-item {
-    @apply pl-2;
+  #menu {
+    .menu-item {
+      @apply pl-1;
+
+      a {
+        @apply text-lg;
+      }
+    }
+
+    .sub-menu .menu-item {
+      @apply pl-2;
+    }
   }
 
-  &.scrolled {
-    @apply bg-white;
+  #menu-desktop {
+    ul {
+      @apply flex flex-wrap;
+
+      li {
+        @apply pr-1;
+      }
+
+      ul {
+        @apply hidden;
+      }
+
+      a {
+        @apply text-base xl:text-md;
+      }
+    }
   }
 
   #menuToggle.open {
@@ -26,31 +46,7 @@
   }
 }
 
-#header[data-theme='white'] {
-  &:not(.scrolled) {
-    #logo g {
-      fill: theme('colors.white');
-    }
-
-    #menuToggle:not(.open):not(:hover),
-    #cartIcon:not(:hover) {
-      @apply text-white;
-    }
-  }
-}
-
 body.page-template-template-white {
-  #header:not(.scrolled) {
-    #logo g {
-      fill: theme('colors.white');
-    }
-
-    #menuToggle:not(.open):not(:hover),
-    #cartIcon:not(:hover) {
-      @apply text-white;
-    }
-  }
-
   main > header {
     @apply text-white;
   }
