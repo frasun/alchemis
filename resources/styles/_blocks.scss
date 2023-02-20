@@ -1,8 +1,6 @@
 // content section
 .wp-block-alchemis {
   &-content-section {
-    @apply text-md;
-
     &.is-style-dark {
       @apply text-white bg-dark;
     }

@@ -11,7 +11,7 @@
 
     @if (isset($inside_container))
       <section class="container pt-2 pb-7">
-        <div class="prose{{ isset($prose) ? ' prose-lg' : '' }}">
+        <div class="prose">
           @includeFirst(['partials.content-page', 'partials.content'])
         </div>
       </section>

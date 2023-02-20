@@ -17,7 +17,7 @@
   @include('partials.page-header', ['thumbnail_url' => $thumbnail_url, 'page_title' => get_the_title()])
 
   <section class="container py-5">
-    <section class="prose prose-lg py-5">
+    <section class="prose py-5">
       {!! apply_filters('the_content', get_post($page_id)->post_content) !!}
     </section>
 

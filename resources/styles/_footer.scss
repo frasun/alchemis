@@ -1,4 +1,6 @@
 #footer {
+  @apply text-baseSm;
+
   .menu a {
     @apply text-grey hover:text-green;
     @apply pt-0.5;

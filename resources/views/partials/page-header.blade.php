@@ -49,7 +49,7 @@
       </div>
     </div>
   @elseif (isset($prose))
-    <div class="container pb-4">
+    <div class="container">
       <div class="text-green flex pt-4">
         <div class="shrink-0 mr-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="38" height="59" viewBox="0 0 38 59">

@@ -110,9 +110,14 @@
           "size": "0.75rem"
         },
         {
+          "name": "baseSm",
+          "slug": "baseSm",
+          "size": "0.9375rem"
+        },
+        {
           "name": "base",
           "slug": "base",
-          "size": "0.9375rem"
+          "size": "1rem"
         },
         {
           "name": "md",

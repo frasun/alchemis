@@ -18,12 +18,12 @@
   <section class="container py-5">
     @if (is_category())
       @if (category_description())
-        <section class="prose prose-lg pb-5">
+        <section class="prose pb-5">
           {!! category_description() !!}
         </section>
       @endif
     @else
-      <section class="prose prose-lg py-5">
+      <section class="prose py-5">
         {!! apply_filters('the_content', get_post($page_id)->post_content) !!}
       </section>
     @endif

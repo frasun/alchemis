@@ -28,7 +28,7 @@
   </div>
   </header>
 
-  <div class="prose prose-lg">
+  <div class="prose">
     @php(the_content())
   </div>
 

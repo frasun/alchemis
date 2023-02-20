@@ -530,8 +530,6 @@ $thumbnail-size-sm: 70px;
   }
 
   .shop_attributes {
-    @apply text-md;
-
     .woocommerce-product-attributes-item__label {
       @apply hidden;
     }
