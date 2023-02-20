@@ -7,7 +7,7 @@ export default () => {
     title: __('Icon grid'),
     icon: 'admin-site-alt3',
     scope: ['inserter'],
-    isDefault: true,
+    // isDefault: true,
     attributes: {
       className: 'icon-grid',
     },

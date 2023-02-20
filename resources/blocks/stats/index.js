@@ -7,7 +7,7 @@ export default () => {
     title: __('Stats'),
     icon: 'analytics',
     scope: ['inserter'],
-    isDefault: true,
+    // isDefault: true,
     attributes: {
       className: 'stats',
     },

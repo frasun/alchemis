@@ -371,3 +371,4 @@ add_action('wp_head', function () {
  * Lightweight accordion plugin
  */
 add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false');
+// add_filter('lightweight_accordion_include_admin_stylesheet', '__return_false');
