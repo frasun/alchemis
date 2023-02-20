@@ -366,3 +366,8 @@ add_action('wp_head', function () {
     <link rel="mask-icon" href="<?php echo $favicon_dir; ?>/safari-pinned-tab.svg" color="#5bbad5">
 <?php
 });
+
+/**
+ * Lightweight accordion plugin
+ */
+add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false');

@@ -1,0 +1,26 @@
+.lightweight-accordion-title {
+  @apply cursor-pointer;
+  @apply transition-colors;
+  @apply px-0.5;
+
+  span {
+    @apply text-md;
+    @apply font-bold;
+    @apply transition-colors;
+    @apply ml-0.5;
+  }
+
+  &:hover {
+    span {
+      @apply text-green;
+    }
+  }
+
+  &::marker {
+    @apply text-green;
+  }
+}
+
+.lightweight-accordion-body {
+  @apply pl-3;
+}
