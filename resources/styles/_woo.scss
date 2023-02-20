@@ -89,6 +89,10 @@ $thumbnail-size-sm: 70px;
     img {
       @apply mx-auto;
     }
+
+    a {
+      @apply pointer-events-none;
+    }
   }
 
   .flex-control-thumbs {

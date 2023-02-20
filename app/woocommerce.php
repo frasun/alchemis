@@ -136,7 +136,7 @@ add_filter('woocommerce_get_image_size_thumbnail', function ($size) {
 add_action('wp_print_scripts', function () {
     // wp_dequeue_script('flexslider');
     wp_dequeue_script('zoom');
-    // wp_dequeue_script('photoswipe-ui-default');
+    wp_dequeue_script('photoswipe-ui-default');
 }, 100);
 
 /**
