@@ -146,6 +146,8 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_re
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 9);
+
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
 add_action('woocommerce_single_product_summary', 'wc_display_product_attributes', 6);

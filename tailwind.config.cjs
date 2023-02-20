@@ -62,6 +62,7 @@ module.exports = {
       headings: '0.9',
       none: '1',
       tight: '1.25',
+      narrow: '1.5',
       normal: '1.75',
       radioLabel: '2',
       label: '2.75',
@@ -138,6 +139,9 @@ module.exports = {
               fontWeight: 'normal',
               textDecoration: 'none',
               color: theme('colors.greyDark'),
+            },
+            ul: {
+              marginTop: 0,
             },
           },
         },

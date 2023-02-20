@@ -542,6 +542,10 @@ $thumbnail-size-sm: 70px;
       @apply p-0;
     }
   }
+
+  .woocommerce-product-details__short-description {
+    @apply my-0.75;
+  }
 }
 
 .woocommerce-orders-table__cell-order-actions a {
@@ -597,5 +601,11 @@ $thumbnail-size-sm: 70px;
     > button {
       float: right;
     }
+  }
+}
+
+.woocommerce-product-details__short-description {
+  li {
+    @apply leading-narrow;
   }
 }
