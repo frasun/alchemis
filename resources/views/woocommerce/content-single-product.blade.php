@@ -62,6 +62,8 @@
          */
         do_action('woocommerce_single_product_summary', $product);
       @endphp
+
+      @include('woocommerce.single-product.info')
     </div>
   </div>
 
