@@ -20,4 +20,4 @@
   }
 @endphp
 
-{!! the_title('<h1 class="uppercase text-xlg font-bold pb-2">', '</h1>') !!}
+{!! the_title('<h1 class="uppercase text-xl font-semibold pb-2">', '</h1>') !!}

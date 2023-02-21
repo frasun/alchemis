@@ -64,7 +64,7 @@
 
     <div class="pb-2">
       <button type="submit" name="add-to-cart" value="{!! esc_attr($product->get_id()) !!}"
-        class="btn btn-sm shrink-0">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
+        class="btn shrink-0">{!! esc_html($product->single_add_to_cart_text()) !!}</button>
     </div>
 
     @php

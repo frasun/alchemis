@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 @import '_headings';
+@import '_wp';
 
 @layer base {
   body:not(.wp-admin) {
@@ -9,7 +10,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     p {
-      @apply pt-1 pb-2 m-0;
+      @apply mt-1 mb-2;
     }
   }
 
@@ -19,6 +20,7 @@
   h4,
   h5,
   h6 {
+    @apply font-normal;
     @apply leading-headings;
   }
 
@@ -41,4 +43,8 @@
   address {
     @apply not-italic;
   }
+}
+
+:root {
+  @include wp-vars;
 }

@@ -42,16 +42,24 @@
 }
 
 .wp-block-image {
-  @apply text-center;
-
   img {
     @apply m-auto;
   }
 
   figcaption {
     color: inherit;
-    font-size: inherit;
     text-align: inherit;
+
+    @apply mt-2;
+
+    strong {
+      @apply text-baseSm;
+      @apply block mb-0.5;
+    }
+
+    br {
+      @apply hidden;
+    }
   }
 }
 
@@ -119,7 +127,7 @@
     }
 
     .box-title {
-      @apply text-xlg text-center text-dark;
+      @apply text-xlg text-center text-dark font-normal;
       @apply m-0;
       @apply translate-y-[110px] transition-transform mt-1 flex items-center;
 
@@ -241,9 +249,22 @@
 
 // columns
 .wp-block-columns {
-  @apply flex gap-3 flex-wrap lg:flex-nowrap;
+  @screen lg {
+    @apply flex gap-4 flex-wrap lg:flex-nowrap;
+  }
 
   .wp-block-column {
     @apply lg:basis-6/12;
+  }
+
+  &.are-vertically-aligned-center {
+    @apply items-center;
+  }
+}
+
+.wp-block-group {
+  @media (max-width: 1023px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

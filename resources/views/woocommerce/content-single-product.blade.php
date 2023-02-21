@@ -46,7 +46,7 @@
       @endphp
     </div>
 
-    <div id="productOverview" class="lg:col-span-3 xl:col-span-2 flex flex-col lg:pt-3">
+    <div id="productOverview" class="lg:col-span-3 xl:col-span-2 flex flex-col lg:pt-2">
       @php
         /**
          * Hook: woocommerce_single_product_summary.

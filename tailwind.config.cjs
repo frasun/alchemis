@@ -75,10 +75,15 @@ module.exports = {
       md: ['1.125rem'], // 18px
       lg: ['1.375rem'], // 22px
       xlg: ['1.75rem'], // 28px
-      xl: ['2.5rem'], // 40px
+      xl: ['2rem'], // 32px
       '1/5xl': ['3rem'], // 48px
       '2xl': ['3.75rem'], // 60px
     }),
+    fontWeight: {
+      normal: '500',
+      semibold: '600',
+      bold: '600',
+    },
     opacity: {
       0: '0',
       30: '0.3',
@@ -120,22 +125,6 @@ module.exports = {
             p: {
               padding: 0,
             },
-            h2: {
-              fontWeight: 700,
-            },
-            h3: {
-              textTransform: 'uppercase',
-              fontWeight: 700,
-            },
-            h4: {
-              fontWeight: 700,
-            },
-            h5: {
-              fontWeight: 700,
-            },
-            h6: {
-              fontWeight: 700,
-            },
             a: {
               fontWeight: 'normal',
               textDecoration: 'none',
@@ -143,6 +132,46 @@ module.exports = {
             },
             ul: {
               marginTop: 0,
+            },
+            h1: {
+              fontSize: theme('fontSize.1/5xl'),
+              fontWeight: theme('fontWeight.normal'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            h2: {
+              fontSize: theme('fontSize.xl'),
+              fontWeight: theme('fontWeight.normal'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            h3: {
+              fontSize: theme('fontSize.lg'),
+              fontWeight: theme('fontWeight.normal'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            h4: {
+              fontSize: theme('fontSize.md'),
+              fontWeight: theme('fontWeight.semibold'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            h5: {
+              fontSize: theme('fontSize.base'),
+              fontWeight: theme('fontWeight.semibold'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            h6: {
+              fontSize: theme('fontSize.base'),
+              fontWeight: theme('fontWeight.semibold'),
+              marginTop: '1.5em',
+              marginBottom: '1em',
+            },
+            figure: {
+              marginTop: 0,
+              marginBottom: 0,
             },
           },
         },

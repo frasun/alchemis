@@ -14,16 +14,19 @@
 .wpcf7-submit {
   border: 2px solid theme('colors.dark'); // woocommerce hack
 
-  @apply py-0.75 px-4;
+  @apply py-0.75 px-3;
   @apply rounded-tl-full rounded-br-full;
   @apply border-2 border-green outline-0;
   @apply bg-green;
   @apply transition-colors;
-  @apply leading-normal;
   @apply text-white;
   @apply inline-block;
-  @apply font-normal;
+  @apply text-md;
+  @apply leading-narrow;
+  @apply font-semibold;
   @apply text-center;
+
+  letter-spacing: -0.02em;
 
   &:not([disabled]):hover {
     @apply bg-dark border-dark text-white;
@@ -42,11 +45,13 @@
   &.btn-sm,
   &.button-sm,
   &.wc-forward {
-    @apply py-[0.4rem] px-3;
+    @apply py-[0.4rem] px-2;
+    @apply leading-tight text-baseSm;
   }
 
   &.btn-xl {
-    @apply text-md;
+    @apply px-4;
+    @apply text-lg;
   }
 }
 

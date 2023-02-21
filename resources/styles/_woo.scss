@@ -87,7 +87,7 @@ $thumbnail-size-sm: 70px;
     @apply max-w-full;
 
     img {
-      @apply mx-auto;
+      @apply mx-auto max-h-full w-auto;
     }
 
     a {
@@ -289,7 +289,7 @@ $thumbnail-size-sm: 70px;
     }
 
     .coupon {
-      @apply order-2 md:order-1;
+      @apply order-2 md:order-1 items-center;
     }
   }
 }
@@ -514,12 +514,6 @@ $thumbnail-size-sm: 70px;
   @apply outline-red;
 }
 
-[id^='product-'] {
-  img {
-    @apply max-h-full w-auto m-auto;
-  }
-}
-
 .add-to-cart-simple {
   .quantity {
     .qty {
@@ -608,4 +602,9 @@ $thumbnail-size-sm: 70px;
   li {
     @apply leading-narrow;
   }
+}
+
+.product.woocommerce.add_to_cart_inline {
+  @apply p-0;
+  @apply flex flex-wrap items-center gap-3;
 }

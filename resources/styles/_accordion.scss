@@ -1,5 +1,7 @@
 .lightweight-accordion {
   @apply pb-3;
+  @apply border-b border-greyDark;
+  @apply pb-1 mb-1;
 }
 
 .lightweight-accordion-title {
@@ -9,7 +11,7 @@
 
   span {
     @apply text-md;
-    @apply font-bold;
+    @apply font-semibold;
     @apply transition-colors;
     @apply ml-0.5;
   }

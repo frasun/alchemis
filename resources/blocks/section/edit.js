@@ -17,6 +17,7 @@ const ALLOWED_BLOCKS = [
   'core/latest-posts',
   'core/columns',
   'core/list',
+  'core/group',
   'woocommerce/featured-product',
   'woocommerce/product-new',
 ];
