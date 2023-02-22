@@ -249,6 +249,8 @@
 
 // columns
 .wp-block-columns {
+  @apply w-full;
+
   @screen lg {
     @apply flex gap-4 flex-wrap lg:flex-nowrap;
   }
@@ -263,6 +265,8 @@
 }
 
 .wp-block-group {
+  @apply flex w-full;
+
   @media (max-width: 1023px) {
     padding-left: 0 !important;
     padding-right: 0 !important;

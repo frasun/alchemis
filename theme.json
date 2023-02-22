@@ -73,6 +73,11 @@
           "name": "Transparent",
           "slug": "transparent",
           "color": "rgba(255, 255, 255, 0)"
+        },
+        {
+          "name": "HomeBg",
+          "slug": "homebg",
+          "color": "#dbdbdb"
         }
       ]
     },
@@ -143,6 +148,11 @@
           "name": "xl",
           "slug": "xl",
           "size": "2rem"
+        },
+        {
+          "name": "xl2",
+          "slug": "xl2",
+          "size": "2.5rem"
         },
         {
           "name": "1/5xl",

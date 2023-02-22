@@ -52,10 +52,83 @@ body.page-template-template-white {
   }
 }
 
-body.home #pageHeader {
-  background-position: 85% 45%;
+$home-bg-mobile-height: 400px;
 
-  @screen sm {
-    background-position: 40% 45%;
+#pageHeader {
+  @apply bg-cover;
+
+  h1 {
+    @apply border-t border-grey-3 text-xlg break-words pt-6 pb-4;
+  }
+
+  &.has-bg-image {
+    @apply h-[70vh] max-h-[42rem] bg-no-repeat;
+
+    .container {
+      @apply h-full flex;
+    }
+
+    .header-content {
+      @apply lg:w-1/2;
+
+      @apply flex flex-col justify-end;
+      @apply items-start;
+
+      @apply pb-4 lg:py-6;
+    }
+
+    body:not(.home) & {
+      background-position: 80%;
+
+      @apply md:bg-right;
+    }
+
+    body.home & {
+      max-height: none;
+
+      @apply bg-homeBg;
+      @apply h-auto lg:h-[70vh] lg:max-h-[42rem];
+
+      .container {
+        @apply bg-no-repeat;
+
+        background-size: auto $home-bg-mobile-height;
+        background-position: top left;
+        padding-top: $home-bg-mobile-height;
+
+        @screen sm {
+          background-position: top center;
+        }
+
+        @screen lg {
+          background-size: auto 100%;
+          padding-top: 0;
+
+          @apply bg-right;
+        }
+
+        @screen xl {
+          background-position: 90%;
+        }
+      }
+
+      .header-content {
+        @apply justify-center block lg:flex;
+      }
+    }
+
+    h1 {
+      @apply text-xl2 xs:text-1/5xl md:text-2xl border-0 p-0;
+    }
+  }
+
+  .has-icon h1 {
+    @apply pt-0.75 pb-0 text-xl2 border-0;
+  }
+
+  body.page-template-template-prose & {
+    .container {
+      @apply text-green pt-4 flex;
+    }
   }
 }

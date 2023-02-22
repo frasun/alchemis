@@ -32,6 +32,7 @@ module.exports = {
       'grey-5': '#eaeaea',
       red: '#C41414',
       transparent: 'rgba(255, 255, 255, 0)',
+      homeBg: '#dbdbdb',
     },
     screens: {
       xs: '480px',
@@ -78,6 +79,7 @@ module.exports = {
       lg: ['1.375rem'], // 22px
       xlg: ['1.75rem'], // 28px
       xl: ['2rem'], // 32px
+      xl2: ['2.5rem'], // 40px
       '1/5xl': ['3rem'], // 48px
       '2xl': ['3.75rem'], // 60px
     }),
@@ -114,9 +116,6 @@ module.exports = {
         maz4: 'url(../images/bg-maz-4.png)',
         maz5: 'url(../images/bg-maz-5.png)',
         maz6: 'url(../images/bg-maz-6.png)',
-      },
-      backgroundPosition: {
-        'header-mobile': '80%',
       },
       typography: (theme) => ({
         DEFAULT: {
