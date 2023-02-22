@@ -9,7 +9,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    p {
+    p:not(.m-0) {
       @apply mt-1 mb-2;
     }
   }
@@ -42,6 +42,10 @@
 
   address {
     @apply not-italic;
+  }
+
+  strong {
+    @apply font-semibold;
   }
 }
 

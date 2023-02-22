@@ -45,6 +45,7 @@ module.exports = {
     },
     spacing: {
       0: '0px',
+      0.25: '0.25rem', // 8px
       0.5: '0.5rem', // 8px
       0.75: '0.75rem', // 12px
       1: '1rem', // 16px
@@ -70,6 +71,7 @@ module.exports = {
     },
     fontSize: ({theme}) => ({
       sm: ['0.75rem'], // 12px
+      sml: ['0.875rem'], // 14px
       baseSm: ['0.9375rem'], // 15px
       base: ['1rem', {lineHeight: theme('lineHeight.normal')}], // 16px
       md: ['1.125rem'], // 18px

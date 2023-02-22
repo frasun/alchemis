@@ -110,6 +110,11 @@
           "size": "0.75rem"
         },
         {
+          "name": "sml",
+          "slug": "sml",
+          "size": "0.875rem"
+        },
+        {
           "name": "baseSm",
           "slug": "baseSm",
           "size": "0.9375rem"

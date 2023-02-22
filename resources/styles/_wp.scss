@@ -18,10 +18,38 @@
   @apply text-center;
 }
 
+.has-sm-font-size {
+  @apply text-sm;
+}
+
+.has-base-sm-font-size {
+  @apply text-baseSm;
+}
+
+.has-base-font-size {
+  @apply text-base;
+}
+
 .has-md-font-size {
   @apply text-md;
 }
 
-.has-base-sm-font-size {
-  @apply text-sm;
+.has-lg-font-size {
+  @apply text-lg;
+}
+
+.has-xlg-font-size {
+  @apply text-xlg;
+}
+
+.has-xl-font-size {
+  @apply text-xl;
+}
+
+.has-1-5-xl-font-size {
+  @apply text-1/5xl;
+}
+
+.has-2-xl-font-size {
+  @apply text-2xl;
 }

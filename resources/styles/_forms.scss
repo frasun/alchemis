@@ -89,7 +89,6 @@ html:where(.editor-styles-wrapper) {
 
   label {
     @apply cursor-pointer;
-    @apply leading-label;
 
     input + & {
       @apply leading-radioLabel;

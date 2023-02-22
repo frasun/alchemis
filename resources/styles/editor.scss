@@ -41,6 +41,10 @@ html :where(.editor-styles-wrapper) {
     @apply mt-1 mb-2;
   }
 
+  strong {
+    @apply font-semibold;
+  }
+
   div[data-type='alchemis/box'] {
     a {
       pointer-events: none;
