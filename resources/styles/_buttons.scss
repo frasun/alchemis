@@ -44,7 +44,8 @@
 
   &.btn-sm,
   &.button-sm,
-  &.wc-forward {
+  &.wc-forward,
+  .product-grid & {
     @apply py-[0.4rem] px-2;
     @apply leading-tight text-baseSm;
   }

@@ -97,6 +97,44 @@
         "rem",
         "vw",
         "vh"
+      ],
+      "blockGap": "2.5rem",
+      "spacingSizes": [
+        {
+          "size": "1rem",
+          "slug": "20",
+          "name": "2"
+        },
+        {
+          "size": "2rem",
+          "slug": "30",
+          "name": "3"
+        },
+        {
+          "size": "2.5rem",
+          "slug": "40",
+          "name": "4"
+        },
+        {
+          "size": "3.75rem",
+          "slug": "50",
+          "name": "5"
+        },
+        {
+          "size": "4.5rem",
+          "slug": "60",
+          "name": "6"
+        },
+        {
+          "size": "6rem",
+          "slug": "70",
+          "name": "7"
+        },
+        {
+          "size": "7.5rem",
+          "slug": "80",
+          "name": "8"
+        }
       ]
     },
     "typography": {

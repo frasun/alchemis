@@ -27,7 +27,7 @@
       <h1>{!! $page_title !!}</h1>
 
       @if ($subtitle)
-        <h2 class="mt-1">{!! $subtitle !!}</h2>
+        <h3 class="mt-1">{!! $subtitle !!}</h3>
       @endif
 
       @if ($header_button_url)

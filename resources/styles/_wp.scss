@@ -1,15 +1,3 @@
-@mixin wp-vars {
-  --wp--preset--spacing--10: 0.5rem;
-  --wp--preset--spacing--20: 1rem;
-  --wp--preset--spacing--30: 1.5rem;
-  --wp--preset--spacing--40: 2rem;
-  --wp--preset--spacing--50: 2.5rem;
-  --wp--preset--spacing--60: 3.75rem;
-  --wp--preset--spacing--70: 4.5rem;
-  --wp--preset--spacing--80: 6rem;
-  --wp--style--block-gap: 2rem;
-}
-
 .has-green-color {
   @apply text-green;
 }

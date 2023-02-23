@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 @import '_headings';
-@import '_wp';
 
 @layer base {
   body:not(.wp-admin) {
@@ -21,13 +20,24 @@
   h5,
   h6 {
     @apply font-normal;
-    @apply leading-headings;
   }
 
   h4,
   h5,
   h6 {
     @apply font-semibold;
+  }
+
+  h1,
+  h2 {
+    @apply leading-headings;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-tight;
   }
 
   @include h-sizes;
@@ -47,8 +57,4 @@
   strong {
     @apply font-semibold;
   }
-}
-
-:root {
-  @include wp-vars;
 }

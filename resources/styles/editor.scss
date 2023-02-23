@@ -2,7 +2,6 @@
 @import '_headings';
 @import '_blocks';
 @import '_acf';
-@import '_wp';
 
 html :where(.editor-styles-wrapper) {
   font-family: Poppins, sans-serif;
@@ -71,8 +70,6 @@ html :where(.editor-styles-wrapper) {
   max-width: 1280px;
   width: 100%;
   @apply m-auto;
-
-  @include wp-vars;
 
   .container {
     max-width: 100%;

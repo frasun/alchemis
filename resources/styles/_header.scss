@@ -69,7 +69,7 @@ $home-bg-mobile-height: 400px;
     }
 
     .header-content {
-      @apply lg:w-1/2;
+      @apply lg:w-[40%];
 
       @apply flex flex-col justify-end;
       @apply items-start;

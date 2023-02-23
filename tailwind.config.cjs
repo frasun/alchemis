@@ -44,7 +44,7 @@ module.exports = {
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
-    spacing: {
+    spacing: ({theme}) => ({
       0: '0px',
       0.25: '0.25rem', // 8px
       0.5: '0.5rem', // 8px
@@ -60,7 +60,8 @@ module.exports = {
       9: '7.5rem', // 120px
       10: '10rem', // 160px
       13: '13rem', // 208px
-    },
+      40: '10rem',
+    }),
     lineHeight: {
       headings: '0.9',
       none: '1',

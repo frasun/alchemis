@@ -250,22 +250,35 @@
 // columns
 .wp-block-columns {
   @apply w-full;
+  @apply flex gap-4 flex-wrap lg:flex-nowrap;
 
-  @screen lg {
-    @apply flex gap-4 flex-wrap lg:flex-nowrap;
-  }
-
-  .wp-block-column {
-    @apply lg:basis-6/12;
+  @media (max-width: 1023px) {
+    flex-wrap: wrap !important;
   }
 
   &.are-vertically-aligned-center {
     @apply items-center;
   }
+
+  &.are-vertically-aligned-top {
+    @apply items-start;
+  }
+
+  .wp-block-column {
+    @apply lg:basis-6/12 flex-grow;
+
+    &.is-vertically-aligned-top {
+      @apply self-start;
+    }
+
+    &.is-vertically-aligned-center {
+      @apply self-center;
+    }
+  }
 }
 
 .wp-block-group {
-  @apply flex w-full;
+  // @apply flex w-full;
 
   @media (max-width: 1023px) {
     padding-left: 0 !important;

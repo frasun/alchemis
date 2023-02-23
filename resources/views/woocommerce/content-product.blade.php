@@ -46,7 +46,7 @@
       do_action('woocommerce_before_shop_loop_item_title');
     @endphp
 
-    <figcaption class="border-t border-grey-3 mt-1 pt-0.25 pb-1">
+    <figcaption class="border-t border-grey-3 mt-1 pt-0.25">
 
       @php
         /**
