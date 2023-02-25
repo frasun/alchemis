@@ -83,11 +83,11 @@ $thumbnail-size: 90px;
 $thumbnail-size-sm: 70px;
 
 .woocommerce-product-gallery {
-  @apply flex flex-col md:flex-row;
-  @apply justify-center lg:justify-start;
+  @apply flex flex-col;
+  @apply justify-center;
 
   .flex-viewport {
-    @apply md:order-2 md:ml-3;
+    @apply md:ml-3;
   }
 
   &__image {
@@ -103,9 +103,8 @@ $thumbnail-size-sm: 70px;
   }
 
   .flex-control-thumbs {
-    @apply md:order-1;
-    @apply flex flex-row flex-wrap md:flex-col;
-    @apply mt-2 md:mt-0;
+    @apply flex flex-row flex-wrap;
+    @apply mt-2;
 
     li {
       flex: 0 0 $thumbnail-size-sm;
@@ -119,7 +118,7 @@ $thumbnail-size-sm: 70px;
       }
 
       &:not(:last-child) {
-        @apply md:mb-0.75 cursor-pointer;
+        @apply mr-0.75 mb-0.75 cursor-pointer;
       }
 
       img {
