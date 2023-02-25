@@ -8,7 +8,7 @@
 .lightweight-accordion-title {
   @apply cursor-pointer;
   @apply transition-colors;
-  @apply px-0.5;
+  @apply lg:px-0.5;
 
   span {
     @apply text-md;
@@ -29,5 +29,5 @@
 }
 
 .lightweight-accordion-body {
-  @apply pl-3;
+  @apply lg:pl-3;
 }
