@@ -91,6 +91,13 @@ html :where(.editor-styles-wrapper) {
       margin-bottom: 1em;
     }
   }
+
+  [data-type='alchemis/heading-with-icon'] {
+    h2,
+    h3 {
+      margin: 0 !important;
+    }
+  }
 }
 
 .wp-block-image {
