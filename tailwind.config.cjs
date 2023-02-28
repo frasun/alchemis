@@ -16,6 +16,7 @@ module.exports = {
     'lg:grid-cols-3',
     'lg:grid-cols-4',
     'items-center',
+    'lg:w-3/4'
   ],
   theme: {
     colors: {
