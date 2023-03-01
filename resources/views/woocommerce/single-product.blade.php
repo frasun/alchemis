@@ -41,5 +41,6 @@ the readme will list any important changes.
 @endsection
 
 @section('aside')
+  @include('partials.feed')
   @include('partials.newsletter')
 @endsection

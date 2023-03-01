@@ -119,8 +119,8 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
+        'before_widget' => '<aside class="widget %1$s %2$s">',
+        'after_widget' => '</aside>',
         'before_title' => '<h4 class="pb-0.5">',
         'after_title' => '</h4>',
     ];
@@ -153,6 +153,11 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name' => __('Newsletter', 'sage'),
         'id' => 'sidebar-newsletter',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Instagram feed', 'sage'),
+        'id' => 'sidebar-feed',
     ] + $config);
 });
 

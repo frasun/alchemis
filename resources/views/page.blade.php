@@ -28,6 +28,10 @@
 @endsection
 
 @section('aside')
+  @if (is_front_page())
+    @include('partials.feed')
+  @endif
+
   @if (in_array('newsletter_sidebar', $widgets))
     @include('partials.newsletter')
   @endif
