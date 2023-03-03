@@ -16,7 +16,7 @@ module.exports = {
     'lg:grid-cols-3',
     'lg:grid-cols-4',
     'items-center',
-    'lg:w-3/4'
+    'lg:w-3/4',
   ],
   theme: {
     colors: {
@@ -108,6 +108,7 @@ module.exports = {
     },
     transitionDuration: {
       DEFAULT: '300ms',
+      500: '500ms',
     },
     extend: {
       backgroundImage: {
@@ -118,6 +119,9 @@ module.exports = {
         maz4: 'url(../images/bg-maz-4.png)',
         maz5: 'url(../images/bg-maz-5.png)',
         maz6: 'url(../images/bg-maz-6.png)',
+      },
+      zIndex: {
+        max: 9999,
       },
       typography: (theme) => ({
         DEFAULT: {

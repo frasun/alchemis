@@ -8,19 +8,19 @@ import {
 import {PanelBody, PanelRow, Button} from '@wordpress/components';
 import {__} from '@wordpress/i18n';
 
-const ALLOWED_BLOCKS = [
-  'alchemis/heading-with-icon',
-  'core/heading',
-  'core/paragraph',
-  'core/image',
-  'alchemis/testimonials',
-  'core/latest-posts',
-  'core/columns',
-  'core/list',
-  'core/group',
-  'woocommerce/featured-product',
-  'woocommerce/product-new',
-];
+// const ALLOWED_BLOCKS = [
+//   'alchemis/heading-with-icon',
+//   'core/heading',
+//   'core/paragraph',
+//   'core/image',
+//   'alchemis/testimonials',
+//   'core/latest-posts',
+//   'core/columns',
+//   'core/list',
+//   'core/group',
+//   'woocommerce/featured-product',
+//   'woocommerce/product-new',
+// ];
 const ALLOWED_MEDIA_TYPES = ['image'];
 
 export default function edit({className, setAttributes, attributes}) {
@@ -87,7 +87,7 @@ export default function edit({className, setAttributes, attributes}) {
       </InspectorControls>
       <section {...blockProps} className={className} style={styles}>
         <div className="container py-6">
-          <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+          <InnerBlocks />
         </div>
       </section>
     </>

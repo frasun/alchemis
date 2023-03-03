@@ -32,3 +32,5 @@
   <div class="bg-maz3"></div>
   <div class="bg-maz5"></div>
 </div>
+
+@include('partials.modal')

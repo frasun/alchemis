@@ -1,0 +1,33 @@
+#modalBackdrop {
+  @apply fixed w-full h-full top-0 -left-full flex items-center justify-center overflow-y-auto z-max;
+  @apply bg-dark/60;
+  @apply opacity-0;
+
+  &.touched {
+    @apply transition-opacity duration-500;
+    @apply left-0;
+  }
+
+  &.open {
+    @apply opacity-100;
+  }
+}
+
+#modal {
+  @apply fixed w-full h-full top-0 -left-full flex items-center justify-center overflow-y-auto z-max;
+  @apply -translate-y-full;
+
+  &.touched {
+    @apply left-0;
+    @apply transition-transform;
+  }
+
+  &.open {
+    @apply translate-y-0;
+  }
+
+  #modalContent {
+    @apply w-[90%] m-auto max-w-[600px];
+    @apply relative;
+  }
+}

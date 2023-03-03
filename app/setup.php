@@ -159,6 +159,11 @@ add_action('widgets_init', function () {
         'name' => __('Instagram feed', 'sage'),
         'id' => 'sidebar-feed',
     ] + $config);
+
+    register_sidebar([
+        'name' => __('Modal', 'sage'),
+        'id' => 'sidebar-modal',
+    ] + $config);
 });
 
 

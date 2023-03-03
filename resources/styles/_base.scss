@@ -11,6 +11,10 @@
     p:not(.m-0) {
       @apply mt-1 mb-2;
     }
+
+    p:empty {
+      @apply hidden;
+    }
   }
 
   h1,

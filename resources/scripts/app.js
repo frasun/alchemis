@@ -1,7 +1,6 @@
 import {domReady} from '@roots/sage/client';
 import Menu from './menu';
 import Swiper, {Navigation, Autoplay} from 'swiper';
-import Form from './form';
 import CartUpdate from './cart';
 
 const UPDATE_CART_BTN = 'update_cart';
@@ -41,12 +40,6 @@ const main = async (err) => {
     });
   }
 
-  // forms
-  const forms = document.querySelectorAll('form[novalidate]:not(.wpcf7-form)');
-  for (let form of Array.from(forms)) {
-    new Form(form);
-  }
-
   // cart
   const cartUpdateBtn = document.querySelector(`[name=${UPDATE_CART_BTN}]`);
   if (cartUpdateBtn) {
@@ -75,6 +68,71 @@ const main = async (err) => {
 
         qtyInput.value = newValue;
       }
+    });
+  }
+
+  // modal
+  const MODAL_SHOW_TIME = 5000;
+  const MODAL_TOUCHED = 'touched';
+  const MODAL_OPEN = 'open';
+  const MODAL_COOKIE_EXP = 30;
+
+  function getCookie(cname) {
+    let name = cname + '=';
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return '';
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+    let expires = 'expires=' + d.toUTCString();
+    document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  }
+
+  let visited = getCookie('newsletter_modal_shown');
+
+  if (visited === '') {
+    document.addEventListener('DOMContentLoaded', () => {
+      window.setTimeout(() => {
+        const modal = document.getElementById('modal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalClose = document.getElementById('modalClose');
+
+        if (modalBackdrop) {
+          modalBackdrop.classList.add(MODAL_TOUCHED);
+          modalBackdrop.classList.add(MODAL_OPEN);
+        }
+
+        if (modal) {
+          modal.classList.add(MODAL_TOUCHED);
+          modal.classList.add(MODAL_OPEN);
+        }
+
+        if (modalClose) {
+          modalClose.addEventListener('click', () => {
+            modal.classList.remove(MODAL_OPEN);
+            modalBackdrop.classList.remove(MODAL_OPEN);
+
+            modalBackdrop.addEventListener('transitionend', () => {
+              modal.classList.remove(MODAL_TOUCHED);
+              modalBackdrop.classList.remove(MODAL_TOUCHED);
+            });
+
+            setCookie('newsletter_modal_shown', true, MODAL_COOKIE_EXP);
+          });
+        }
+      }, MODAL_SHOW_TIME);
     });
   }
 };
