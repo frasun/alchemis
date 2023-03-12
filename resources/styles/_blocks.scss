@@ -61,6 +61,18 @@
       @apply hidden;
     }
   }
+
+  &.alignleft {
+    img {
+      @apply ml-0;
+    }
+  }
+
+  &.alignright {
+    img {
+      @apply mr-0;
+    }
+  }
 }
 
 .wp-block-latest-posts {

@@ -10,13 +10,13 @@
 @endphp
 
 @if (apply_filters('woocommerce_checkout_show_terms', true) &&
-    function_exists('wc_terms_and_conditions_checkbox_enabled'))
+        function_exists('wc_terms_and_conditions_checkbox_enabled'))
   @php
     do_action('woocommerce_checkout_before_terms_and_conditions');
   @endphp
 
   @if (wc_terms_and_conditions_checkbox_enabled())
-    <div class="woocommerce-terms-and-conditions-wrapper mt-4 mb-6">
+    <div class="woocommerce-terms-and-conditions-wrapper mt-4 mb-2">
       @php
         /**
          * Terms and conditions hook used to inject content.

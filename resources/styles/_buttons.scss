@@ -11,6 +11,7 @@
 .posts-navigation a,
 .wp-block-button a,
 .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+#commentform .form-submit input[type='submit'],
 .wpcf7-submit {
   border: 2px solid theme('colors.dark'); // woocommerce hack
 
@@ -25,6 +26,7 @@
   @apply leading-narrow;
   @apply font-semibold;
   @apply text-center;
+  @apply cursor-pointer;
 
   letter-spacing: -0.02em;
 

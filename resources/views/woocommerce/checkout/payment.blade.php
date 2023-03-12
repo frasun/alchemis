@@ -27,35 +27,7 @@
     wc_get_template('checkout/terms.php');
   @endphp
 
-  @if (WC()->cart->needs_payment())
-    <h3 class="pb-1">
-      {!! esc_html_e('Payment', 'woocommerce') !!}
-    </h3>
-    <ul class="wc_payment_methods payment_methods methods">
-      @if (!empty($available_gateways))
-        @foreach ($available_gateways as $gateway)
-          {!! wc_get_template('checkout/payment-method.php', ['gateway' => $gateway]) !!}
-        @endforeach
-      @else
-        <li class="woocommerce-notice woocommerce-notice--info woocommerce-info">
-          {!! apply_filters(
-              'woocommerce_no_available_payment_methods_message',
-              WC()->customer->get_billing_country()
-                  ? esc_html__(
-                      'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.',
-                      'woocommerce',
-                  )
-                  : esc_html__('Please fill in your details above to see available payment methods.', 'woocommerce'),
-          ) !!}
-        </li>
-      @endif
-    </ul>
-    <div class="pt-2">
-      <img src="@asset('images/banner_1215x200B.png')" />
-    </div>
-  @endif
-
-  <footer class="mt-4 flex flex-col items-end">
+  <div class="mb-2 flex flex-col items-start">
     <noscript>
       @php
         /* translators: $1 and $2 opening and closing emphasis tags respectively */
@@ -90,14 +62,46 @@
 
     @php
       do_action('woocommerce_review_order_after_submit');
-      
-      wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce');
     @endphp
-  </footer>
+
+  </div>
+
+  @php
+    if (is_active_sidebar('sidebar-checkout')) {
+        dynamic_sidebar('sidebar-checkout');
+    }
+  @endphp
+
+  @if (WC()->cart->needs_payment())
+    <h3 class="pb-1 mt-5">
+      {!! esc_html_e('Payment', 'woocommerce') !!}
+    </h3>
+    <ul class="wc_payment_methods payment_methods methods">
+      @if (!empty($available_gateways))
+        @foreach ($available_gateways as $gateway)
+          {!! wc_get_template('checkout/payment-method.php', ['gateway' => $gateway]) !!}
+        @endforeach
+      @else
+        <li class="woocommerce-notice woocommerce-notice--info woocommerce-info">
+          {!! apply_filters(
+              'woocommerce_no_available_payment_methods_message',
+              WC()->customer->get_billing_country()
+                  ? esc_html__(
+                      'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.',
+                      'woocommerce',
+                  )
+                  : esc_html__('Please fill in your details above to see available payment methods.', 'woocommerce'),
+          ) !!}
+        </li>
+      @endif
+    </ul>
+  @endif
+
+  @php
+    wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce');
+  @endphp
 </div>
 
 @if (!wp_doing_ajax())
-  @php
-    do_action('woocommerce_review_order_after_payment');
-  @endphp
+  @php(do_action('woocommerce_review_order_after_payment'))
 @endif

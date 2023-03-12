@@ -164,6 +164,11 @@ add_action('widgets_init', function () {
         'name' => __('Modal', 'sage'),
         'id' => 'sidebar-modal',
     ] + $config);
+
+    register_sidebar([
+        'name' => __('After checkout', 'sage'),
+        'id' => 'sidebar-checkout',
+    ] + $config);
 });
 
 
@@ -382,3 +387,13 @@ add_action('wp_head', function () {
  */
 add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false');
 // add_filter('lightweight_accordion_include_admin_stylesheet', '__return_false');
+
+
+/**
+ * Use first name as default display name
+ */
+add_filter('pre_user_display_name', function ($name) {
+    $user = get_user_by('login', $name);
+
+    return $user->first_name;
+});

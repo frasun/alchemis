@@ -75,7 +75,6 @@
           }
         @endphp
       </ul>
-      <img src="@asset('images/banner_1215x200B.png')" class="mt-2" />
     </section>
   @endif
 
