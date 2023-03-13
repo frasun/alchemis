@@ -103,37 +103,35 @@ const main = async (err) => {
   let visited = getCookie('newsletter_modal_shown');
 
   if (visited === '') {
-    document.addEventListener('DOMContentLoaded', () => {
-      window.setTimeout(() => {
-        const modal = document.getElementById('modal');
-        const modalBackdrop = document.getElementById('modalBackdrop');
-        const modalClose = document.getElementById('modalClose');
+    window.setTimeout(() => {
+      const modal = document.getElementById('modal');
+      const modalBackdrop = document.getElementById('modalBackdrop');
+      const modalClose = document.getElementById('modalClose');
 
-        if (modalBackdrop) {
-          modalBackdrop.classList.add(MODAL_TOUCHED);
-          modalBackdrop.classList.add(MODAL_OPEN);
-        }
+      if (modalBackdrop) {
+        modalBackdrop.classList.add(MODAL_TOUCHED);
+        modalBackdrop.classList.add(MODAL_OPEN);
+      }
 
-        if (modal) {
-          modal.classList.add(MODAL_TOUCHED);
-          modal.classList.add(MODAL_OPEN);
-        }
+      if (modal) {
+        modal.classList.add(MODAL_TOUCHED);
+        modal.classList.add(MODAL_OPEN);
+      }
 
-        if (modalClose) {
-          modalClose.addEventListener('click', () => {
-            modal.classList.remove(MODAL_OPEN);
-            modalBackdrop.classList.remove(MODAL_OPEN);
+      if (modalClose) {
+        modalClose.addEventListener('click', () => {
+          modal.classList.remove(MODAL_OPEN);
+          modalBackdrop.classList.remove(MODAL_OPEN);
 
-            modalBackdrop.addEventListener('transitionend', () => {
-              modal.classList.remove(MODAL_TOUCHED);
-              modalBackdrop.classList.remove(MODAL_TOUCHED);
-            });
-
-            setCookie('newsletter_modal_shown', true, MODAL_COOKIE_EXP);
+          modalBackdrop.addEventListener('transitionend', () => {
+            modal.classList.remove(MODAL_TOUCHED);
+            modalBackdrop.classList.remove(MODAL_TOUCHED);
           });
-        }
-      }, MODAL_SHOW_TIME);
-    });
+
+          setCookie('newsletter_modal_shown', true, MODAL_COOKIE_EXP);
+        });
+      }
+    }, MODAL_SHOW_TIME);
   }
 };
 
