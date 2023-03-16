@@ -27,7 +27,7 @@
     wc_get_template('checkout/terms.php');
   @endphp
 
-  <div class="mb-2 flex flex-col items-start">
+  <div class="mb-3 flex flex-col items-start">
     <noscript>
       @php
         /* translators: $1 and $2 opening and closing emphasis tags respectively */
@@ -73,28 +73,30 @@
   @endphp
 
   @if (WC()->cart->needs_payment())
-    <h3 class="pb-1 mt-5">
-      {!! esc_html_e('Payment', 'woocommerce') !!}
-    </h3>
-    <ul class="wc_payment_methods payment_methods methods">
-      @if (!empty($available_gateways))
-        @foreach ($available_gateways as $gateway)
-          {!! wc_get_template('checkout/payment-method.php', ['gateway' => $gateway]) !!}
-        @endforeach
-      @else
-        <li class="woocommerce-notice woocommerce-notice--info woocommerce-info">
-          {!! apply_filters(
-              'woocommerce_no_available_payment_methods_message',
-              WC()->customer->get_billing_country()
-                  ? esc_html__(
-                      'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.',
-                      'woocommerce',
-                  )
-                  : esc_html__('Please fill in your details above to see available payment methods.', 'woocommerce'),
-          ) !!}
-        </li>
-      @endif
-    </ul>
+    <div class="hidden">
+      <h3 class="pb-1 mt-5">
+        {!! esc_html_e('Payment', 'woocommerce') !!}
+      </h3>
+      <ul class="wc_payment_methods payment_methods methods">
+        @if (!empty($available_gateways))
+          @foreach ($available_gateways as $gateway)
+            {!! wc_get_template('checkout/payment-method.php', ['gateway' => $gateway]) !!}
+          @endforeach
+        @else
+          <li class="woocommerce-notice woocommerce-notice--info woocommerce-info">
+            {!! apply_filters(
+                'woocommerce_no_available_payment_methods_message',
+                WC()->customer->get_billing_country()
+                    ? esc_html__(
+                        'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.',
+                        'woocommerce',
+                    )
+                    : esc_html__('Please fill in your details above to see available payment methods.', 'woocommerce'),
+            ) !!}
+          </li>
+        @endif
+      </ul>
+    </div>
   @endif
 
   @php
