@@ -1,5 +1,5 @@
 <aside class="flex gap-2 flex-wrap text-baseSm">
-  <div class="flex gap-0.75 items-center">
+  {{-- <div class="flex gap-0.75 items-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30.419 18">
       <g transform="translate(0 0)">
         <path
@@ -10,7 +10,7 @@
       </g>
     </svg>
     {!! esc_html_e('Free shipping', 'woocommerce') !!}
-  </div>
+  </div> --}}
   <div class="flex gap-0.75 items-center">
     <svg fill="#75B84E" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path
